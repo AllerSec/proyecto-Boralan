@@ -47,10 +47,12 @@ function tr(str, lang) {
   return dict[str] !== undefined ? dict[str] : str;
 }
 
-/* selector de idioma (HTML). pageKey = ruta lógica actual; lang = idioma actual */
+/* selector de idioma (HTML). pageKey = ruta lógica actual; lang = idioma actual
+   Usa un centinela @@LANGHREF@@ para que applyBase NO normalice estos enlaces
+   (cada opción debe conservar su prefijo de idioma) y solo les añada BASE al final. */
 function langSwitcher(pageKey, lang) {
   const items = LANGS.map(l => {
-    const href = `${l.dir}/${pageKey ? pageKey + "/" : ""}`;
+    const href = `@@LANGHREF@@${l.dir}/${pageKey ? pageKey + "/" : ""}`;
     const current = l.code === lang ? ' aria-current="true"' : "";
     return `<a class="lang-switch__opt${l.code === lang ? " is-active" : ""}" href="${href}" hreflang="${l.hreflang}" lang="${l.htmlLang}"${current}>${l.label}</a>`;
   }).join("");
@@ -196,6 +198,8 @@ function applyBase(html, langDir) {
   }
   // aplicar BASE a todo lo que empiece por "/" (no protocolo-relativo)
   if (BASE) html = html.replace(new RegExp(`((?:${ATTRS})=")\\/(?!\\/)`, "g"), `$1${BASE}/`);
+  // resolver centinela del selector de idioma: @@LANGHREF@@/eu/ -> BASE/eu/
+  html = html.replace(/@@LANGHREF@@/g, BASE || "");
   return html;
 }
 
