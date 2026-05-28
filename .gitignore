@@ -1,0 +1,20 @@
+# Dependencias y artefactos de desarrollo
+node_modules/
+package.json
+package-lock.json
+
+# Capturas y scripts de prueba (solo desarrollo)
+.shots/
+shot.js
+nav-check.js
+overflow-check.js
+build-assets.sh
+
+# Backups de originales (pesados, no necesarios en producción)
+assets/img/orig/
+assets/video/orig/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
