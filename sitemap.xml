@@ -1,56 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boralan.es/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://boralan.es/assets/img/equipo-mirando-tala-altura-full.webp</image:loc>
-      <image:title>Equipo de Boralan en una tala en altura</image:title>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/eu/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/fr/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/en/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/"/>
   </url>
   <url>
     <loc>https://boralan.es/servicios/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/servicios/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/eu/servicios/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/servicios/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/fr/servicios/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/servicios/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/en/servicios/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/servicios/"/>
   </url>
   <url>
     <loc>https://boralan.es/nosotros/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/nosotros/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/eu/nosotros/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/nosotros/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/fr/nosotros/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/nosotros/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/en/nosotros/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/nosotros/"/>
   </url>
   <url>
     <loc>https://boralan.es/galeria/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/galeria/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/eu/galeria/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/galeria/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/fr/galeria/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/galeria/"/>
+  </url>
+  <url>
+    <loc>https://boralan.es/en/galeria/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/galeria/"/>
   </url>
   <url>
     <loc>https://boralan.es/contacto/</loc>
     <lastmod>2026-05-28</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/contacto/"/>
   </url>
   <url>
-    <loc>https://boralan.es/aviso-legal/</loc>
+    <loc>https://boralan.es/eu/contacto/</loc>
     <lastmod>2026-05-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/contacto/"/>
   </url>
   <url>
-    <loc>https://boralan.es/politica-privacidad/</loc>
+    <loc>https://boralan.es/fr/contacto/</loc>
     <lastmod>2026-05-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/contacto/"/>
   </url>
   <url>
-    <loc>https://boralan.es/politica-cookies/</loc>
+    <loc>https://boralan.es/en/contacto/</loc>
     <lastmod>2026-05-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://boralan.es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://boralan.es/eu/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://boralan.es/fr/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boralan.es/en/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boralan.es/contacto/"/>
   </url>
 </urlset>

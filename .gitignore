@@ -20,3 +20,9 @@ assets/video/orig/
 .DS_Store
 Thumbs.db
 *.log
+
+# scripts i18n temporales
+i18n-shot*.js
+i18n-links.js
+live-shot.js
+sim-shot.js
