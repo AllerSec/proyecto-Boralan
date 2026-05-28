@@ -267,7 +267,12 @@ const T = {
 
     // — Selector idioma —
     "Idioma": "Hizkuntza",
-    "Cambiar idioma": "Aldatu hizkuntza"
+    "Cambiar idioma": "Aldatu hizkuntza",
+    "Trabajo de tala controlada junto a una edificación": "Mozketa kontrolatua eraikin baten ondoan",
+    "Tala controlada junto a una edificación": "Mozketa kontrolatua eraikin baten ondoan",
+    "Operario de Boralan en una poda en altura con cuerdas de trepa": "Boralango langilea altuerako inausketan igoera-sokekin",
+    "Equipo de Boralan trabajando en una zona de difícil acceso en la copa de un haya": "Boralango taldea sarbide zaileko gune batean lanean, pago baten kopan",
+    "Trepa hasta la copa de un árbol en una zona de difícil acceso": "Zuhaitz baten koparaino igoera sarbide zaileko gune batean"
   },
 
   fr: {
@@ -505,7 +510,12 @@ const T = {
     "Volver al inicio": "Retour à l'accueil",
 
     "Idioma": "Langue",
-    "Cambiar idioma": "Changer de langue"
+    "Cambiar idioma": "Changer de langue",
+    "Trabajo de tala controlada junto a una edificación": "Abattage contrôlé à côté d'un bâtiment",
+    "Tala controlada junto a una edificación": "Abattage contrôlé à côté d'un bâtiment",
+    "Operario de Boralan en una poda en altura con cuerdas de trepa": "Opérateur de Boralan lors d'un élagage en hauteur avec cordes de grimpe",
+    "Equipo de Boralan trabajando en una zona de difícil acceso en la copa de un haya": "L'équipe de Boralan dans une zone d'accès difficile, au sommet d'un hêtre",
+    "Trepa hasta la copa de un árbol en una zona de difícil acceso": "Grimpe jusqu'à la cime d'un arbre dans une zone d'accès difficile"
   },
 
   en: {
@@ -743,7 +753,12 @@ const T = {
     "Volver al inicio": "Back to home",
 
     "Idioma": "Language",
-    "Cambiar idioma": "Change language"
+    "Cambiar idioma": "Change language",
+    "Trabajo de tala controlada junto a una edificación": "Controlled felling next to a building",
+    "Tala controlada junto a una edificación": "Controlled felling next to a building",
+    "Operario de Boralan en una poda en altura con cuerdas de trepa": "A Boralan operator pruning at height with climbing ropes",
+    "Equipo de Boralan trabajando en una zona de difícil acceso en la copa de un haya": "The Boralan team working in a hard-to-reach area, in the canopy of a beech tree",
+    "Trepa hasta la copa de un árbol en una zona de difícil acceso": "Climbing to the top of a tree in a hard-to-reach area"
   }
 };
 
