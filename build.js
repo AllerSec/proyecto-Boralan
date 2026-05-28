@@ -10,6 +10,14 @@
 const fs = require("fs");
 const path = require("path");
 
+/* ──────────────────────────────────────────────────────────────────────────
+   RUTA BASE
+   - GitHub Pages en subcarpeta:  BASE = "/proyecto-Boralan"
+   - Dominio propio (boralan.es):  BASE = ""   (raíz)
+   Cambia esta constante y vuelve a ejecutar `node build.js`.
+   ────────────────────────────────────────────────────────────────────────── */
+const BASE = process.env.BASE_PATH !== undefined ? process.env.BASE_PATH : "/proyecto-Boralan";
+
 const WA_MSG = encodeURIComponent("Hola, he visto vuestra web y quería pedir un presupuesto para un trabajo de poda o tala.");
 const WA_LINK = `https://wa.me/34628850027?text=${WA_MSG}`;
 
@@ -114,6 +122,24 @@ function inject(html, name) {
   return html;
 }
 
+/* Reescribe rutas root-relativas (href/src/content que empiezan por "/")
+   anteponiendo BASE. Idempotente: primero quita cualquier BASE conocido,
+   luego aplica el actual. No toca URLs absolutas (https://, //) ni anclas (#). */
+const KNOWN_BASES = ["/proyecto-Boralan"]; // bases que pudieron aplicarse antes
+function applyBase(html) {
+  const ATTRS = "href|src|poster"; // atributos con rutas a recursos internos
+  // 1) normalizar: quitar bases previas -> dejar rutas en raíz "/"
+  for (const kb of KNOWN_BASES) {
+    if (!kb) continue;
+    const esc = kb.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    html = html.replace(new RegExp(`((?:${ATTRS})=")${esc}/`, "g"), "$1/");
+  }
+  if (!BASE) return html; // dominio raíz: nada que prefijar
+  // 2) aplicar BASE a rutas que empiezan por "/" pero no por "//" (protocolo-relativas)
+  html = html.replace(new RegExp(`((?:${ATTRS})=")\\/(?!\\/)`, "g"), `$1${BASE}/`);
+  return html;
+}
+
 function buildPage(file) {
   let html = fs.readFileSync(file, "utf8");
   for (const name of Object.keys(PARTIALS)) html = inject(html, name);
@@ -128,6 +154,7 @@ function buildPage(file) {
       `$1 aria-current="page"`
     );
   }
+  html = applyBase(html);
   fs.writeFileSync(file, html, "utf8");
   console.log("✓", path.relative(process.cwd(), file));
 }
