@@ -112,9 +112,10 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
 }
 .hero__content { position: relative; z-index: 1; width: 100%; }
 .hero__title {
-  font-size: clamp(2.8rem, 11vw, 8.5rem);
-  line-height: .92;
-  letter-spacing: -0.04em;
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  line-height: .95;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 .hero__title .accent { color: var(--accent); }
 .hero__lead {
