@@ -8,6 +8,8 @@ package-lock.json
 shot.js
 nav-check.js
 overflow-check.js
+overlap-check.js
+stat-check.js
 build-assets.sh
 
 # Backups de originales (pesados, no necesarios en producción)
