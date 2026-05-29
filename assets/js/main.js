@@ -84,6 +84,7 @@
     const header = document.querySelector("[data-header]");
     const toggle = document.querySelector("[data-nav-toggle]");
     const mobileNav = document.querySelector("[data-mobile-nav]");
+    const navClose = document.querySelector("[data-nav-close]");
 
     if (header) {
       const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
@@ -103,6 +104,7 @@
         mobileNav.classList.toggle("is-open", !open);
         document.body.style.overflow = open ? "" : "hidden";
       });
+      if (navClose) navClose.addEventListener("click", close);
       mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
       document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
     }
