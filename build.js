@@ -201,6 +201,13 @@ function applyBase(html, langDir) {
   }
   // aplicar BASE a todo lo que empiece por "/" (no protocolo-relativo)
   if (BASE) html = html.replace(new RegExp(`((?:${ATTRS})=")\\/(?!\\/)`, "g"), `$1${BASE}/`);
+  // srcset/imagesrcset: contienen varias URLs; los assets nunca llevan prefijo de
+  // idioma, así que basta con normalizar el BASE en cada "/assets/..." que aparezca.
+  if (BASE) {
+    const baseEsc2 = BASE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    html = html.replace(new RegExp(`${baseEsc2}/assets/`, "g"), "/assets/"); // quitar BASE previo
+    html = html.replace(/(^|[\s,"])\/assets\//g, `$1${BASE}/assets/`);        // reaplicar BASE
+  }
   // resolver centinela del selector de idioma: @@LANGHREF@@/eu/ -> BASE/eu/
   html = html.replace(/@@LANGHREF@@/g, BASE || "");
   return html;
