@@ -329,36 +329,20 @@
     if (!root) return;
     const slides = Array.from(root.querySelectorAll(".hero__slide"));
     if (slides.length < 2) return;
-    const dotsWrap = document.querySelector("[data-hero-dots]");
     const INTERVAL = 5000;
     let index = slides.findIndex(s => s.classList.contains("is-active"));
     if (index < 0) index = 0;
     let timer = null;
     let visible = true;
 
-    // Construir dots accesibles
-    const dots = slides.map((_, i) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "hero__dot";
-      b.setAttribute("role", "tab");
-      b.setAttribute("aria-label", "Imagen " + (i + 1));
-      b.setAttribute("aria-selected", i === index ? "true" : "false");
-      b.addEventListener("click", () => { go(i); restart(); });
-      dotsWrap && dotsWrap.appendChild(b);
-      return b;
-    });
-
     function go(next) {
       if (next === index) return;
       slides[index].classList.remove("is-active");
-      dots[index] && dots[index].setAttribute("aria-selected", "false");
       index = (next + slides.length) % slides.length;
       // reiniciar la animación Ken Burns de la nueva activa
       const img = slides[index].querySelector(".hero__slide-img");
       if (img) { img.style.animation = "none"; void img.offsetWidth; img.style.animation = ""; }
       slides[index].classList.add("is-active");
-      dots[index] && dots[index].setAttribute("aria-selected", "true");
     }
 
     function tick() { go(index + 1); }
@@ -367,7 +351,6 @@
       timer = window.setInterval(tick, INTERVAL);
     }
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
-    function restart() { stop(); start(); }
 
     // Pausar cuando la pestaña no está visible
     document.addEventListener("visibilitychange", () => {

@@ -104,35 +104,6 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   from { transform: scale(1.08) translate3d(0, 0, 0); }
   to   { transform: scale(1.16) translate3d(-1.5%, -1.5%, 0); }
 }
-/* Dots de navegación */
-.hero__dots {
-  position: absolute;
-  left: var(--gutter);
-  bottom: 2rem;
-  z-index: 3;
-  display: flex;
-  gap: .6rem;
-}
-.hero__dot {
-  width: 28px; height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  border-radius: 999px;
-}
-.hero__dot::before {
-  content: "";
-  width: 9px; height: 9px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.4);
-  transition: background .3s, transform .3s var(--ease-out);
-}
-.hero__dot[aria-selected="true"]::before { background: var(--accent); transform: scale(1.25); }
-.hero__dot:hover::before { background: rgba(255,255,255,.7); }
-.hero__dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   .hero__slide { transition: opacity .01ms; }
   .hero__slide.is-active .hero__slide-img { animation: none; transform: scale(1.05); }
