@@ -54,52 +54,146 @@
 
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <!-- Schema.org: LocalBusiness -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://boralan.eus/#business",
-    "name": "Boralan",
-    "description": "Empresa especializada en poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados. Trabajos en zonas inaccesibles para maquinaria.",
-    "url": "https://boralan.eus/",
-    "email": "boralan04@gmail.com",
-    "telephone": "+34628850027",
-    "image": "https://boralan.eus/assets/img/equipo-boralan-retrato-1200.webp",
-    "logo": "https://boralan.eus/assets/img/boralan-logo.png",
-    "priceRange": "€€",
-    "areaServed": ["Navarra", "Bortziri", "Cinco Villas", "País Vasco", "Gipuzkoa"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lesaka",
-      "addressRegion": "Navarra",
-      "postalCode": "31770",
-      "addressCountry": "ES"
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "LocalBusiness",
+    "HomeAndConstructionBusiness"
+  ],
+  "@id": "https://boralan.eus/#business",
+  "name": "Boralan",
+  "description": "Zuhaitz handien inausketa eta mozketa altueran egiten espezializatutako enpresa, igoera-teknika eta mozketa kontrolatuen bidez. Makineriarako sarbide zaileko guneetako lanak.",
+  "url": "https://boralan.eus/eu/",
+  "email": "boralan04@gmail.com",
+  "telephone": "+34628850027",
+  "image": "https://boralan.eus/assets/img/equipo-boralan-retrato-1200.webp",
+  "logo": "https://boralan.eus/assets/img/boralan-logo.png",
+  "priceRange": "€€",
+  "foundingDate": "2024",
+  "slogan": "Subir donde otros no llegan",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Iker Iturria Pombar"
     },
-    "geo": { "@type": "GeoCoordinates", "latitude": 43.2447, "longitude": -1.7019 },
-    "sameAs": ["https://www.instagram.com/boralan04/"],
-    "knowsAbout": ["Poda en altura", "Tala controlada", "Trepa de árboles", "Apeos controlados", "Gestión de residuos vegetales"]
-  }
-  </script>
-  <!-- Schema.org: Servicios -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Poda y tala de árboles en altura",
-    "provider": { "@id": "https://boralan.eus/#business" },
-    "areaServed": "Navarra y País Vasco",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios de arboricultura",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tala controlada de grandes árboles" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Poda en altura mediante trepa" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trabajos en zonas inaccesibles" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestión de residuos de poda y tala" } }
-      ]
+    {
+      "@type": "Person",
+      "name": "Beñat Ordoki Telletxea"
+    },
+    {
+      "@type": "Person",
+      "name": "Jon Erro Fagoaga"
     }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lesaka"
+    },
+    {
+      "@type": "City",
+      "name": "Bera"
+    },
+    {
+      "@type": "City",
+      "name": "Igantzi"
+    },
+    {
+      "@type": "City",
+      "name": "Etxalar"
+    },
+    {
+      "@type": "City",
+      "name": "Irun"
+    },
+    {
+      "@type": "City",
+      "name": "Hondarribia"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Bortziri / Cinco Villas"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Gipuzkoa"
+    },
+    {
+      "@type": "State",
+      "name": "Navarra"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lesaka",
+    "addressRegion": "Navarra",
+    "postalCode": "31770",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.2447,
+    "longitude": -1.7019
+  },
+  "sameAs": [
+    "https://www.instagram.com/boralan04/"
+  ],
+  "knowsAbout": [
+    "Altuerako inausketa",
+    "Mozketa kontrolatua",
+    "Zuhaitzen igoera",
+    "Apeo kontrolatuak",
+    "Landare-hondakinen kudeaketa"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://boralan.eus/#service",
+  "serviceType": "Zuhaitzen inausketa eta mozketa altueran",
+  "url": "https://boralan.eus/eu/servicios/",
+  "provider": {
+    "@id": "https://boralan.eus/#business"
+  },
+  "areaServed": "Nafarroa eta Euskal Herria",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de arboricultura",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Zuhaitz handien mozketa kontrolatua"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Altuerako inausketa igoeraz"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sarbide zaileko guneetako lanak"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Inausketa eta mozketa hondakinen kudeaketa"
+        }
+      }
+    ]
   }
+}
   </script>
 </head>
 <body data-page="inicio">
@@ -172,37 +266,37 @@
       <div class="hero__bg" data-hero-media>
         <div class="hero__carousel" data-hero-carousel aria-label="Boralanen lanak" role="group" aria-roledescription="carrusel">
           <figure class="hero__slide is-active">
-            <img class="hero__slide-img"
+            <img class="hero__slide-img" width="1600" height="900"
               src="/assets/img/ambiente-niebla-montana-full.webp"
               srcset="/assets/img/ambiente-niebla-montana-480.webp 480w, /assets/img/ambiente-niebla-montana-768.webp 768w, /assets/img/ambiente-niebla-montana-1600.webp 1600w"
               sizes="100vw" alt="Lainopean dagoen basoa Nafarroako mendietan" fetchpriority="high" decoding="async">
           </figure>
           <figure class="hero__slide">
-            <img class="hero__slide-img"
+            <img class="hero__slide-img" width="1600" height="900"
               src="/assets/img/poda-altura-haya-doble-full.webp"
               srcset="/assets/img/poda-altura-haya-doble-480.webp 480w, /assets/img/poda-altura-haya-doble-768.webp 768w, /assets/img/poda-altura-haya-doble-full.webp 1600w"
               sizes="100vw" alt="Pago bikoitz baten inausketa altueran, igoera teknikak erabiliz" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
-            <img class="hero__slide-img"
+            <img class="hero__slide-img" width="1600" height="900"
               src="/assets/img/trabajo-vertical-cuerdas-full.webp"
               srcset="/assets/img/trabajo-vertical-cuerdas-480.webp 480w, /assets/img/trabajo-vertical-cuerdas-768.webp 768w, /assets/img/trabajo-vertical-cuerdas-full.webp 1600w"
               sizes="100vw" alt="Soketatik zintzilik egindako lan bertikala altuera handiko zuhaitz batean" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
-            <img class="hero__slide-img"
+            <img class="hero__slide-img" width="1600" height="900"
               src="/assets/img/trepa-copa-arbol-full.webp"
               srcset="/assets/img/trepa-copa-arbol-480.webp 480w, /assets/img/trepa-copa-arbol-768.webp 768w, /assets/img/trepa-copa-arbol-full.webp 1600w"
               sizes="100vw" alt="Boralango arboristak soketan zuhaitz baten kopururaino igotzen" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
-            <img class="hero__slide-img"
+            <img class="hero__slide-img" width="1600" height="900"
               src="/assets/img/tala-junto-edificacion-full.webp"
               srcset="/assets/img/tala-junto-edificacion-480.webp 480w, /assets/img/tala-junto-edificacion-768.webp 768w, /assets/img/tala-junto-edificacion-full.webp 1600w"
               sizes="100vw" alt="Zuhaitz baten mozketa kontrolatua eraikin baten ondoan, sarbide zaileko eremuan" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
-            <img class="hero__slide-img"
+            <img class="hero__slide-img" width="1600" height="900"
               src="/assets/img/ambiente-bosque-luz-full.webp"
               srcset="/assets/img/ambiente-bosque-luz-480.webp 480w, /assets/img/ambiente-bosque-luz-768.webp 768w, /assets/img/ambiente-bosque-luz-1600.webp 1600w"
               sizes="100vw" alt="Eguzki argia baso bateko zuhaitzen artean sartzen" loading="lazy" decoding="async">

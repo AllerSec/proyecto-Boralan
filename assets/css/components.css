@@ -595,3 +595,52 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   display: grid; place-items: center;
 }
 .ig-strip a:hover::after { opacity: 1; }
+
+/* ---------- FAQ (acordeón nativo <details>) ---------- */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.faq__item {
+  background: var(--c-ink-3);
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: var(--radius-lg);
+  padding: 0 var(--sp-3);
+  transition: border-color .3s ease;
+}
+.faq__item[open],
+.faq__item:hover { border-color: rgba(255, 255, 255, .12); }
+.faq__q {
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--text);
+  padding: var(--sp-3) 2.5rem var(--sp-3) 0;
+  position: relative;
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__q::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform .3s ease;
+}
+.faq__item[open] .faq__q::after { transform: translateY(-50%) rotate(45deg); }
+.faq__a {
+  color: var(--text-dim);
+  padding: 0 0 var(--sp-3);
+  margin: 0;
+  max-width: 65ch;
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq__item, .faq__q::after { transition: none; }
+}

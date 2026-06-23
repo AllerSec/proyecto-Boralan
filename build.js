@@ -242,6 +242,265 @@ function translate(html, lang) {
   return html;
 }
 
+/* ==========================================================================
+   STRUCTURED DATA (JSON-LD) generado por idioma.
+   Se construye desde objetos JS y se serializa con JSON.stringify (escape
+   automático, JSON siempre válido). Las URLs llevan el prefijo de idioma y los
+   textos están traducidos, de modo que /eu/ /fr/ /en/ tengan su propio schema
+   coherente en lugar de heredar el español con URLs de la raíz.
+   ========================================================================== */
+
+// Etiquetas de migas de pan por idioma (coinciden con el nav traducido)
+const CRUMB = {
+  es: { inicio: "Inicio", servicios: "Servicios", nosotros: "Nosotros", galeria: "Galería", contacto: "Contacto" },
+  eu: { inicio: "Hasiera", servicios: "Zerbitzuak", nosotros: "Gu", galeria: "Galeria", contacto: "Kontaktua" },
+  fr: { inicio: "Accueil", servicios: "Services", nosotros: "À propos", galeria: "Galerie", contacto: "Contact" },
+  en: { inicio: "Home", servicios: "Services", nosotros: "About", galeria: "Gallery", contacto: "Contact" }
+};
+
+// Descripción del negocio (LocalBusiness) por idioma
+const BIZ_DESC = {
+  es: "Empresa especializada en poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados. Trabajos en zonas inaccesibles para maquinaria.",
+  eu: "Zuhaitz handien inausketa eta mozketa altueran egiten espezializatutako enpresa, igoera-teknika eta mozketa kontrolatuen bidez. Makineriarako sarbide zaileko guneetako lanak.",
+  fr: "Entreprise spécialisée dans l'élagage et l'abattage de grands arbres en hauteur par des techniques de grimpe et de démontage contrôlé. Travaux en zones inaccessibles aux machines.",
+  en: "Company specialised in pruning and felling large trees at height using climbing techniques and controlled dismantling. Work in areas inaccessible to machinery."
+};
+
+// knowsAbout del LocalBusiness por idioma
+const KNOWS = {
+  es: ["Poda en altura", "Tala controlada", "Trepa de árboles", "Apeos controlados", "Gestión de residuos vegetales"],
+  eu: ["Altuerako inausketa", "Mozketa kontrolatua", "Zuhaitzen igoera", "Apeo kontrolatuak", "Landare-hondakinen kudeaketa"],
+  fr: ["Élagage en hauteur", "Abattage contrôlé", "Grimpe d'arbres", "Démontage contrôlé", "Gestion des déchets végétaux"],
+  en: ["Pruning at height", "Controlled felling", "Tree climbing", "Controlled dismantling", "Green waste management"]
+};
+
+// Nombres de los servicios (OfferCatalog) por idioma
+const SERVICES = {
+  es: ["Tala controlada de grandes árboles", "Poda en altura mediante trepa", "Trabajos en zonas inaccesibles", "Gestión de residuos de poda y tala"],
+  eu: ["Zuhaitz handien mozketa kontrolatua", "Altuerako inausketa igoeraz", "Sarbide zaileko guneetako lanak", "Inausketa eta mozketa hondakinen kudeaketa"],
+  fr: ["Abattage contrôlé de grands arbres", "Élagage en hauteur par grimpe", "Travaux en zones inaccessibles", "Gestion des déchets d'élagage et d'abattage"],
+  en: ["Controlled felling of large trees", "Pruning at height by climbing", "Work in inaccessible areas", "Pruning and felling waste management"]
+};
+
+const SERVICE_TYPE = {
+  es: "Poda y tala de árboles en altura",
+  eu: "Zuhaitzen inausketa eta mozketa altueran",
+  fr: "Élagage et abattage d'arbres en hauteur",
+  en: "Tree pruning and felling at height"
+};
+
+const AREA_SERVED = {
+  es: "Navarra y País Vasco", eu: "Nafarroa eta Euskal Herria",
+  fr: "Navarre et Pays basque", en: "Navarre and the Basque Country"
+};
+
+// Preguntas frecuentes (servicios) por idioma — paridad con la sección visible
+const FAQ = {
+  es: [
+    ["¿Cuánto cuesta talar un árbol grande en altura?", "El coste depende de la altura, el entorno y la dificultad de acceso. Al trabajar por trepa y sin grúa, abaratamos el precio frente a la maquinaria pesada. Damos presupuesto sin compromiso."],
+    ["¿Cuándo necesito una tala controlada en altura?", "Cuando un árbol presenta riesgo de caída, está cerca de una casa o un vallado, o no se puede entrar con maquinaria. Subimos al árbol y lo cortamos trozo a trozo de forma controlada."],
+    ["¿Podéis quitar un árbol pegado a una casa sin dañarla?", "Sí. Apeamos el árbol trozo a trozo desde arriba y bajamos cada corte con cuerda, protegiendo casas, vallados e instalaciones cercanas."],
+    ["¿Trabajáis en sitios donde no entra la maquinaria?", "Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios."],
+    ["¿Os encargáis de retirar los restos de la poda o la tala?", "Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia."],
+    ["¿En qué zonas trabajáis?", "En Navarra (Lesaka, Bera, Igantzi, Etxalar y el resto de Bortziri / Cinco Villas) y en Gipuzkoa (Irun, Hondarribia y alrededores). Consúltanos tu caso sin compromiso."]
+  ],
+  eu: [
+    ["Zenbat balio du zuhaitz handi bat altueran moztzeak?", "Kostua altueraren, ingurunearen eta sarbidearen zailtasunaren araberakoa da. Igoeraz eta gururik gabe lan eginez, prezioa merkatzen dugu makineria astunaren aldean. Konpromisorik gabeko aurrekontua ematen dugu."],
+    ["Noiz behar dut altuerako mozketa kontrolatu bat?", "Zuhaitzak erortzeko arriskua duenean, etxe edo hesi batetik gertu dagoenean, edo makineriarekin sartu ezin denean. Zuhaitzera igo eta zatika mozten dugu, modu kontrolatuan."],
+    ["Etxe bati itsatsitako zuhaitz bat ken dezakezue kalterik egin gabe?", "Bai. Zuhaitza goitik behera zatika apeatzen dugu eta moztutako zati bakoitza sokaz jaisten dugu, inguruko etxe, hesi eta instalazioak babestuz."],
+    ["Makineria sartzen ez den tokietan lan egiten duzue?", "Bai. Gururako eta makinetarako sarbide zaileko guneetan espezializatuta gaude. Igoera-teknikekin lan eginez kostuak merkatzen ditugu, ez baitugu bitarteko handirik behar."],
+    ["Inausketako edo mozketako hondarrak kentzeaz arduratzen zarete?", "Bai, inausketa eta mozketako hondakinak kudeatzen ditugu eta eremua garbi uzten dugu."],
+    ["Zein eremutan lan egiten duzue?", "Nafarroan (Lesaka, Bera, Igantzi, Etxalar eta gainerako Bortziri / Bost Iriak) eta Gipuzkoan (Irun, Hondarribia eta inguruak). Galdetu zure kasua konpromisorik gabe."]
+  ],
+  fr: [
+    ["Combien coûte l'abattage d'un grand arbre en hauteur ?", "Le coût dépend de la hauteur, de l'environnement et de la difficulté d'accès. En travaillant par grimpe et sans grue, nous réduisons le prix par rapport à la machinerie lourde. Devis sans engagement."],
+    ["Quand ai-je besoin d'un abattage contrôlé en hauteur ?", "Lorsqu'un arbre présente un risque de chute, est proche d'une maison ou d'une clôture, ou que la machinerie ne peut pas accéder. Nous montons dans l'arbre et le coupons morceau par morceau de façon contrôlée."],
+    ["Pouvez-vous retirer un arbre collé à une maison sans l'endommager ?", "Oui. Nous démontons l'arbre morceau par morceau depuis le haut et descendons chaque coupe à la corde, en protégeant maisons, clôtures et installations proches."],
+    ["Travaillez-vous là où la machinerie ne peut pas accéder ?", "Oui. Nous sommes spécialisés dans les zones inaccessibles aux grues et aux machines. En travaillant par grimpe, nous réduisons les coûts car nous n'avons pas besoin de gros moyens."],
+    ["Vous chargez-vous d'enlever les restes de l'élagage ou de l'abattage ?", "Oui, nous gérons les déchets d'élagage et d'abattage et laissons la zone propre."],
+    ["Dans quelles zones travaillez-vous ?", "En Navarre (Lesaka, Bera, Igantzi, Etxalar et le reste de Bortziri / Cinco Villas) et au Guipuscoa (Irun, Hondarribia et alentours). Parlez-nous de votre cas sans engagement."]
+  ],
+  en: [
+    ["How much does it cost to fell a large tree at height?", "The cost depends on the height, the surroundings and how hard the access is. By working with climbing and no crane, we lower the price compared with heavy machinery. We give a free, no-obligation quote."],
+    ["When do I need a controlled felling at height?", "When a tree is at risk of falling, is close to a house or fence, or machinery cannot get in. We climb the tree and cut it piece by piece in a controlled way."],
+    ["Can you remove a tree right next to a house without damaging it?", "Yes. We dismantle the tree piece by piece from above and lower each cut with a rope, protecting nearby houses, fences and installations."],
+    ["Do you work where machinery cannot get in?", "Yes. We specialise in areas inaccessible to cranes and machines. By working with climbing techniques we lower costs because we don't need heavy equipment."],
+    ["Do you take care of removing the pruning or felling debris?", "Yes, we manage the pruning and felling waste and leave the area clean."],
+    ["Which areas do you work in?", "In Navarre (Lesaka, Bera, Igantzi, Etxalar and the rest of Bortziri / Cinco Villas) and in Gipuzkoa (Irun, Hondarribia and the surrounding area). Tell us about your case with no obligation."]
+  ]
+};
+
+// URL absoluta de una página en un idioma
+function pageUrl(pageKey, lang) {
+  const dir = LANGS.find(l => l.code === lang).dir;
+  return `${SITE}${dir}/${pageKey ? pageKey + "/" : ""}`;
+}
+
+// Serializa un objeto a un <script type="application/ld+json">
+function ldScript(obj) {
+  return `  <script type="application/ld+json">\n${JSON.stringify(obj, null, 2)}\n  </script>`;
+}
+
+// Migas de pan localizadas para una página interna
+function breadcrumbLd(pageKey, lang) {
+  const c = CRUMB[lang] || CRUMB.es;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": c.inicio, "item": pageUrl("", lang) },
+      { "@type": "ListItem", "position": 2, "name": c[pageKey] || pageKey, "item": pageUrl(pageKey, lang) }
+    ]
+  };
+}
+
+// LocalBusiness canónico (#business) — entidad única referida por @id en todo el sitio
+function businessLd(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@id": `${SITE}/#business`,
+    "name": "Boralan",
+    "description": BIZ_DESC[lang] || BIZ_DESC.es,
+    "url": pageUrl("", lang),
+    "email": "boralan04@gmail.com",
+    "telephone": "+34628850027",
+    "image": `${SITE}/assets/img/equipo-boralan-retrato-1200.webp`,
+    "logo": `${SITE}/assets/img/boralan-logo.png`,
+    "priceRange": "€€",
+    "foundingDate": "2024",
+    "slogan": "Subir donde otros no llegan",
+    "founder": [
+      { "@type": "Person", "name": "Iker Iturria Pombar" },
+      { "@type": "Person", "name": "Beñat Ordoki Telletxea" },
+      { "@type": "Person", "name": "Jon Erro Fagoaga" }
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Lesaka" },
+      { "@type": "City", "name": "Bera" },
+      { "@type": "City", "name": "Igantzi" },
+      { "@type": "City", "name": "Etxalar" },
+      { "@type": "City", "name": "Irun" },
+      { "@type": "City", "name": "Hondarribia" },
+      { "@type": "AdministrativeArea", "name": "Bortziri / Cinco Villas" },
+      { "@type": "AdministrativeArea", "name": "Gipuzkoa" },
+      { "@type": "State", "name": "Navarra" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lesaka",
+      "addressRegion": "Navarra",
+      "postalCode": "31770",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.2447, "longitude": -1.7019 },
+    "sameAs": ["https://www.instagram.com/boralan04/"],
+    "knowsAbout": KNOWS[lang] || KNOWS.es
+  };
+}
+
+// Service + OfferCatalog (home), referido al #business como provider
+function serviceLd(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE}/#service`,
+    "serviceType": SERVICE_TYPE[lang] || SERVICE_TYPE.es,
+    "url": pageUrl("servicios", lang),
+    "provider": { "@id": `${SITE}/#business` },
+    "areaServed": AREA_SERVED[lang] || AREA_SERVED.es,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de arboricultura",
+      "itemListElement": (SERVICES[lang] || SERVICES.es).map(name => ({
+        "@type": "Offer", "itemOffered": { "@type": "Service", "name": name }
+      }))
+    }
+  };
+}
+
+// FAQPage localizado (servicios)
+function faqLd(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": (FAQ[lang] || FAQ.es).map(([q, a]) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  };
+}
+
+// LocalBusiness de la página de contacto: referencia al #business + url propia
+function contactBusinessLd(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${SITE}/#business`,
+    "name": "Boralan",
+    "image": `${SITE}/assets/img/equipo-boralan-retrato-1200.webp`,
+    "telephone": "+34628850027",
+    "email": "boralan04@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lesaka", "addressRegion": "Navarra", "postalCode": "31770", "addressCountry": "ES" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.2447, "longitude": -1.7019 },
+    "url": pageUrl("contacto", lang),
+    "areaServed": AREA_SERVED[lang] || AREA_SERVED.es
+  };
+}
+
+// Organization (nosotros) — misma entidad que el negocio (@id #business)
+function organizationLd(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE}/#business`,
+    "name": "Boralan",
+    "url": pageUrl("", lang),
+    "logo": `${SITE}/assets/img/boralan-logo.png`,
+    "foundingDate": "2024",
+    "founder": [
+      { "@type": "Person", "name": "Iker Iturria Pombar" },
+      { "@type": "Person", "name": "Beñat Ordoki Telletxea" },
+      { "@type": "Person", "name": "Jon Erro Fagoaga" }
+    ],
+    "foundingLocation": "Lesaka, Navarra",
+    "sameAs": ["https://www.instagram.com/boralan04/"]
+  };
+}
+
+// Devuelve el conjunto de bloques JSON-LD (string) para una página/idioma
+function buildJsonLd(pageKey, lang) {
+  let blocks = [];
+  if (pageKey === "") {
+    blocks = [businessLd(lang), serviceLd(lang)];
+  } else if (pageKey === "servicios") {
+    blocks = [breadcrumbLd("servicios", lang), faqLd(lang)];
+  } else if (pageKey === "nosotros") {
+    blocks = [breadcrumbLd("nosotros", lang), organizationLd(lang)];
+  } else if (pageKey === "contacto") {
+    blocks = [breadcrumbLd("contacto", lang), contactBusinessLd(lang)];
+  } else if (pageKey === "galeria") {
+    blocks = [breadcrumbLd("galeria", lang)];
+  } else {
+    return null; // páginas sin JSON-LD (legales)
+  }
+  return blocks.map(ldScript).join("\n");
+}
+
+// Elimina los bloques JSON-LD existentes y reinyecta los generados antes de </head>
+function injectJsonLd(html, pageKey, lang) {
+  // quitar comentarios de esquema huérfanos (p.ej. <!-- Schema.org: ... -->, <!-- FAQ schema -->)
+  html = html.replace(/[ \t]*<!--[^>]*[Ss]chema[^>]*-->\n?/g, "");
+  // quitar todos los <script type="application/ld+json"> ... </script> previos
+  html = html.replace(/[ \t]*<script type="application\/ld\+json">[\s\S]*?<\/script>\s*/g, "");
+  const generated = buildJsonLd(pageKey, lang);
+  if (generated) {
+    html = html.replace(/<\/head>/, `${generated}\n</head>`);
+  }
+  return html;
+}
+
 /* genera bloque hreflang + canonical para una página */
 function hreflangBlock(pageKey, lang) {
   const slug = pageKey ? pageKey + "/" : "";
@@ -276,6 +535,10 @@ function buildLangPage(srcFile, pageKey, lang) {
 
   // 4) traducir textos visibles
   html = translate(html, lang);
+
+  // 4b) structured data (JSON-LD) localizado: reemplaza los bloques de la fuente
+  //     por los generados con URLs de idioma y textos traducidos.
+  html = injectJsonLd(html, pageKey, lang);
 
   // 5) SEO: title, description, OG/twitter title+desc según META de la página
   const meta = (META[lang] && META[lang][pageKey]) || (META.es && META.es[pageKey]);
@@ -316,6 +579,9 @@ function buildEsPage(srcFile, pageKey) {
     html = html.replace(new RegExp(`(<a class="nav__link"[^>]*data-nav="${page}")`), `$1 aria-current="page"`);
   }
   html = html.replace(/<html lang="[^"]*"/, `<html lang="es"`);
+
+  // structured data (JSON-LD) localizado en español (idempotente: borra y reinyecta)
+  html = injectJsonLd(html, pageKey, "es");
 
   // SEO: title, description, OG/twitter title+desc desde META (misma fuente que eu/fr/en)
   const meta = META.es && META.es[pageKey];
@@ -377,16 +643,28 @@ if (fs.existsSync(nf)) {
   const today = new Date().toISOString().slice(0, 10);
   const priority = { "": "1.0", "servicios": "0.9", "nosotros": "0.8", "galeria": "0.7", "contacto": "0.9" };
   const inSitemap = ["", "servicios", "nosotros", "galeria", "contacto"]; // legales fuera (noindex)
+  // fecha local YYYY-MM-DD (evita el desfase UTC de toISOString en husos +N)
+  const ymdLocal = (d) => {
+    const p = (n) => String(n).padStart(2, "0");
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+  };
+  // lastmod real = fecha de última modificación del archivo fuente de cada página
+  const lastmodOf = (pageKey) => {
+    const src = path.join(process.cwd(), PAGES[pageKey] || "index.html");
+    try { return ymdLocal(fs.statSync(src).mtime); }
+    catch (e) { return today; }
+  };
   const urls = [];
   for (const pageKey of inSitemap) {
     const slug = pageKey ? pageKey + "/" : "";
+    const lastmod = lastmodOf(pageKey);
     for (const L of LANGS) {
       const alts = LANGS.map(a => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${SITE}${a.dir}/${slug}"/>`).join("\n");
       const xdef = `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/${slug}"/>`;
       urls.push(
 `  <url>
     <loc>${SITE}${L.dir}/${slug}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${priority[pageKey] || "0.6"}</priority>
 ${alts}

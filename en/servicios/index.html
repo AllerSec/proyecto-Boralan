@@ -47,45 +47,81 @@
   <link rel="stylesheet" href="/assets/css/components.css">
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <!-- Breadcrumb schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://boralan.eus/" },
-      { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://boralan.eus/servicios/" }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://boralan.eus/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://boralan.eus/en/servicios/"
+    }
+  ]
+}
   </script>
-  <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuándo necesito una tala controlada en altura?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cuando un árbol presenta riesgo de caída, está cerca de una casa o un vallado, o no se puede entrar con maquinaria. Subimos al árbol y lo cortamos trozo a trozo de forma controlada." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Trabajáis en sitios donde no entra la maquinaria?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Os encargáis de retirar los restos de la poda o la tala?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿En qué zonas trabajáis?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Principalmente en Navarra (Bortziri / Cinco Villas) y en el País Vasco. Consúltanos tu caso sin compromiso." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to fell a large tree at height?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost depends on the height, the surroundings and how hard the access is. By working with climbing and no crane, we lower the price compared with heavy machinery. We give a free, no-obligation quote."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I need a controlled felling at height?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When a tree is at risk of falling, is close to a house or fence, or machinery cannot get in. We climb the tree and cut it piece by piece in a controlled way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you remove a tree right next to a house without damaging it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We dismantle the tree piece by piece from above and lower each cut with a rope, protecting nearby houses, fences and installations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work where machinery cannot get in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We specialise in areas inaccessible to cranes and machines. By working with climbing techniques we lower costs because we don't need heavy equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you take care of removing the pruning or felling debris?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we manage the pruning and felling waste and leave the area clean."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas do you work in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Navarre (Lesaka, Bera, Igantzi, Etxalar and the rest of Bortziri / Cinco Villas) and in Gipuzkoa (Irun, Hondarribia and the surrounding area). Tell us about your case with no obligation."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body data-page="servicios">
@@ -275,6 +311,41 @@
             <h3 style="margin-top:.5rem">We clean the area</h3>
             <p style="color:var(--text-dim); margin-top:.6rem">We manage the waste and leave everything tidy.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2>Common questions about pruning and felling at height.</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary class="faq__q">How much does it cost to fell a large tree at height?</summary>
+            <p class="faq__a">The cost depends on the height, the surroundings and how hard the access is. By working with climbing and no crane, we lower the price compared with heavy machinery. We give a free, no-obligation quote.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">When do I need a controlled felling at height?</summary>
+            <p class="faq__a">When a tree is at risk of falling, is close to a house or fence, or machinery cannot get in. We climb the tree and cut it piece by piece in a controlled way.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Can you remove a tree right next to a house without damaging it?</summary>
+            <p class="faq__a">Yes. We dismantle the tree piece by piece from above and lower each cut with a rope, protecting nearby houses, fences and installations.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Do you work where machinery cannot get in?</summary>
+            <p class="faq__a">Yes. We specialise in areas inaccessible to cranes and machines. By working with climbing techniques we lower costs because we don't need heavy equipment.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Do you take care of removing the pruning or felling debris?</summary>
+            <p class="faq__a">Yes, we manage the pruning and felling waste and leave the area clean.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Which areas do you work in?</summary>
+            <p class="faq__a">In Navarre (Lesaka, Bera, Igantzi, Etxalar and the rest of Bortziri / Cinco Villas) and in Gipuzkoa (Irun, Hondarribia and the surrounding area). Tell us about your case with no obligation.</p>
+          </details>
         </div>
       </div>
     </section>

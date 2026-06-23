@@ -47,45 +47,81 @@
   <link rel="stylesheet" href="/assets/css/components.css">
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <!-- Breadcrumb schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://boralan.eus/" },
-      { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://boralan.eus/servicios/" }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hasiera",
+      "item": "https://boralan.eus/eu/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Zerbitzuak",
+      "item": "https://boralan.eus/eu/servicios/"
+    }
+  ]
+}
   </script>
-  <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuándo necesito una tala controlada en altura?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cuando un árbol presenta riesgo de caída, está cerca de una casa o un vallado, o no se puede entrar con maquinaria. Subimos al árbol y lo cortamos trozo a trozo de forma controlada." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Trabajáis en sitios donde no entra la maquinaria?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Os encargáis de retirar los restos de la poda o la tala?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿En qué zonas trabajáis?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Principalmente en Navarra (Bortziri / Cinco Villas) y en el País Vasco. Consúltanos tu caso sin compromiso." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Zenbat balio du zuhaitz handi bat altueran moztzeak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kostua altueraren, ingurunearen eta sarbidearen zailtasunaren araberakoa da. Igoeraz eta gururik gabe lan eginez, prezioa merkatzen dugu makineria astunaren aldean. Konpromisorik gabeko aurrekontua ematen dugu."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "Noiz behar dut altuerako mozketa kontrolatu bat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zuhaitzak erortzeko arriskua duenean, etxe edo hesi batetik gertu dagoenean, edo makineriarekin sartu ezin denean. Zuhaitzera igo eta zatika mozten dugu, modu kontrolatuan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Etxe bati itsatsitako zuhaitz bat ken dezakezue kalterik egin gabe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bai. Zuhaitza goitik behera zatika apeatzen dugu eta moztutako zati bakoitza sokaz jaisten dugu, inguruko etxe, hesi eta instalazioak babestuz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Makineria sartzen ez den tokietan lan egiten duzue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bai. Gururako eta makinetarako sarbide zaileko guneetan espezializatuta gaude. Igoera-teknikekin lan eginez kostuak merkatzen ditugu, ez baitugu bitarteko handirik behar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inausketako edo mozketako hondarrak kentzeaz arduratzen zarete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bai, inausketa eta mozketako hondakinak kudeatzen ditugu eta eremua garbi uzten dugu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Zein eremutan lan egiten duzue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nafarroan (Lesaka, Bera, Igantzi, Etxalar eta gainerako Bortziri / Bost Iriak) eta Gipuzkoan (Irun, Hondarribia eta inguruak). Galdetu zure kasua konpromisorik gabe."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body data-page="servicios">
@@ -275,6 +311,41 @@
             <h3 style="margin-top:.5rem">Gunea garbitzen dugu</h3>
             <p style="color:var(--text-dim); margin-top:.6rem">Hondakinak kudeatzen ditugu eta dena jasota uzten dugu.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Ohiko galderak</p>
+          <h2>Altuerako inausketa eta mozketari buruzko ohiko zalantzak.</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary class="faq__q">Zenbat balio du zuhaitz handi bat altueran moztzeak?</summary>
+            <p class="faq__a">Kostua altueraren, ingurunearen eta sarbidearen zailtasunaren araberakoa da. Igoeraz eta gururik gabe lan eginez, prezioa merkatzen dugu makineria astunaren aldean. Konpromisorik gabeko aurrekontua ematen dugu.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Noiz behar dut altuerako mozketa kontrolatu bat?</summary>
+            <p class="faq__a">Zuhaitzak erortzeko arriskua duenean, etxe edo hesi batetik gertu dagoenean, edo makineriarekin sartu ezin denean. Zuhaitzera igo eta zatika mozten dugu, modu kontrolatuan.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Etxe bati itsatsitako zuhaitz bat ken dezakezue kalterik egin gabe?</summary>
+            <p class="faq__a">Bai. Zuhaitza goitik behera zatika apeatzen dugu eta moztutako zati bakoitza sokaz jaisten dugu, inguruko etxe, hesi eta instalazioak babestuz.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Makineria sartzen ez den tokietan lan egiten duzue?</summary>
+            <p class="faq__a">Bai. Gururako eta makinetarako sarbide zaileko guneetan espezializatuta gaude. Igoera-teknikekin lan eginez kostuak merkatzen ditugu, ez baitugu bitarteko handirik behar.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Inausketako edo mozketako hondarrak kentzeaz arduratzen zarete?</summary>
+            <p class="faq__a">Bai, inausketa eta mozketako hondakinak kudeatzen ditugu eta eremua garbi uzten dugu.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Zein eremutan lan egiten duzue?</summary>
+            <p class="faq__a">Nafarroan (Lesaka, Bera, Igantzi, Etxalar eta gainerako Bortziri / Bost Iriak) eta Gipuzkoan (Irun, Hondarribia eta inguruak). Galdetu zure kasua konpromisorik gabe.</p>
+          </details>
         </div>
       </div>
     </section>

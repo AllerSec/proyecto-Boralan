@@ -47,45 +47,81 @@
   <link rel="stylesheet" href="/assets/css/components.css">
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <!-- Breadcrumb schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://boralan.eus/" },
-      { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://boralan.eus/servicios/" }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://boralan.eus/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": "https://boralan.eus/servicios/"
+    }
+  ]
+}
   </script>
-  <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuándo necesito una tala controlada en altura?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cuando un árbol presenta riesgo de caída, está cerca de una casa o un vallado, o no se puede entrar con maquinaria. Subimos al árbol y lo cortamos trozo a trozo de forma controlada." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Trabajáis en sitios donde no entra la maquinaria?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Os encargáis de retirar los restos de la poda o la tala?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿En qué zonas trabajáis?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Principalmente en Navarra (Bortziri / Cinco Villas) y en el País Vasco. Consúltanos tu caso sin compromiso." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta talar un árbol grande en altura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El coste depende de la altura, el entorno y la dificultad de acceso. Al trabajar por trepa y sin grúa, abaratamos el precio frente a la maquinaria pesada. Damos presupuesto sin compromiso."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo necesito una tala controlada en altura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando un árbol presenta riesgo de caída, está cerca de una casa o un vallado, o no se puede entrar con maquinaria. Subimos al árbol y lo cortamos trozo a trozo de forma controlada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Podéis quitar un árbol pegado a una casa sin dañarla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Apeamos el árbol trozo a trozo desde arriba y bajamos cada corte con cuerda, protegiendo casas, vallados e instalaciones cercanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajáis en sitios donde no entra la maquinaria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Os encargáis de retirar los restos de la poda o la tala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué zonas trabajáis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Navarra (Lesaka, Bera, Igantzi, Etxalar y el resto de Bortziri / Cinco Villas) y en Gipuzkoa (Irun, Hondarribia y alrededores). Consúltanos tu caso sin compromiso."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body data-page="servicios">
@@ -275,6 +311,41 @@
             <h3 style="margin-top:.5rem">Limpiamos la zona</h3>
             <p style="color:var(--text-dim); margin-top:.6rem">Gestionamos los residuos y dejamos todo recogido.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Dudas habituales sobre poda y tala en altura.</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary class="faq__q">¿Cuánto cuesta talar un árbol grande en altura?</summary>
+            <p class="faq__a">El coste depende de la altura, el entorno y la dificultad de acceso. Al trabajar por trepa y sin grúa, abaratamos el precio frente a la maquinaria pesada. Damos presupuesto sin compromiso.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">¿Cuándo necesito una tala controlada en altura?</summary>
+            <p class="faq__a">Cuando un árbol presenta riesgo de caída, está cerca de una casa o un vallado, o no se puede entrar con maquinaria. Subimos al árbol y lo cortamos trozo a trozo de forma controlada.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">¿Podéis quitar un árbol pegado a una casa sin dañarla?</summary>
+            <p class="faq__a">Sí. Apeamos el árbol trozo a trozo desde arriba y bajamos cada corte con cuerda, protegiendo casas, vallados e instalaciones cercanas.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">¿Trabajáis en sitios donde no entra la maquinaria?</summary>
+            <p class="faq__a">Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">¿Os encargáis de retirar los restos de la poda o la tala?</summary>
+            <p class="faq__a">Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">¿En qué zonas trabajáis?</summary>
+            <p class="faq__a">En Navarra (Lesaka, Bera, Igantzi, Etxalar y el resto de Bortziri / Cinco Villas) y en Gipuzkoa (Irun, Hondarribia y alrededores). Consúltanos tu caso sin compromiso.</p>
+          </details>
         </div>
       </div>
     </section>
