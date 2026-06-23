@@ -24,8 +24,8 @@ module.exports = {
     "Correo electrónico:": "Helbide elektronikoa:",
     "Teléfono:": "Telefonoa:",
     "2. Objeto": "2. Xedea",
-    "El presente aviso legal regula el uso del sitio web boralan.es, cuya finalidad es presentar los servicios de poda y tala de árboles en altura ofrecidos por Boralan y facilitar el contacto con clientes potenciales.":
-      "Lege-ohar honek boralan.es webgunearen erabilera arautzen du, zeinaren helburua Boralanek eskaintzen dituen altuerako zuhaitzen inausketa eta mozketa zerbitzuak aurkeztea eta bezero potentzialekin harremana erraztea baita.",
+    "El presente aviso legal regula el uso del sitio web boralan.eus, cuya finalidad es presentar los servicios de poda y tala de árboles en altura ofrecidos por Boralan y facilitar el contacto con clientes potenciales.":
+      "Lege-ohar honek boralan.eus webgunearen erabilera arautzen du, zeinaren helburua Boralanek eskaintzen dituen altuerako zuhaitzen inausketa eta mozketa zerbitzuak aurkeztea eta bezero potentzialekin harremana erraztea baita.",
     "3. Condiciones de uso": "3. Erabilera-baldintzak",
     "La utilización del sitio web atribuye la condición de usuario e implica la aceptación plena de todas las cláusulas de este aviso legal. El usuario se compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades ilícitas o contrarias a la buena fe.":
       "Webgunea erabiltzeak erabiltzaile-izaera ematen du eta lege-ohar honen klausula guztiak erabat onartzea dakar. Erabiltzaileak edukiak modu egokian erabiltzeko konpromisoa hartzen du, eta ez ditu jarduera ez-zilegietarako edo fede onaren aurkakoetarako erabiliko.",
@@ -116,8 +116,8 @@ module.exports = {
     "Correo electrónico:": "E-mail :",
     "Teléfono:": "Téléphone :",
     "2. Objeto": "2. Objet",
-    "El presente aviso legal regula el uso del sitio web boralan.es, cuya finalidad es presentar los servicios de poda y tala de árboles en altura ofrecidos por Boralan y facilitar el contacto con clientes potenciales.":
-      "Les présentes mentions légales régissent l'utilisation du site boralan.es, dont l'objet est de présenter les services d'élagage et d'abattage d'arbres en hauteur proposés par Boralan et de faciliter le contact avec des clients potentiels.",
+    "El presente aviso legal regula el uso del sitio web boralan.eus, cuya finalidad es presentar los servicios de poda y tala de árboles en altura ofrecidos por Boralan y facilitar el contacto con clientes potenciales.":
+      "Les présentes mentions légales régissent l'utilisation du site boralan.eus, dont l'objet est de présenter les services d'élagage et d'abattage d'arbres en hauteur proposés par Boralan et de faciliter le contact avec des clients potentiels.",
     "3. Condiciones de uso": "3. Conditions d'utilisation",
     "La utilización del sitio web atribuye la condición de usuario e implica la aceptación plena de todas las cláusulas de este aviso legal. El usuario se compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades ilícitas o contrarias a la buena fe.":
       "L'utilisation du site confère la qualité d'utilisateur et implique l'acceptation pleine et entière de toutes les clauses des présentes mentions légales. L'utilisateur s'engage à faire un usage approprié des contenus et à ne pas les employer à des fins illicites ou contraires à la bonne foi.",
@@ -206,8 +206,8 @@ module.exports = {
     "Correo electrónico:": "Email:",
     "Teléfono:": "Phone:",
     "2. Objeto": "2. Purpose",
-    "El presente aviso legal regula el uso del sitio web boralan.es, cuya finalidad es presentar los servicios de poda y tala de árboles en altura ofrecidos por Boralan y facilitar el contacto con clientes potenciales.":
-      "This legal notice governs the use of the boralan.es website, whose purpose is to present the tree pruning and felling services at height offered by Boralan and to facilitate contact with potential clients.",
+    "El presente aviso legal regula el uso del sitio web boralan.eus, cuya finalidad es presentar los servicios de poda y tala de árboles en altura ofrecidos por Boralan y facilitar el contacto con clientes potenciales.":
+      "This legal notice governs the use of the boralan.eus website, whose purpose is to present the tree pruning and felling services at height offered by Boralan and to facilitate contact with potential clients.",
     "3. Condiciones de uso": "3. Terms of use",
     "La utilización del sitio web atribuye la condición de usuario e implica la aceptación plena de todas las cláusulas de este aviso legal. El usuario se compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades ilícitas o contrarias a la buena fe.":
       "Use of the website confers user status and implies full acceptance of all the clauses of this legal notice. The user undertakes to make appropriate use of the content and not to use it for unlawful activities or activities contrary to good faith.",

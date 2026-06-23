@@ -9,8 +9,8 @@
        · <title>/<meta> por idioma, <html lang>, hreflang + x-default
        · rutas con BASE (+ prefijo de idioma para enlaces internos)
 
-   Uso:  node build.js
-   Dominio propio:  BASE_PATH="" node build.js
+   Uso (dominio propio, p.ej. boralan.eus en Netlify):  node build.js
+   GitHub Pages en subcarpeta:  BASE_PATH="/proyecto-Boralan" node build.js
    ========================================================================== */
 const fs = require("fs");
 const path = require("path");
@@ -21,8 +21,8 @@ for (const lang of Object.keys(LEGAL)) {
   T[lang] = Object.assign({}, T[lang], LEGAL[lang]);
 }
 
-const BASE = process.env.BASE_PATH !== undefined ? process.env.BASE_PATH : "/proyecto-Boralan";
-const SITE = "https://boralan.es"; // dominio canónico para SEO (hreflang/og)
+const BASE = process.env.BASE_PATH !== undefined ? process.env.BASE_PATH : "";
+const SITE = "https://boralan.eus"; // dominio canónico para SEO (hreflang/og)
 
 const WA_MSG = encodeURIComponent("Hola, he visto vuestra web y quería pedir un presupuesto para un trabajo de poda o tala.");
 const WA_LINK = `https://wa.me/34628850027?text=${WA_MSG}`;
@@ -185,30 +185,37 @@ function inject(html, name, value) {
 /* aplica BASE (+prefijo idioma) a rutas root-relativas href/src/poster.
    langDir = "" para es, "/eu" etc. Solo enlaces internos de páginas reciben
    el prefijo de idioma; los assets (/assets, /site.webmanifest) NO. */
+// Prefijos de BASE históricos que pueden quedar quemados en las fuentes y deben
+// normalizarse a raíz ANTES de aplicar el BASE actual. Incluye el BASE actual y
+// el legado de GitHub Pages para que el build sea idempotente con cualquier BASE.
+const KNOWN_BASES = Array.from(new Set([BASE, "/proyecto-Boralan"].filter(Boolean)));
+
 function applyBase(html, langDir) {
   const ATTRS = "href|src|poster";
-  // normalizar: quitar BASE y cualquier prefijo de idioma previo -> raíz "/"
-  const baseEsc = BASE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  if (BASE) html = html.replace(new RegExp(`((?:${ATTRS})=")${baseEsc}/`, "g"), "$1/");
+  // 1) normalizar: quitar cualquier BASE conocido (actual o legado) -> raíz "/"
+  for (const b of KNOWN_BASES) {
+    const bEsc = b.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    html = html.replace(new RegExp(`((?:${ATTRS})=")${bEsc}/`, "g"), "$1/");
+    // también en srcset/imagesrcset (varias URLs separadas por espacios/comas)
+    html = html.replace(new RegExp(`${bEsc}/assets/`, "g"), "/assets/");
+  }
+  // 2) quitar cualquier prefijo de idioma previo -> raíz "/"
   for (const l of LANGS) {
     if (!l.dir) continue;
     const dEsc = l.dir.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     html = html.replace(new RegExp(`((?:${ATTRS})=")${dEsc}/`, "g"), "$1/");
   }
-  // aplicar prefijo de idioma SOLO a rutas internas de página (no assets ni manifest)
+  // 3) aplicar prefijo de idioma SOLO a rutas internas de página (no assets ni manifest)
   if (langDir) {
-    html = html.replace(new RegExp(`((?:href)=")\\/(?!\\/|assets\\/|site\\.webmanifest|robots|sitemap)`, "g"), `$1${langDir}/`);
+    html = html.replace(new RegExp(`((?:href)=")\\/(?!\\/|assets\\/|site\\.webmanifest|robots|sitemap|llms)`, "g"), `$1${langDir}/`);
   }
-  // aplicar BASE a todo lo que empiece por "/" (no protocolo-relativo)
-  if (BASE) html = html.replace(new RegExp(`((?:${ATTRS})=")\\/(?!\\/)`, "g"), `$1${BASE}/`);
-  // srcset/imagesrcset: contienen varias URLs; los assets nunca llevan prefijo de
-  // idioma, así que basta con normalizar el BASE en cada "/assets/..." que aparezca.
+  // 4) aplicar BASE a todo lo que empiece por "/" (no protocolo-relativo)
   if (BASE) {
-    const baseEsc2 = BASE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    html = html.replace(new RegExp(`${baseEsc2}/assets/`, "g"), "/assets/"); // quitar BASE previo
-    html = html.replace(/(^|[\s,"])\/assets\//g, `$1${BASE}/assets/`);        // reaplicar BASE
+    html = html.replace(new RegExp(`((?:${ATTRS})=")\\/(?!\\/)`, "g"), `$1${BASE}/`);
+    // srcset/imagesrcset: reaplicar BASE en cada "/assets/..." que aparezca
+    html = html.replace(/(^|[\s,"])\/assets\//g, `$1${BASE}/assets/`);
   }
-  // resolver centinela del selector de idioma: @@LANGHREF@@/eu/ -> BASE/eu/
+  // 5) resolver centinela del selector de idioma: @@LANGHREF@@/eu/ -> BASE/eu/
   html = html.replace(/@@LANGHREF@@/g, BASE || "");
   return html;
 }
@@ -309,6 +316,18 @@ function buildEsPage(srcFile, pageKey) {
     html = html.replace(new RegExp(`(<a class="nav__link"[^>]*data-nav="${page}")`), `$1 aria-current="page"`);
   }
   html = html.replace(/<html lang="[^"]*"/, `<html lang="es"`);
+
+  // SEO: title, description, OG/twitter title+desc desde META (misma fuente que eu/fr/en)
+  const meta = META.es && META.es[pageKey];
+  if (meta) {
+    html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${meta.title}</title>`);
+    html = html.replace(/(<meta name="description" content=")[^"]*(")/, `$1${meta.desc}$2`);
+    html = html.replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${meta.title}$2`);
+    html = html.replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${meta.desc}$2`);
+    html = html.replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${meta.title}$2`);
+    html = html.replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${meta.desc}$2`);
+  }
+
   // hreflang + canonical
   const { hreflang, canonical } = hreflangBlock(pageKey, "es");
   html = html.replace(/\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">/g, "");

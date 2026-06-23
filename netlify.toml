@@ -1,0 +1,86 @@
+# ==========================================================================
+# Boralan — configuración de Netlify
+# Sitio estático ya compilado (node build.js). No hay paso de build en Netlify:
+# el HTML, CSS, JS e imágenes se publican tal cual desde la raíz del repo.
+# Dominio canónico: https://boralan.eus
+# ==========================================================================
+
+[build]
+  publish = "."
+  # Sin comando de build: los archivos ya vienen generados en el repositorio.
+  command = ""
+
+[build.environment]
+  # Por si en el futuro se quiere recompilar en Netlify con el BASE de dominio propio.
+  BASE_PATH = ""
+
+# --------------------------------------------------------------------------
+# Redirecciones de canonicalización de dominio
+# El dominio canónico es el apex boralan.eus. Redirigimos www -> apex (301).
+# --------------------------------------------------------------------------
+[[redirects]]
+  from = "https://www.boralan.eus/*"
+  to = "https://boralan.eus/:splat"
+  status = 301
+  force = true
+
+# Si añades el dominio boralan.es en Netlify (como dominio alias o secundario),
+# descomenta estos bloques para redirigir TODO el tráfico de .es al canónico .eus
+# y evitar contenido duplicado. (Requiere que boralan.es apunte a este sitio.)
+# [[redirects]]
+#   from = "https://boralan.es/*"
+#   to = "https://boralan.eus/:splat"
+#   status = 301
+#   force = true
+# [[redirects]]
+#   from = "https://www.boralan.es/*"
+#   to = "https://boralan.eus/:splat"
+#   status = 301
+#   force = true
+
+# --------------------------------------------------------------------------
+# Cabeceras de seguridad (todas las rutas)
+# --------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# --------------------------------------------------------------------------
+# Caché de assets estáticos versionables (1 año, inmutable)
+# Fuentes, imágenes, vídeos, CSS y JS. Si cambian, cambia el nombre del archivo
+# o se purga el deploy de Netlify, así que es seguro cachear de forma agresiva.
+# --------------------------------------------------------------------------
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Iconos / manifest: caché media
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# HTML: siempre revalidar para que los cambios de contenido se vean al instante
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# llms.txt / llms-full.txt: servir como texto plano UTF-8 (para LLMs y AI search)
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"

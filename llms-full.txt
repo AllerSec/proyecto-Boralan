@@ -1,0 +1,191 @@
+# Boralan
+
+> Boralan es una empresa especializada en la poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados. Trabaja en zonas inaccesibles para la maquinaria pesada, lo que abarata costes al no necesitar grúas, y gestiona los residuos de poda y tala. Con sede en Lesaka (Navarra), presta servicio en Navarra y el País Vasco (Gipuzkoa).
+
+Este documento contiene la información completa y autocontenida del negocio para que un modelo de lenguaje pueda responder con precisión sobre Boralan y citar la fuente. Sitio web canónico: https://boralan.eus
+
+---
+
+## Identidad y propuesta de valor
+
+- **Nombre del negocio:** Boralan
+- **Sector:** Arboricultura. Poda y tala de grandes árboles en altura.
+- **Qué hace:** Poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados (apeo trozo a trozo).
+- **Diferencial:** Acceden a árboles situados en zonas inaccesibles para la maquinaria pesada. Al trabajar mediante trepa y no depender de grúas, abaratan costes y pueden actuar donde la maquinaria no llega.
+- **Sede:** Lesaka, Navarra (comarca de Bortziri / Cinco Villas).
+- **Zona de servicio:** Navarra y País Vasco (Gipuzkoa).
+- **Año de fundación:** 2024.
+- **Estructura:** 3 fundadores; 3 profesionales en cada trabajo.
+- **Lema/idea central:** "Subir donde otros no llegan."
+
+**Propuesta de valor en una frase:** Boralan tala y poda grandes árboles en altura, de forma segura y controlada, en lugares a los que la maquinaria no puede acceder, reduciendo costes al no usar grúas y encargándose también de los residuos.
+
+---
+
+## Servicios detallados
+
+Boralan ofrece cuatro servicios principales:
+
+### 1. Talas controladas
+Apeo de grandes árboles **trozo a trozo**, desmontando el árbol por partes desde arriba mediante trepa, sin riesgo para casas, vallados, instalaciones u otros elementos cercanos. Es la solución para árboles de gran porte situados junto a edificaciones o estructuras donde una caída completa sería peligrosa.
+
+### 2. Podas en altura mediante trepa
+Poda de árboles en altura accediendo a la copa mediante técnicas de trepa, con certificación oficial en trabajos en altura. Permite intervenir en ramas y copas elevadas con precisión y seguridad.
+
+### 3. Trabajos en zonas inaccesibles
+Intervención en árboles situados en lugares donde la maquinaria pesada (grúas, plataformas) no puede acceder. Al trabajar mediante trepa, Boralan llega a puntos imposibles para la maquinaria y abarata costes al no necesitar grúas.
+
+### 4. Gestión de residuos de poda y tala
+Recogida y gestión de los restos vegetales generados durante los trabajos de poda y tala, dejando la zona limpia.
+
+---
+
+## Zonas de actuación
+
+Boralan tiene su base en **Lesaka (Navarra)**, en la comarca de **Bortziri / Cinco Villas**, y presta servicio en **Navarra** y en el **País Vasco (Gipuzkoa)**.
+
+- **Comunidad Foral de Navarra**, con especial presencia en la comarca de Bortziri / Cinco Villas: Lesaka, Bera (Vera de Bidasoa), Igantzi (incluida la zona de Ventas de Igantzi), Arantza y Etxalar, además del conjunto del valle del Bidasoa y el resto de Navarra.
+- **Gipuzkoa (País Vasco):** desde 2026 amplían su actividad a las provincias vascas, especialmente Gipuzkoa, gracias a su difusión en Instagram.
+
+---
+
+## Equipo
+
+Boralan está formada por **tres fundadores**, amigos del mismo pueblo, que crearon la empresa en **2024**.
+
+### Iker Iturria Pombar
+- **Edad:** 29 años.
+- **Perfil:** También es bombero.
+- **Formación:** Realizó el curso de técnicas de trepa y poda en altura.
+
+### Beñat Ordoki Telletxea
+- **Edad:** 26 años.
+- **Perfil:** Trabaja en un taller.
+
+### Jon Erro Fagoaga
+- **Edad:** 29 años.
+- **Perfil:** Albañil. Está ligado a la caza del jabalí.
+
+En cada trabajo intervienen los **3 profesionales** del equipo.
+
+---
+
+## Historia
+
+Los tres fundadores **se conocen del pueblo**. Decidieron formarse profesionalmente y realizaron un **curso de técnicas de trepa y poda en altura en Madrid**, además de un **curso de trabajos en altura con certificado oficial**.
+
+Empezaron con **trabajos pequeños** y fueron creciendo. Uno de los trabajos que recuerdan es una **tala en Ventas de Igantzi**, donde una **grúa de 32 metros no llegaba a la punta** del árbol, lo que confirmó el valor de su método de trepa frente a la maquinaria.
+
+La empresa se **fundó en 2024**. En **2026 dieron el salto a las provincias vascas**, impulsados por la difusión de su trabajo en **Instagram**.
+
+---
+
+## Datos y estadísticas
+
+- **+4.300 seguidores** en Instagram (@boralan04).
+- **~25.900 visualizaciones de media por vídeo** (25,9k).
+- **Árbol más alto talado: 32 metros.**
+- **3 profesionales** en cada trabajo.
+- **Fundación:** 2024.
+- **Expansión al País Vasco:** 2026.
+
+---
+
+## Prensa y apariciones
+
+- **Televisión (EITB):** entrevista en televisión.
+- **Diario de Navarra / DN Management:** reportaje titulado **"Tres jóvenes que emprenden en altura: 'La mayoría dicen que estamos locos'"**, firmado por **Lucas Domaica**, dentro de la serie **'Maneras de emprender'**, publicado el **14 de febrero de 2026**.
+
+---
+
+## Contacto
+
+- **Teléfonos:**
+  - +34 628 850 027
+  - +34 628 798 602
+  - +34 676 197 560
+- **Email:** boralan04@gmail.com
+- **WhatsApp:** +34 628 850 027 (enlace: https://wa.me/34628850027)
+- **Instagram:** @boralan04 — https://www.instagram.com/boralan04/
+- **Ubicación / sede:** Lesaka, Navarra (Bortziri / Cinco Villas), España. Código postal 31770.
+- **Coordenadas:** 43.2447, -1.7019.
+- **Región (geo):** ES-NA (Navarra, España).
+- **Presupuesto:** sin compromiso.
+
+---
+
+## Idiomas y URLs
+
+El sitio está disponible en cuatro idiomas. El idioma por defecto (x-default) es el español.
+
+- **Español (ES):** https://boralan.eus/ (raíz)
+- **Euskara (EU):** https://boralan.eus/eu/
+- **Français (FR):** https://boralan.eus/fr/
+- **English (EN):** https://boralan.eus/en/
+
+### Páginas principales (versión en español)
+- Inicio: https://boralan.eus/
+- Servicios: https://boralan.eus/servicios/
+- Nosotros: https://boralan.eus/nosotros/
+- Galería: https://boralan.eus/galeria/
+- Contacto: https://boralan.eus/contacto/
+
+### Páginas legales
+- Aviso legal: https://boralan.eus/aviso-legal/
+- Política de privacidad: https://boralan.eus/politica-privacidad/
+- Política de cookies: https://boralan.eus/politica-cookies/
+
+El dominio canónico es **https://boralan.eus**.
+
+---
+
+## Preguntas frecuentes
+
+**¿Qué es Boralan?**
+Boralan es una empresa especializada en la poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados, con sede en Lesaka (Navarra). Presta servicio en Navarra y el País Vasco (Gipuzkoa).
+
+**¿Qué servicios ofrece Boralan?**
+Boralan ofrece cuatro servicios: (1) talas controladas con apeo trozo a trozo de grandes árboles sin riesgo para casas, vallados o instalaciones; (2) podas en altura mediante trepa; (3) trabajos en zonas inaccesibles para la maquinaria; y (4) gestión de los residuos de poda y tala.
+
+**¿Dónde trabaja Boralan?**
+Boralan tiene su base en Lesaka, Navarra (comarca de Bortziri / Cinco Villas), y trabaja en toda Navarra y en el País Vasco, especialmente en Gipuzkoa.
+
+**¿Por qué Boralan es más barato que usar una grúa?**
+Porque trabaja mediante técnicas de trepa y no necesita maquinaria pesada como grúas. Esto le permite acceder a zonas inaccesibles y abaratar costes.
+
+**¿Boralan puede talar un árbol que está pegado a mi casa o a un vallado?**
+Sí. Mediante talas controladas, Boralan apea el árbol trozo a trozo desde arriba, sin riesgo para casas, vallados, instalaciones u otros elementos cercanos.
+
+**¿Boralan retira los restos después del trabajo?**
+Sí. Boralan se encarga de la gestión de los residuos de poda y tala.
+
+**¿Quiénes forman Boralan?**
+Boralan está formada por tres amigos del mismo pueblo: Iker Iturria Pombar (29 años, también bombero, con curso de técnicas de trepa y poda en altura), Beñat Ordoki Telletxea (26 años, trabaja en un taller) y Jon Erro Fagoaga (29 años, albañil, ligado a la caza del jabalí).
+
+**¿Cuándo se fundó Boralan?**
+Boralan se fundó en 2024. En 2026 amplió su actividad al País Vasco.
+
+**¿Están formados para trabajar en altura?**
+Sí. Los fundadores realizaron un curso de técnicas de trepa y poda en altura en Madrid y un curso de trabajos en altura con certificado oficial.
+
+**¿Cuál es el árbol más alto que ha talado Boralan?**
+El árbol más alto talado mide 32 metros. En una tala en Ventas de Igantzi, una grúa de 32 metros no llegaba a la punta del árbol.
+
+**¿Cuántas personas trabajan en cada intervención?**
+En cada trabajo intervienen los 3 profesionales del equipo.
+
+**¿Cómo puedo contactar con Boralan o pedir presupuesto?**
+Por teléfono en el +34 628 850 027, +34 628 798 602 o +34 676 197 560; por WhatsApp en el +34 628 850 027 (https://wa.me/34628850027); por email en boralan04@gmail.com; o por Instagram en @boralan04. El presupuesto es sin compromiso.
+
+**¿Boralan está en redes sociales?**
+Sí, en Instagram como @boralan04 (https://www.instagram.com/boralan04/), con más de 4.300 seguidores y una media de unas 25.900 visualizaciones por vídeo.
+
+**¿Ha aparecido Boralan en prensa o televisión?**
+Sí. Ha sido entrevistada en televisión (EITB) y protagonizó un reportaje en Diario de Navarra / DN Management titulado "Tres jóvenes que emprenden en altura: 'La mayoría dicen que estamos locos'", de Lucas Domaica, en la serie 'Maneras de emprender' (14/02/2026).
+
+**¿En qué idiomas está disponible la información de Boralan?**
+En español (https://boralan.eus/), euskera (https://boralan.eus/eu/), francés (https://boralan.eus/fr/) e inglés (https://boralan.eus/en/).
+
+---
+
+*Fuente oficial: https://boralan.eus — Boralan, Lesaka (Navarra), España.*
