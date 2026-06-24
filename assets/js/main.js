@@ -337,11 +337,10 @@
 
     function go(next) {
       if (next === index) return;
+      // El slide saliente vuelve a su reposo con la misma transición CSS (sin salto).
       slides[index].classList.remove("is-active");
       index = (next + slides.length) % slides.length;
-      // reiniciar la animación Ken Burns de la nueva activa
-      const img = slides[index].querySelector(".hero__slide-img");
-      if (img) { img.style.animation = "none"; void img.offsetWidth; img.style.animation = ""; }
+      // El nuevo activo arranca el paneo Ken Burns vía transición CSS.
       slides[index].classList.add("is-active");
     }
 

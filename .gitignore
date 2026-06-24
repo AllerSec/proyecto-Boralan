@@ -15,6 +15,7 @@ build-assets.sh
 # Backups de originales (pesados, no necesarios en producción)
 assets/img/orig/
 assets/video/orig/
+hero-primera-imagen.png
 
 # Sistema
 .DS_Store
