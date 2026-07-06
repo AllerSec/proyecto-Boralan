@@ -26,7 +26,7 @@ const SITE = "https://boralan.eus"; // dominio canónico para SEO (hreflang/og)
 
 const WA_MSG = encodeURIComponent("Hola, he visto vuestra web y quería pedir un presupuesto para un trabajo de poda o tala.");
 const WA_LINK = `https://wa.me/34628850027?text=${WA_MSG}`;
-const BRAND_MARK = `<svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true"><rect class="brand__trunk" x="44" y="6" width="12" height="88" rx="6"/><path class="brand__climber" d="M58 18c6 0 11 4 11 10 0 4-2 7-6 9l4 8-7 3-3-7-5 2 1 9-7 1-2-13c-3-1-5-4-5-7 0-5 4-9 9-9l3-9 4 0z"/><path class="brand__rope" d="M62 12 56 40" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>`;
+const BRAND_MARK = `<img class="brand__mark" src="/assets/img/logo-mark.webp" width="1024" height="1536" alt="" aria-hidden="true">`;
 
 // Páginas del sitio: clave = ruta lógica; valor = ruta de archivo fuente (es)
 const PAGES = {
@@ -610,6 +610,21 @@ function writeOut(outFile, content) {
 }
 
 /* ===================== EJECUCIÓN ===================== */
+// 0) CSS combinado (base.css + components.css -> styles.css) para servir un solo
+//    archivo y evitar un salto extra en la cadena de solicitudes críticas del render.
+(function buildCombinedCss() {
+  const dir = path.join(process.cwd(), "assets/css");
+  const base = fs.readFileSync(path.join(dir, "base.css"), "utf8");
+  const components = fs.readFileSync(path.join(dir, "components.css"), "utf8");
+  const header = "/* ==========================================================================\n" +
+    "   BORALAN — Hoja de estilos combinada (base + componentes)\n" +
+    "   Generada por build.js a partir de base.css + components.css. No editar a mano:\n" +
+    "   edita esos dos archivos y vuelve a ejecutar node build.js.\n" +
+    "   ========================================================================== */\n\n";
+  fs.writeFileSync(path.join(dir, "styles.css"), header + base + "\n" + components, "utf8");
+  console.log("✓ assets/css/styles.css (combinado)");
+})();
+
 // 1) Español en la raíz (sobre los archivos fuente)
 for (const [pageKey, srcRel] of Object.entries(PAGES)) {
   const src = path.join(process.cwd(), srcRel);

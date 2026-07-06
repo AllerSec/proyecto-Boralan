@@ -313,9 +313,16 @@ strong { font-weight: 600; }
   letter-spacing: -0.03em;
   line-height: 1;
 }
-.brand__mark { width: 34px; height: 34px; flex: none; }
-.brand__mark path, .brand__mark rect { fill: var(--text); transition: fill .3s; }
-.brand:hover .brand__climber { fill: var(--accent); }
+.brand__mark {
+  height: 34px;
+  width: auto;
+  flex: none;
+  filter: brightness(0) invert(1);
+  transition: filter .3s;
+}
+.brand:hover .brand__mark { filter: brightness(0) saturate(100%) invert(62%) sepia(56%) saturate(2476%) hue-rotate(357deg) brightness(101%) contrast(101%); }
+.site-header .brand__mark { height: 52px; }
+.site-header.is-scrolled .brand__mark { height: 44px; }
 
 .nav { display: none; }
 @media (min-width: 920px) {

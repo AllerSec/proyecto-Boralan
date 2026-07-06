@@ -43,8 +43,7 @@
   <link rel="preload" href="/assets/fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
   <script>document.documentElement.classList.remove('no-js');</script>
 
   <script type="application/ld+json">
@@ -103,7 +102,7 @@
   <!--#HEADER#-->
   <header class="site-header" data-header>
     <div class="container header__inner">
-      <a class="brand" href="/eu/" aria-label="Boralan — hasiera"><svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true"><rect class="brand__trunk" x="44" y="6" width="12" height="88" rx="6"/><path class="brand__climber" d="M58 18c6 0 11 4 11 10 0 4-2 7-6 9l4 8-7 3-3-7-5 2 1 9-7 1-2-13c-3-1-5-4-5-7 0-5 4-9 9-9l3-9 4 0z"/><path class="brand__rope" d="M62 12 56 40" stroke="currentColor" stroke-width="1.5" fill="none"/></svg><span>boralan</span></a>
+      <a class="brand" href="/eu/" aria-label="Boralan — hasiera"><img class="brand__mark" src="/assets/img/logo-mark.webp" width="1024" height="1536" alt="" aria-hidden="true"><span>boralan</span></a>
       <nav class="nav" aria-label="Nabigazio nagusia">
         <a class="nav__link" href="/eu/" data-nav="inicio">Hasiera</a>
         <a class="nav__link" href="/eu/servicios/" data-nav="servicios">Zerbitzuak</a>
@@ -145,7 +144,7 @@
     <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="page-hero__bg" data-parallax-wrap>
-        <img src="/assets/img/equipo-boralan-retrato-1920.webp" data-parallax="0.12" width="1920" height="1280" alt="Iker, Beñat y Jon, el equipo de Boralan, con sus motosierras" fetchpriority="high">
+        <img src="/assets/img/equipo-boralan-retrato-1920.webp" srcset="/assets/img/equipo-boralan-retrato-480.webp 480w, /assets/img/equipo-boralan-retrato-768.webp 768w, /assets/img/equipo-boralan-retrato-1200.webp 1200w, /assets/img/equipo-boralan-retrato-1920.webp 1920w" sizes="100vw" data-parallax="0.12" width="1920" height="1280" alt="Iker, Beñat y Jon, el equipo de Boralan, con sus motosierras" fetchpriority="high">
       </div>
       <div class="container">
         <nav class="breadcrumb" aria-label="Ogi-apurrak">
@@ -167,7 +166,7 @@
             <p>Inausketa eta mozketen hondakinak kudeatzen ditugu.</p>
           </div>
           <div class="split__media split__media--tall" data-reveal data-reveal-y="60" data-lightbox>
-            <img src="/assets/img/equipo-tocon-montana-full.webp" width="899" height="1321" loading="lazy" alt="El equipo de Boralan sobre el tocón de un árbol talado en la montaña">
+            <img src="/assets/img/equipo-tocon-montana-full.webp" srcset="/assets/img/equipo-tocon-montana-480.webp 480w, /assets/img/equipo-tocon-montana-768.webp 768w, /assets/img/equipo-tocon-montana-full.webp 899w" sizes="(max-width: 899px) 100vw, 50vw" width="899" height="1321" loading="lazy" alt="El equipo de Boralan sobre el tocón de un árbol talado en la montaña">
             <div class="split__sticker">2024tik <span>Lesaka · Bortziri</span></div>
           </div>
         </div>
@@ -185,7 +184,7 @@
         <div class="grid md:cols-3" data-reveal-group>
           <article class="card" data-reveal-item data-tilt="4">
             <div class="media ratio-1-1">
-              <img src="/assets/img/retrato-iker-768.webp" srcset="/assets/img/retrato-iker-480.webp 480w, /assets/img/retrato-iker-768.webp 768w" sizes="(max-width: 768px) 100vw, 33vw" width="768" height="768" loading="lazy" alt="Iker Iturria, Boralan taldeko kidea">
+              <img src="/assets/img/retrato-iker-768.webp" srcset="/assets/img/retrato-iker-480.webp 480w, /assets/img/retrato-iker-768.webp 768w" sizes="(max-width: 768px) 100vw, 33vw" width="768" height="768" loading="lazy" alt="Iker Iturria, miembro del equipo de Boralan">
             </div>
             <div class="service-card__body">
               <h3>Iker Iturria</h3>
@@ -194,7 +193,7 @@
           </article>
           <article class="card" data-reveal-item data-tilt="4">
             <div class="media ratio-1-1">
-              <img src="/assets/img/retrato-benat-768.webp" srcset="/assets/img/retrato-benat-480.webp 480w, /assets/img/retrato-benat-768.webp 768w" sizes="(max-width: 768px) 100vw, 33vw" width="768" height="768" loading="lazy" alt="Beñat Ordoki, Boralan taldeko kidea">
+              <img src="/assets/img/retrato-benat-768.webp" srcset="/assets/img/retrato-benat-480.webp 480w, /assets/img/retrato-benat-768.webp 768w" sizes="(max-width: 768px) 100vw, 33vw" width="768" height="768" loading="lazy" alt="Beñat Ordoki, miembro del equipo de Boralan">
             </div>
             <div class="service-card__body">
               <h3>Beñat Ordoki</h3>
@@ -203,7 +202,7 @@
           </article>
           <article class="card" data-reveal-item data-tilt="4">
             <div class="media ratio-1-1">
-              <img src="/assets/img/retrato-jon-768.webp" srcset="/assets/img/retrato-jon-480.webp 480w, /assets/img/retrato-jon-768.webp 768w" sizes="(max-width: 768px) 100vw, 33vw" width="768" height="768" loading="lazy" alt="Jon Erro, Boralan taldeko kidea">
+              <img src="/assets/img/retrato-jon-768.webp" srcset="/assets/img/retrato-jon-480.webp 480w, /assets/img/retrato-jon-768.webp 768w" sizes="(max-width: 768px) 100vw, 33vw" width="768" height="768" loading="lazy" alt="Jon Erro, miembro del equipo de Boralan">
             </div>
             <div class="service-card__body">
               <h3>Jon Erro</h3>
@@ -273,7 +272,7 @@
       <div class="container">
         <div class="cta-banner" data-reveal>
           <div class="cta-banner__bg">
-            <img src="/assets/img/hero-trepa-doble-arbol-1600.webp" width="1600" height="900" loading="lazy" alt="Dos arboristas de Boralan trepando árboles de gran altura">
+            <img src="/assets/img/hero-trepa-doble-arbol-1600.webp" srcset="/assets/img/hero-trepa-doble-arbol-480.webp 480w, /assets/img/hero-trepa-doble-arbol-768.webp 768w, /assets/img/hero-trepa-doble-arbol-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1240px" width="1600" height="900" loading="lazy" alt="Dos arboristas de Boralan trepando árboles de gran altura">
           </div>
           <div class="cta-banner__inner">
             <p class="eyebrow">Hitz egingo dugu?</p>
@@ -297,7 +296,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a class="brand" href="/eu/" aria-label="Boralan — hasiera"><svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true"><rect class="brand__trunk" x="44" y="6" width="12" height="88" rx="6"/><path class="brand__climber" d="M58 18c6 0 11 4 11 10 0 4-2 7-6 9l4 8-7 3-3-7-5 2 1 9-7 1-2-13c-3-1-5-4-5-7 0-5 4-9 9-9l3-9 4 0z"/><path class="brand__rope" d="M62 12 56 40" stroke="currentColor" stroke-width="1.5" fill="none"/></svg><span>boralan</span></a>
+          <a class="brand" href="/eu/" aria-label="Boralan — hasiera"><img class="brand__mark" src="/assets/img/logo-mark.webp" width="1024" height="1536" alt="" aria-hidden="true"><span>boralan</span></a>
           <p class="footer__tagline">Zuhaitz handien inausketa eta mozketa altueran. Igoera eta mozketa kontrolatuak Nafarroan eta Euskal Herrian.</p>
         </div>
         <div>
