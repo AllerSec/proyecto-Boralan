@@ -101,8 +101,8 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   background: linear-gradient(180deg, rgba(11, 13, 12, .55) 0%, rgba(11, 13, 12, .45) 50%, rgba(11, 13, 12, .8) 100%);
 }
 /* Columna divisoria entre laterales y carrusel: columna propia del grid con
-   una "cuerda" vertical (hairline que se desvanece en los extremos) y un
-   tramo naranja arriba — eco del guion del eyebrow y de la línea de scroll. */
+   una "cuerda" vertical (hairline que se desvanece en los extremos) por la
+   que baja el destello naranja animado por GSAP (main.js). */
 .hero__divider {
   position: relative;
   display: none;
@@ -121,17 +121,6 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
     rgba(244, 241, 234, .22) 15%,
     rgba(244, 241, 234, .22) 85%,
     transparent 100%);
-}
-.hero__divider::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 16%;
-  width: 3px;
-  height: clamp(42px, 7vh, 68px);
-  transform: translateX(-50%);
-  border-radius: 2px;
-  background: linear-gradient(180deg, var(--accent) 0%, rgba(255, 90, 31, 0) 100%);
 }
 /* Runner: destello naranja que recorre la cuerda en bucle (lo anima GSAP en
    main.js; lo crea allí mismo y solo existe en PC sin prefers-reduced-motion) */
