@@ -417,24 +417,21 @@
       (ctx) => {
         if (!ctx.conditions.wide || ctx.conditions.reduce) return;
 
-        const TRAVEL = 2.9;          // duración del recorrido (misma velocidad)
-        const PER_COLUMN = 2;        // destellos simultáneos por columna
+        const TRAVEL = 2.9;   // duración del recorrido
+        const PAUSE = 1.2;    // pausa entre vueltas por columna
 
         dividers.forEach((root, i) => {
-          for (let j = 0; j < PER_COLUMN; j++) {
-            const runner = document.createElement("span");
-            runner.className = "hero__divider-runner";
-            root.appendChild(runner);
+          const runner = document.createElement("span");
+          runner.className = "hero__divider-runner";
+          root.appendChild(runner);
 
-            // sin pausa entre vueltas; cada runner de la columna va desfasado
-            // media vuelta y las dos columnas, un cuarto: tren continuo
-            gsap.timeline({ repeat: -1, repeatRefresh: true, delay: i * (TRAVEL / 4) + j * (TRAVEL / PER_COLUMN) })
-              .fromTo(runner,
-                { y: 0, autoAlpha: 0 },
-                { y: () => root.offsetHeight + 180, duration: TRAVEL, ease: "sine.inOut" }, 0)
-              .to(runner, { autoAlpha: 0.9, duration: 0.5, ease: "power1.out" }, 0)
-              .to(runner, { autoAlpha: 0, duration: 0.6, ease: "power1.in" }, TRAVEL - 0.6);
-          }
+          // las dos columnas van desfasadas media vuelta: se alternan
+          gsap.timeline({ repeat: -1, repeatDelay: PAUSE, repeatRefresh: true, delay: 0.4 + i * ((TRAVEL + PAUSE) / 2) })
+            .fromTo(runner,
+              { y: 0, autoAlpha: 0 },
+              { y: () => root.offsetHeight + 180, duration: TRAVEL, ease: "sine.inOut" }, 0)
+            .to(runner, { autoAlpha: 0.9, duration: 0.5, ease: "power1.out" }, 0)
+            .to(runner, { autoAlpha: 0, duration: 0.6, ease: "power1.in" }, TRAVEL - 0.6);
         });
 
         // al dejar de cumplirse la condición, GSAP revierte los tweens;
