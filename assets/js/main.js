@@ -368,6 +368,54 @@
   }
 
   /* ----------------------------------------------------------------------
+     11c. VÍDEOS LATERALES del hero (autoplay mudo, pausados fuera de vista)
+     ---------------------------------------------------------------------- */
+  function initHeroSideVideos() {
+    const videos = Array.from(document.querySelectorAll("[data-hero-side-video]"));
+    if (!videos.length) return;
+    if (prefersReduced) {
+      videos.forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
+      return;
+    }
+    const inView = new WeakMap();
+    const sync = () => {
+      videos.forEach((v) => {
+        if (!document.hidden && inView.get(v) !== false) v.play().catch(() => {});
+        else v.pause();
+      });
+    };
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => inView.set(e.target, e.isIntersecting));
+        sync();
+      }, { threshold: 0.1 });
+      videos.forEach((v) => io.observe(v));
+    }
+    document.addEventListener("visibilitychange", sync);
+  }
+
+  /* ----------------------------------------------------------------------
+     11d. VÍDEO en hover de tarjetas de servicio (data-hover-video)
+     El vídeo vive detrás de la imagen y solo carga/reproduce al pasar
+     el ratón (o al enfocar con teclado). En táctil se queda la foto.
+     ---------------------------------------------------------------------- */
+  function initHoverVideos() {
+    const videos = document.querySelectorAll("[data-hover-video]");
+    if (!videos.length || prefersReduced) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    videos.forEach((video) => {
+      const card = video.closest(".card") || video.parentElement;
+      const play = () => { video.play().catch(() => {}); };
+      const stop = () => { video.pause(); };
+      card.addEventListener("mouseenter", play);
+      card.addEventListener("mouseleave", stop);
+      card.addEventListener("focusin", play);
+      card.addEventListener("focusout", stop);
+    });
+  }
+
+  /* ----------------------------------------------------------------------
      12. AÑO dinámico footer
      ---------------------------------------------------------------------- */
   function initYear() {
@@ -389,6 +437,8 @@
     initLightbox();
     initCarousels();
     initHeroCarousel();
+    initHeroSideVideos();
+    initHoverVideos();
     initYear();
     if (hasGSAP && window.ScrollTrigger) {
       window.addEventListener("load", () => ScrollTrigger.refresh());

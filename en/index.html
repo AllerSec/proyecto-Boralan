@@ -242,11 +242,11 @@
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"/></svg>
     </button>
     <ul class="mobile-nav__list" role="list">
-      <li><a class="mobile-nav__link" href="/en/"><span class="idx">01</span>Home</a></li>
-      <li><a class="mobile-nav__link" href="/en/servicios/"><span class="idx">02</span>Services</a></li>
-      <li><a class="mobile-nav__link" href="/en/nosotros/"><span class="idx">03</span>About</a></li>
-      <li><a class="mobile-nav__link" href="/en/galeria/"><span class="idx">04</span>Gallery</a></li>
-      <li><a class="mobile-nav__link" href="/en/contacto/"><span class="idx">05</span>Contact</a></li>
+      <li><a class="mobile-nav__link" href="/en/">Home</a></li>
+      <li><a class="mobile-nav__link" href="/en/servicios/">Services</a></li>
+      <li><a class="mobile-nav__link" href="/en/nosotros/">About</a></li>
+      <li><a class="mobile-nav__link" href="/en/galeria/">Gallery</a></li>
+      <li><a class="mobile-nav__link" href="/en/contacto/">Contact</a></li>
     </ul>
     <div class="mobile-nav__lang"><div class="lang-switch" role="group" aria-label="Change language"><a class="lang-switch__opt" href="/" hreflang="es" lang="es">ES</a><a class="lang-switch__opt" href="/eu/" hreflang="eu" lang="eu">EU</a><a class="lang-switch__opt" href="/fr/" hreflang="fr" lang="fr">FR</a><a class="lang-switch__opt is-active" href="/en/" hreflang="en" lang="en" aria-current="true">EN</a></div></div>
     <div class="mobile-nav__footer">
@@ -261,8 +261,11 @@
 
     <!-- ====================== HERO ====================== -->
     <section class="hero">
-      <!-- Carrusel de fondo: mismas fotos en PC y móvil, fundido cruzado + Ken Burns -->
+      <!-- Fondo: vídeos laterales en autoplay (solo PC) + carrusel central de fotos con fundido cruzado y Ken Burns -->
       <div class="hero__bg" data-hero-media>
+        <div class="hero__side hero__side--left" aria-hidden="true">
+          <video class="hero__side-video" data-hero-side-video autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-lateral-izquierda-poster.webp" src="/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
+        </div>
         <div class="hero__carousel" data-hero-carousel aria-label="Boralan's work" role="group" aria-roledescription="carrusel">
           <figure class="hero__slide is-active">
             <img class="hero__slide-img" width="1600" height="900"
@@ -300,6 +303,9 @@
               srcset="/assets/img/equipo-tocon-montana-480.webp 480w, /assets/img/equipo-tocon-montana-768.webp 768w, /assets/img/equipo-tocon-montana-full.webp 1600w"
               sizes="100vw" alt="El equipo de Boralan sobre el tocón de un árbol talado en la montaña" loading="lazy" decoding="async">
           </figure>
+        </div>
+        <div class="hero__side hero__side--right" aria-hidden="true">
+          <video class="hero__side-video" data-hero-side-video autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-lateral-derecha-poster.webp" src="/assets/video/hero-lateral-derecha.mp4" tabindex="-1"></video>
         </div>
       </div>
       <div class="container hero__content">
@@ -356,9 +362,9 @@
           <article class="card service-card" data-reveal-item data-tilt="4">
             <div class="media">
               <img src="/assets/img/tecnica-trepa-polea-768.webp" srcset="/assets/img/tecnica-trepa-polea-480.webp 480w, /assets/img/tecnica-trepa-polea-768.webp 768w" sizes="(max-width: 639px) 100vw, (max-width: 1099px) 50vw, 290px" width="768" height="1019" loading="lazy" alt="Controlled felling next to a building">
+              <video class="media__video" data-hover-video muted loop playsinline preload="none" src="/assets/video/servicio-talas-controladas.mp4" aria-hidden="true" tabindex="-1"></video>
             </div>
             <div class="service-card__body">
-              <span class="service-card__num">01</span>
               <h3>Controlled felling</h3>
               <p>Felling large trees piece by piece, with no risk to nearby houses, fences or installations.</p>
               <a class="service-card__foot" href="/en/servicios/">Learn more
@@ -370,9 +376,9 @@
           <article class="card service-card" data-reveal-item data-tilt="4">
             <div class="media">
               <img src="/assets/img/trabajo-vertical-cuerdas-768.webp" srcset="/assets/img/trabajo-vertical-cuerdas-480.webp 480w, /assets/img/trabajo-vertical-cuerdas-768.webp 768w" sizes="(max-width: 639px) 100vw, (max-width: 1099px) 50vw, 290px" width="768" height="960" loading="lazy" alt="A Boralan operator pruning at height with climbing ropes">
+              <video class="media__video" data-hover-video muted loop playsinline preload="none" src="/assets/video/servicio-podas-altura.mp4" aria-hidden="true" tabindex="-1"></video>
             </div>
             <div class="service-card__body">
-              <span class="service-card__num">02</span>
               <h3>Pruning at height</h3>
               <p>Climbing techniques to prune the canopy precisely, improving the tree's health and safety.</p>
               <a class="service-card__foot" href="/en/servicios/">Learn more
@@ -384,9 +390,9 @@
           <article class="card service-card" data-reveal-item data-tilt="4">
             <div class="media">
               <img src="/assets/img/poda-altura-haya-doble-768.webp" srcset="/assets/img/poda-altura-haya-doble-480.webp 480w, /assets/img/poda-altura-haya-doble-768.webp 768w" sizes="(max-width: 639px) 100vw, (max-width: 1099px) 50vw, 290px" width="768" height="960" loading="lazy" alt="The Boralan team working in a hard-to-reach area, in the canopy of a beech tree">
+              <video class="media__video" data-hover-video muted loop playsinline preload="none" src="/assets/video/servicio-zonas-inaccesibles.mp4" aria-hidden="true" tabindex="-1"></video>
             </div>
             <div class="service-card__body">
-              <span class="service-card__num">03</span>
               <h3>Inaccessible areas</h3>
               <p>We work where machinery can't reach. We cut costs by avoiding cranes and heavy equipment.</p>
               <a class="service-card__foot" href="/en/servicios/">Learn more
@@ -400,7 +406,6 @@
               <img src="/assets/img/tala-junto-edificacion-768.webp" srcset="/assets/img/tala-junto-edificacion-480.webp 480w, /assets/img/tala-junto-edificacion-768.webp 768w" sizes="(max-width: 639px) 100vw, (max-width: 1099px) 50vw, 290px" width="768" height="1018" loading="lazy" alt="Detalle de la técnica de trepa con polea sujeta al tronco">
             </div>
             <div class="service-card__body">
-              <span class="service-card__num">04</span>
               <h3>Waste management</h3>
               <p>We handle the pruning and felling debris. We leave the area clean and tidy.</p>
               <a class="service-card__foot" href="/en/servicios/">Learn more

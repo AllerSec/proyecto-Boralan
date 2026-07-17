@@ -79,9 +79,27 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   position: absolute;
   inset: 0;
   z-index: -2;
+  /* móvil/tablet: solo el carrusel central; en PC entran los vídeos laterales */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+/* Vídeos laterales del hero: autoplay mudo en bucle, solo en pantallas anchas */
+.hero__side { position: relative; display: none; overflow: hidden; }
+.hero__side-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__side--left { border-right: 1px solid rgba(255, 255, 255, .08); }
+.hero__side--right { border-left: 1px solid rgba(255, 255, 255, .08); }
+@media (min-width: 1100px) {
+  .hero__bg { grid-template-columns: minmax(230px, 24vw) minmax(0, 1fr) minmax(230px, 24vw); }
+  .hero__side { display: block; }
 }
 /* Carrusel: slides apilados, fundido cruzado por opacidad */
-.hero__carousel { position: absolute; inset: 0; }
+.hero__carousel { position: relative; }
 .hero__slide {
   position: absolute;
   inset: 0;

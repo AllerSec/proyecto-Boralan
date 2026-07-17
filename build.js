@@ -70,8 +70,8 @@ function navLinks(lang, mobile) {
     ["contacto/", "contacto", "Contacto"]
   ];
   if (mobile) {
-    return map.map(([slug, key, label], i) =>
-      `<li><a class="mobile-nav__link" href="${d}/${slug}"><span class="idx">0${i + 1}</span>${tr(label, lang)}</a></li>`
+    return map.map(([slug, key, label]) =>
+      `<li><a class="mobile-nav__link" href="${d}/${slug}">${tr(label, lang)}</a></li>`
     ).join("\n      ");
   }
   return map.map(([slug, key, label]) =>
