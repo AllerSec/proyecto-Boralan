@@ -417,25 +417,31 @@
       (ctx) => {
         if (!ctx.conditions.wide || ctx.conditions.reduce) return;
 
-        dividers.forEach((root, i) => {
-          const runner = document.createElement("span");
-          runner.className = "hero__divider-runner";
-          root.appendChild(runner);
+        const TRAVEL = 2.9;          // duración del recorrido (misma velocidad)
+        const PER_COLUMN = 2;        // destellos simultáneos por columna
 
-          gsap.timeline({ repeat: -1, repeatDelay: 0.7, repeatRefresh: true, delay: 0.5 + i * 1.8 })
-            .fromTo(runner,
-              { y: 0, autoAlpha: 0 },
-              { y: () => root.offsetHeight + 180, duration: 2.9, ease: "sine.inOut" }, 0)
-            .to(runner, { autoAlpha: 0.9, duration: 0.5, ease: "power1.out" }, 0)
-            .to(runner, { autoAlpha: 0, duration: 0.6, ease: "power1.in" }, 2.3);
+        dividers.forEach((root, i) => {
+          for (let j = 0; j < PER_COLUMN; j++) {
+            const runner = document.createElement("span");
+            runner.className = "hero__divider-runner";
+            root.appendChild(runner);
+
+            // sin pausa entre vueltas; cada runner de la columna va desfasado
+            // media vuelta y las dos columnas, un cuarto: tren continuo
+            gsap.timeline({ repeat: -1, repeatRefresh: true, delay: i * (TRAVEL / 4) + j * (TRAVEL / PER_COLUMN) })
+              .fromTo(runner,
+                { y: 0, autoAlpha: 0 },
+                { y: () => root.offsetHeight + 180, duration: TRAVEL, ease: "sine.inOut" }, 0)
+              .to(runner, { autoAlpha: 0.9, duration: 0.5, ease: "power1.out" }, 0)
+              .to(runner, { autoAlpha: 0, duration: 0.6, ease: "power1.in" }, TRAVEL - 0.6);
+          }
         });
 
         // al dejar de cumplirse la condición, GSAP revierte los tweens;
         // aquí retiramos los runners creados
         return () => {
           dividers.forEach((root) => {
-            const r = root.querySelector(".hero__divider-runner");
-            if (r) r.remove();
+            root.querySelectorAll(".hero__divider-runner").forEach((r) => r.remove());
           });
         };
       }
