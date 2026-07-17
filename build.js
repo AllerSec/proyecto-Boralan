@@ -26,7 +26,7 @@ const SITE = "https://boralan.eus"; // dominio canónico para SEO (hreflang/og)
 
 const WA_MSG = encodeURIComponent("Hola, he visto vuestra web y quería pedir un presupuesto para un trabajo de poda o tala.");
 const WA_LINK = `https://wa.me/34628850027?text=${WA_MSG}`;
-const BRAND_MARK = `<img class="brand__mark" src="/assets/img/logo-mark.webp" width="1024" height="1536" alt="" aria-hidden="true">`;
+const BRAND_MARK = `<img class="brand__mark" src="/assets/img/logo-mark-160.webp" width="106" height="160" alt="" aria-hidden="true">`;
 
 // Páginas del sitio: clave = ruta lógica; valor = ruta de archivo fuente (es)
 const PAGES = {
@@ -612,17 +612,26 @@ function writeOut(outFile, content) {
 /* ===================== EJECUCIÓN ===================== */
 // 0) CSS combinado (base.css + components.css -> styles.css) para servir un solo
 //    archivo y evitar un salto extra en la cadena de solicitudes críticas del render.
+/* Minificador CSS conservador: quita comentarios y espacios redundantes.
+   No toca el interior de calc() (los espacios alrededor de + y - se conservan
+   porque solo se colapsan espacios junto a {};:,> ). */
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*([{};,>])\s*/g, "$1")
+    .replace(/:\s+/g, ":")
+    .replace(/;}/g, "}")
+    .trim();
+}
+
 (function buildCombinedCss() {
   const dir = path.join(process.cwd(), "assets/css");
   const base = fs.readFileSync(path.join(dir, "base.css"), "utf8");
   const components = fs.readFileSync(path.join(dir, "components.css"), "utf8");
-  const header = "/* ==========================================================================\n" +
-    "   BORALAN — Hoja de estilos combinada (base + componentes)\n" +
-    "   Generada por build.js a partir de base.css + components.css. No editar a mano:\n" +
-    "   edita esos dos archivos y vuelve a ejecutar node build.js.\n" +
-    "   ========================================================================== */\n\n";
-  fs.writeFileSync(path.join(dir, "styles.css"), header + base + "\n" + components, "utf8");
-  console.log("✓ assets/css/styles.css (combinado)");
+  const header = "/* BORALAN — generada y minificada por build.js desde base.css + components.css. No editar a mano. */\n";
+  fs.writeFileSync(path.join(dir, "styles.css"), header + minifyCss(base + "\n" + components), "utf8");
+  console.log("✓ assets/css/styles.css (combinado + minificado)");
 })();
 
 // 1) Español en la raíz (sobre los archivos fuente)
