@@ -133,6 +133,24 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   border-radius: 2px;
   background: linear-gradient(180deg, var(--accent) 0%, rgba(255, 90, 31, 0) 100%);
 }
+/* Runner: destello naranja que recorre la cuerda en bucle (lo anima GSAP en
+   main.js; lo crea allí mismo y solo existe en PC sin prefers-reduced-motion) */
+.hero__divider-runner {
+  position: absolute;
+  left: 50%;
+  top: -90px;
+  width: 2px;
+  height: 72px;
+  margin-left: -1px;
+  border-radius: 2px;
+  background: linear-gradient(180deg,
+    rgba(255, 90, 31, 0) 0%,
+    rgba(255, 122, 71, .9) 55%,
+    rgba(255, 90, 31, 0) 100%);
+  box-shadow: 0 0 14px rgba(255, 90, 31, .35);
+  opacity: 0;
+  pointer-events: none;
+}
 @media (min-width: 1100px) {
   .hero__bg {
     grid-template-columns:

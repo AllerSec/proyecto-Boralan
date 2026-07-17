@@ -399,7 +399,51 @@
   }
 
   /* ----------------------------------------------------------------------
-     11d. VÍDEO en hover de tarjetas de servicio (data-hover-video)
+     11d. RUNNER de las columnas divisorias del hero
+     Un destello naranja recorre la "cuerda" de cada divisoria en bucle.
+     gsap.matchMedia lo crea solo en PC (>=1100px, donde existen las
+     divisorias) y lo revierte solo con prefers-reduced-motion o al
+     estrecharse la ventana. repeatRefresh recalcula la altura en cada
+     vuelta por si cambia el tamaño del viewport.
+     ---------------------------------------------------------------------- */
+  function initHeroDividerRunners() {
+    if (!hasGSAP) return;
+    const dividers = gsap.utils.toArray(".hero__divider");
+    if (!dividers.length) return;
+
+    const mm = gsap.matchMedia();
+    mm.add(
+      { wide: "(min-width: 1100px)", reduce: "(prefers-reduced-motion: reduce)" },
+      (ctx) => {
+        if (!ctx.conditions.wide || ctx.conditions.reduce) return;
+
+        dividers.forEach((root, i) => {
+          const runner = document.createElement("span");
+          runner.className = "hero__divider-runner";
+          root.appendChild(runner);
+
+          gsap.timeline({ repeat: -1, repeatDelay: 2.6, repeatRefresh: true, delay: 1.2 + i * 2.9 })
+            .fromTo(runner,
+              { y: 0, autoAlpha: 0 },
+              { y: () => root.offsetHeight + 180, duration: 3.6, ease: "sine.inOut" }, 0)
+            .to(runner, { autoAlpha: 0.9, duration: 0.7, ease: "power1.out" }, 0)
+            .to(runner, { autoAlpha: 0, duration: 0.8, ease: "power1.in" }, 2.8);
+        });
+
+        // al dejar de cumplirse la condición, GSAP revierte los tweens;
+        // aquí retiramos los runners creados
+        return () => {
+          dividers.forEach((root) => {
+            const r = root.querySelector(".hero__divider-runner");
+            if (r) r.remove();
+          });
+        };
+      }
+    );
+  }
+
+  /* ----------------------------------------------------------------------
+     11e. VÍDEO en hover de tarjetas de servicio (data-hover-video)
      El vídeo vive detrás de la imagen y solo carga/reproduce al pasar
      el ratón (o al enfocar con teclado). En táctil se queda la foto.
      ---------------------------------------------------------------------- */
@@ -442,6 +486,7 @@
     initCarousels();
     initHeroCarousel();
     initHeroSideVideos();
+    initHeroDividerRunners();
     initHoverVideos();
     initYear();
     if (hasGSAP && window.ScrollTrigger) {
