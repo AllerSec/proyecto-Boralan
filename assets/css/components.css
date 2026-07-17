@@ -107,14 +107,16 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
      oscuro, rematado con un filo de luz a cada lado del carrusel. */
   .hero__bg {
     grid-template-columns: minmax(230px, 24vw) minmax(0, 1fr) minmax(230px, 24vw);
-    column-gap: clamp(10px, 1.2vw, 18px);
+    column-gap: clamp(14px, 1.5vw, 26px);
     background: var(--c-ink);
   }
   .hero__side { display: block; }
   .hero__carousel { border-inline: 1px solid var(--c-line); }
 }
-/* Carrusel: slides apilados, fundido cruzado por opacidad */
-.hero__carousel { position: relative; }
+/* Carrusel: slides apilados, fundido cruzado por opacidad.
+   overflow hidden: el Ken Burns escala la imagen y sin él taparía la
+   columna divisoria de los laterales. */
+.hero__carousel { position: relative; overflow: hidden; }
 .hero__slide {
   position: absolute;
   inset: 0;
