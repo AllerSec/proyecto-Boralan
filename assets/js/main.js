@@ -78,19 +78,12 @@
   }
 
   /* ----------------------------------------------------------------------
-     3. HEADER scroll + mobile nav
+     3. NAVEGACIÓN móvil
      ---------------------------------------------------------------------- */
   function initHeader() {
-    const header = document.querySelector("[data-header]");
     const toggle = document.querySelector("[data-nav-toggle]");
     const mobileNav = document.querySelector("[data-mobile-nav]");
     const navClose = document.querySelector("[data-nav-close]");
-
-    if (header) {
-      const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
 
     if (toggle && mobileNav) {
       const close = () => {

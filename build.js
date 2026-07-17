@@ -84,7 +84,7 @@ function partials(lang, pageKey) {
   const home = `${d}/`;
   return {
     HEADER: `
-  <header class="site-header" data-header>
+  <header class="site-header">
     <div class="container header__inner">
       <a class="brand" href="${home}" aria-label="${tr("Boralan — inicio", lang)}">${BRAND_MARK}<span>boralan</span></a>
       <nav class="nav" aria-label="${tr("Navegación principal", lang)}">

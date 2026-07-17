@@ -100,18 +100,47 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   inset: 0;
   background: linear-gradient(180deg, rgba(11, 13, 12, .55) 0%, rgba(11, 13, 12, .45) 50%, rgba(11, 13, 12, .8) 100%);
 }
-.hero__side--left { border-right: 1px solid var(--c-line); }
-.hero__side--right { border-left: 1px solid var(--c-line); }
+/* Columna divisoria entre laterales y carrusel: columna propia del grid con
+   una "cuerda" vertical (hairline que se desvanece en los extremos) y un
+   tramo naranja arriba — eco del guion del eyebrow y de la línea de scroll. */
+.hero__divider {
+  position: relative;
+  display: none;
+  background: var(--c-ink);
+}
+.hero__divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 4%;
+  bottom: 4%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(244, 241, 234, .22) 15%,
+    rgba(244, 241, 234, .22) 85%,
+    transparent 100%);
+}
+.hero__divider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 16%;
+  width: 3px;
+  height: clamp(42px, 7vh, 68px);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent) 0%, rgba(255, 90, 31, 0) 100%);
+}
 @media (min-width: 1100px) {
-  /* Columna divisoria: hueco entre laterales y centro que deja ver el fondo
-     oscuro, rematado con un filo de luz a cada lado del carrusel. */
   .hero__bg {
-    grid-template-columns: minmax(230px, 24vw) minmax(0, 1fr) minmax(230px, 24vw);
-    column-gap: clamp(14px, 1.5vw, 26px);
+    grid-template-columns:
+      minmax(230px, 24vw) clamp(18px, 1.8vw, 30px) minmax(0, 1fr) clamp(18px, 1.8vw, 30px) minmax(230px, 24vw);
     background: var(--c-ink);
   }
-  .hero__side { display: block; }
-  .hero__carousel { border-inline: 1px solid var(--c-line); }
+  .hero__side,
+  .hero__divider { display: block; }
 }
 /* Carrusel: slides apilados, fundido cruzado por opacidad.
    overflow hidden: el Ken Burns escala la imagen y sin él taparía la
