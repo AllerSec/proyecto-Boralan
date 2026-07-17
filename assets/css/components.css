@@ -92,11 +92,26 @@ html.is-ready [data-hero-reveal] { opacity: 1; }
   height: 100%;
   object-fit: cover;
 }
-.hero__side--left { border-right: 1px solid rgba(255, 255, 255, .08); }
-.hero__side--right { border-left: 1px solid rgba(255, 255, 255, .08); }
+/* Oscurecido propio de los laterales (además del degradado global del hero):
+   el protagonismo queda en el carrusel central y el texto. */
+.hero__side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 13, 12, .55) 0%, rgba(11, 13, 12, .45) 50%, rgba(11, 13, 12, .8) 100%);
+}
+.hero__side--left { border-right: 1px solid var(--c-line); }
+.hero__side--right { border-left: 1px solid var(--c-line); }
 @media (min-width: 1100px) {
-  .hero__bg { grid-template-columns: minmax(230px, 24vw) minmax(0, 1fr) minmax(230px, 24vw); }
+  /* Columna divisoria: hueco entre laterales y centro que deja ver el fondo
+     oscuro, rematado con un filo de luz a cada lado del carrusel. */
+  .hero__bg {
+    grid-template-columns: minmax(230px, 24vw) minmax(0, 1fr) minmax(230px, 24vw);
+    column-gap: clamp(10px, 1.2vw, 18px);
+    background: var(--c-ink);
+  }
   .hero__side { display: block; }
+  .hero__carousel { border-inline: 1px solid var(--c-line); }
 }
 /* Carrusel: slides apilados, fundido cruzado por opacidad */
 .hero__carousel { position: relative; }
