@@ -1,8 +1,10 @@
 /* ==========================================================================
    BORALAN — idioma
-   1) Detección automática del idioma del navegador en la home en español
-      y redirección a /fr/ o /en/ (euskara NUNCA por defecto).
-   2) Recuerda la elección del usuario (selector de idioma).
+   Recuerda la elección del usuario (selector de idioma) y le lleva a su
+   versión al volver a la home en español.
+   NO se detecta el idioma del navegador: Googlebot navega en inglés y esa
+   redirección automática hacía que Google indexara la home como /en/.
+   El reparto por idioma en buscadores lo hace el hreflang, no JS.
    ========================================================================== */
 (function () {
   "use strict";
@@ -28,7 +30,7 @@
     if (lang) { try { localStorage.setItem("boralan_lang", lang); } catch (err) {} }
   });
 
-  // Detección + redirección (solo una vez, solo en la home en español)
+  // Redirección solo si el usuario eligió idioma antes (solo en la home en español)
   function maybeRedirect() {
     var htmlLang = (document.documentElement.lang || "es").slice(0, 2);
     if (htmlLang !== "es") return; // ya estamos en una versión traducida
@@ -39,25 +41,11 @@
     var isHome = path === base || path === base + "index.html" || path === "/" || path === "/index.html";
     if (!isHome) return;
 
-    // no redirigir si el usuario ya eligió o ya se hizo
-    var stored, done;
-    try { stored = localStorage.getItem("boralan_lang"); done = sessionStorage.getItem("boralan_lang_done"); } catch (e) {}
-    try { sessionStorage.setItem("boralan_lang_done", "1"); } catch (e) {}
+    var stored;
+    try { stored = localStorage.getItem("boralan_lang"); } catch (e) {}
 
-    var target = null;
-    if (stored && /^(es|eu|fr|en)$/.test(stored)) {
-      target = stored;
-    } else if (!done) {
-      // idioma del navegador (euskara nunca por defecto)
-      var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "es";
-      var code = nav.slice(0, 2).toLowerCase();
-      if (code === "fr") target = "fr";
-      else if (code === "en") target = "en";
-      else target = "es"; // español por defecto para es y cualquier otro (incl. eu)
-    }
-
-    if (target && target !== "es") {
-      location.replace(base + target + "/");
+    if (stored && /^(eu|fr|en)$/.test(stored)) {
+      location.replace(base + stored + "/");
     }
   }
 
