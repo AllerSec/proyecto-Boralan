@@ -417,8 +417,8 @@
       (ctx) => {
         if (!ctx.conditions.wide || ctx.conditions.reduce) return;
 
-        const TRAVEL = 2.9;   // duración del recorrido
-        const PAUSE = 1.2;    // pausa entre vueltas por columna
+        const TRAVEL = 3.6;   // duración del recorrido
+        const PAUSE = 2.6;    // pausa entre vueltas por columna
 
         dividers.forEach((root, i) => {
           const runner = document.createElement("span");
@@ -426,12 +426,12 @@
           root.appendChild(runner);
 
           // las dos columnas van desfasadas media vuelta: se alternan
-          gsap.timeline({ repeat: -1, repeatDelay: PAUSE, repeatRefresh: true, delay: 0.4 + i * ((TRAVEL + PAUSE) / 2) })
+          gsap.timeline({ repeat: -1, repeatDelay: PAUSE, repeatRefresh: true, delay: 1.2 + i * ((TRAVEL + PAUSE) / 2) })
             .fromTo(runner,
               { y: 0, autoAlpha: 0 },
               { y: () => root.offsetHeight + 180, duration: TRAVEL, ease: "sine.inOut" }, 0)
-            .to(runner, { autoAlpha: 0.9, duration: 0.5, ease: "power1.out" }, 0)
-            .to(runner, { autoAlpha: 0, duration: 0.6, ease: "power1.in" }, TRAVEL - 0.6);
+            .to(runner, { autoAlpha: 0.9, duration: 0.7, ease: "power1.out" }, 0)
+            .to(runner, { autoAlpha: 0, duration: 0.8, ease: "power1.in" }, TRAVEL - 0.8);
         });
 
         // al dejar de cumplirse la condición, GSAP revierte los tweens;
