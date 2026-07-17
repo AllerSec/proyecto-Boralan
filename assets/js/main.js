@@ -373,15 +373,24 @@
   function initHeroSideVideos() {
     const videos = Array.from(document.querySelectorAll("[data-hero-side-video]"));
     if (!videos.length) return;
-    if (prefersReduced) {
-      videos.forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
-      return;
-    }
+    // El src vive en data-src: solo se carga cuando los laterales son visibles
+    // (pantalla ancha), para no descargar megas de vídeo en móvil/tablet.
+    const mq = window.matchMedia("(min-width: 1100px)");
     const inView = new WeakMap();
+    const load = (v) => {
+      if (!v.src && v.dataset.src) {
+        if (v.dataset.poster) v.poster = v.dataset.poster;
+        v.src = v.dataset.src;
+      }
+    };
     const sync = () => {
       videos.forEach((v) => {
-        if (!document.hidden && inView.get(v) !== false) v.play().catch(() => {});
-        else v.pause();
+        if (mq.matches && !prefersReduced && !document.hidden && inView.get(v) !== false) {
+          load(v);
+          v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
       });
     };
     if ("IntersectionObserver" in window) {
@@ -392,6 +401,8 @@
       videos.forEach((v) => io.observe(v));
     }
     document.addEventListener("visibilitychange", sync);
+    if (mq.addEventListener) mq.addEventListener("change", sync);
+    sync();
   }
 
   /* ----------------------------------------------------------------------

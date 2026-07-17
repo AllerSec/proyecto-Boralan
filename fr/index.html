@@ -264,7 +264,8 @@
       <!-- Fondo: vídeos laterales en autoplay (solo PC) + carrusel central de fotos con fundido cruzado y Ken Burns -->
       <div class="hero__bg" data-hero-media>
         <div class="hero__side hero__side--left" aria-hidden="true">
-          <video class="hero__side-video" data-hero-side-video autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-lateral-izquierda-poster.webp" src="/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
+          <!-- src/poster via data-*: solo se cargan por JS en pantallas anchas, para no descargar MB en móvil -->
+          <video class="hero__side-video" data-hero-side-video muted loop playsinline preload="none" data-poster="/assets/video/hero-lateral-izquierda-poster.webp" data-src="/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
         </div>
         <div class="hero__carousel" data-hero-carousel aria-label="Travaux de Boralan" role="group" aria-roledescription="carrusel">
           <figure class="hero__slide is-active">
@@ -305,7 +306,7 @@
           </figure>
         </div>
         <div class="hero__side hero__side--right" aria-hidden="true">
-          <video class="hero__side-video" data-hero-side-video autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-lateral-derecha-poster.webp" src="/assets/video/hero-lateral-derecha.mp4" tabindex="-1"></video>
+          <video class="hero__side-video" data-hero-side-video muted loop playsinline preload="none" data-poster="/assets/video/hero-lateral-derecha-poster.webp" data-src="/assets/video/hero-lateral-derecha.mp4" tabindex="-1"></video>
         </div>
       </div>
       <div class="container hero__content">
