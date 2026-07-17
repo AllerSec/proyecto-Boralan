@@ -422,12 +422,12 @@
           runner.className = "hero__divider-runner";
           root.appendChild(runner);
 
-          gsap.timeline({ repeat: -1, repeatDelay: 2.6, repeatRefresh: true, delay: 1.2 + i * 2.9 })
+          gsap.timeline({ repeat: -1, repeatDelay: 0.7, repeatRefresh: true, delay: 0.5 + i * 1.8 })
             .fromTo(runner,
               { y: 0, autoAlpha: 0 },
-              { y: () => root.offsetHeight + 180, duration: 3.6, ease: "sine.inOut" }, 0)
-            .to(runner, { autoAlpha: 0.9, duration: 0.7, ease: "power1.out" }, 0)
-            .to(runner, { autoAlpha: 0, duration: 0.8, ease: "power1.in" }, 2.8);
+              { y: () => root.offsetHeight + 180, duration: 2.9, ease: "sine.inOut" }, 0)
+            .to(runner, { autoAlpha: 0.9, duration: 0.5, ease: "power1.out" }, 0)
+            .to(runner, { autoAlpha: 0, duration: 0.6, ease: "power1.in" }, 2.3);
         });
 
         // al dejar de cumplirse la condición, GSAP revierte los tweens;
