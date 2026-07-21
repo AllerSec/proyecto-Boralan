@@ -198,24 +198,6 @@
 <body data-page="inicio">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ====================== LOADER ====================== -->
-  <div class="loader" data-loader aria-hidden="true">
-    <div class="loader__inner">
-      <div class="loader__words">
-        <span class="loader__word" data-loader-word>Going</span>
-        <span class="loader__word loader__word--accent" data-loader-word>where</span>
-        <span class="loader__word" data-loader-word>others</span>
-        <span class="loader__word" data-loader-word>can't</span>
-        <span class="loader__word" data-loader-word>reach.</span>
-      </div>
-      <div class="loader__meta">
-        <span>Boralan · Lesaka</span>
-        <span class="loader__count" data-loader-count>00</span>
-      </div>
-      <div class="loader__progress"><span class="loader__bar" data-loader-bar></span></div>
-    </div>
-  </div>
-
   <!-- ====================== HEADER ====================== -->
   <!--#HEADER#-->
   <header class="site-header">
@@ -277,32 +259,32 @@
           </figure>
           <figure class="hero__slide">
             <img class="hero__slide-img" width="1600" height="900"
-              src="/assets/img/poda-altura-haya-doble-full.webp"
-              srcset="/assets/img/poda-altura-haya-doble-480.webp 480w, /assets/img/poda-altura-haya-doble-768.webp 768w, /assets/img/poda-altura-haya-doble-full.webp 1600w"
+              data-src="/assets/img/poda-altura-haya-doble-full.webp"
+              data-srcset="/assets/img/poda-altura-haya-doble-480.webp 480w, /assets/img/poda-altura-haya-doble-768.webp 768w, /assets/img/poda-altura-haya-doble-full.webp 1600w"
               sizes="100vw" alt="Aerial pruning of a double beech using climbing techniques" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
             <img class="hero__slide-img" width="1600" height="900"
-              src="/assets/img/trabajo-vertical-cuerdas-full.webp"
-              srcset="/assets/img/trabajo-vertical-cuerdas-480.webp 480w, /assets/img/trabajo-vertical-cuerdas-768.webp 768w, /assets/img/trabajo-vertical-cuerdas-full.webp 1600w"
+              data-src="/assets/img/trabajo-vertical-cuerdas-full.webp"
+              data-srcset="/assets/img/trabajo-vertical-cuerdas-480.webp 480w, /assets/img/trabajo-vertical-cuerdas-768.webp 768w, /assets/img/trabajo-vertical-cuerdas-full.webp 1600w"
               sizes="100vw" alt="Rope-suspended vertical work on a very tall tree" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
             <img class="hero__slide-img" width="1600" height="900"
-              src="/assets/img/trepa-copa-arbol-full.webp"
-              srcset="/assets/img/trepa-copa-arbol-480.webp 480w, /assets/img/trepa-copa-arbol-768.webp 768w, /assets/img/trepa-copa-arbol-full.webp 1600w"
+              data-src="/assets/img/trepa-copa-arbol-full.webp"
+              data-srcset="/assets/img/trepa-copa-arbol-480.webp 480w, /assets/img/trepa-copa-arbol-768.webp 768w, /assets/img/trepa-copa-arbol-full.webp 1600w"
               sizes="100vw" alt="Boralan arborist climbing to the top of a tree with ropes" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
             <img class="hero__slide-img" width="1600" height="900"
-              src="/assets/img/tala-junto-edificacion-full.webp"
-              srcset="/assets/img/tala-junto-edificacion-480.webp 480w, /assets/img/tala-junto-edificacion-768.webp 768w, /assets/img/tala-junto-edificacion-full.webp 1600w"
+              data-src="/assets/img/tala-junto-edificacion-full.webp"
+              data-srcset="/assets/img/tala-junto-edificacion-480.webp 480w, /assets/img/tala-junto-edificacion-768.webp 768w, /assets/img/tala-junto-edificacion-full.webp 1600w"
               sizes="100vw" alt="Controlled felling of a tree next to a building in a hard-to-reach area" loading="lazy" decoding="async">
           </figure>
           <figure class="hero__slide">
             <img class="hero__slide-img" width="1600" height="900"
-              src="/assets/img/equipo-tocon-montana-full.webp"
-              srcset="/assets/img/equipo-tocon-montana-480.webp 480w, /assets/img/equipo-tocon-montana-768.webp 768w, /assets/img/equipo-tocon-montana-full.webp 1600w"
+              data-src="/assets/img/equipo-tocon-montana-full.webp"
+              data-srcset="/assets/img/equipo-tocon-montana-480.webp 480w, /assets/img/equipo-tocon-montana-768.webp 768w, /assets/img/equipo-tocon-montana-full.webp 1600w"
               sizes="100vw" alt="El equipo de Boralan sobre el tocón de un árbol talado en la montaña" loading="lazy" decoding="async">
           </figure>
         </div>
@@ -472,8 +454,8 @@
       <div class="container">
         <div class="section-head section-head--center" data-reveal>
           <p class="eyebrow">In the media</p>
-          <h2>We've been on TV and in the press.</h2>
-          <p>Our work and our videos have caught the attention of the press in Navarre and the Basque Country.</p>
+          <h2>We've been on TV.</h2>
+          <p>Our work at height caught the attention of TV in Navarre and the Basque Country.</p>
         </div>
 
         <div class="split" data-reveal>
@@ -489,8 +471,30 @@
             <p>You can watch the full interview on our Instagram profile, where we explain what we do in a visual, hands-on way.</p>
             <div class="hero__actions">
               <a class="btn btn--ghost" href="https://www.instagram.com/reel/DRzyPbOiHh1/" target="_blank" rel="noopener">Watch full interview</a>
-              <a class="btn btn--ghost" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener">Diario de Navarra article</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PRENSA · DIARIO DE NAVARRA ====================== -->
+    <section class="section">
+      <div class="container">
+        <div class="press" data-reveal>
+          <a class="press__clip" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener" aria-label="Read the full feature in Diario de Navarra">
+            <img src="/assets/img/diario-navarra-articulo-1600.webp"
+              srcset="/assets/img/diario-navarra-articulo-480.webp 480w, /assets/img/diario-navarra-articulo-768.webp 768w, /assets/img/diario-navarra-articulo-1600.webp 1600w"
+              sizes="(min-width: 900px) 54vw, 100vw" width="2018" height="1420" loading="lazy" decoding="async"
+              alt="Feature about Boralan in Diario de Navarra: “Three young people who go into business at height”">
+          </a>
+          <div class="press__body">
+            <span class="eyebrow">In the press</span>
+            <img class="press__logo" src="/assets/img/diario-de-navarra-logo.webp" width="200" height="200" alt="Diario de Navarra" loading="lazy">
+            <blockquote class="press__quote">“Most people say we’re crazy.”</blockquote>
+            <p>Diario de Navarra ran a feature on Boralan and the three young people from Lesaka who set out to climb where others can’t reach.</p>
+            <a class="btn btn--ghost" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener">Read the feature
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -602,9 +606,39 @@
   </div>
   <!--#/COOKIES#-->
 
-  <script src="/assets/js/gsap.min.js" defer></script>
-  <script src="/assets/js/ScrollTrigger.min.js" defer></script>
   <script src="/assets/js/lang.js?v=2" defer></script>
-  <script src="/assets/js/main.js" defer></script>
+  <!-- Interactividad y animaciones: se cargan al primer gesto del usuario, para
+       que la carga inicial (LCP) no ejecute JS. El menu movil funciona antes
+       gracias al handler inline de abajo. -->
+  <script>
+  (function () {
+    var toggle = document.querySelector("[data-nav-toggle]");
+    var nav = document.querySelector("[data-mobile-nav]");
+    if (toggle && nav) {
+      window.__navReady = true;
+      var closeBtn = document.querySelector("[data-nav-close]");
+      var setOpen = function (o) {
+        toggle.setAttribute("aria-expanded", String(o));
+        nav.classList.toggle("is-open", o);
+        document.body.style.overflow = o ? "hidden" : "";
+      };
+      toggle.addEventListener("click", function () { setOpen(toggle.getAttribute("aria-expanded") !== "true"); });
+      if (closeBtn) closeBtn.addEventListener("click", function () { setOpen(false); });
+      Array.prototype.forEach.call(nav.querySelectorAll("a"), function (a) { a.addEventListener("click", function () { setOpen(false); }); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+    }
+    var loaded = false;
+    var load = function (src) { return new Promise(function (res) { var s = document.createElement("script"); s.src = src; s.onload = res; document.body.appendChild(s); }); };
+    var boot = function () {
+      if (loaded) return; loaded = true;
+      load("/assets/js/gsap.min.js")
+        .then(function () { return load("/assets/js/ScrollTrigger.min.js"); })
+        .then(function () { return load("/assets/js/main.js"); });
+    };
+    ["pointerdown", "touchstart", "keydown", "wheel", "scroll", "mousemove"].forEach(function (ev) {
+      window.addEventListener(ev, boot, { once: true, passive: true });
+    });
+  })();
+  </script>
 </body>
 </html>

@@ -81,6 +81,9 @@
      3. NAVEGACIÓN móvil
      ---------------------------------------------------------------------- */
   function initHeader() {
+    // El nav móvil ya lo cablea un handler inline en el HTML (para que funcione
+    // antes de cargar este script). Evitamos duplicar los listeners.
+    if (window.__navReady) return;
     const toggle = document.querySelector("[data-nav-toggle]");
     const mobileNav = document.querySelector("[data-mobile-nav]");
     const navClose = document.querySelector("[data-nav-close]");
@@ -328,11 +331,30 @@
     let timer = null;
     let visible = true;
 
+    // Las imágenes no activas viven en data-src/data-srcset y solo se descargan
+    // cuando el slide va a mostrarse, para no saturar el ancho de banda inicial
+    // (el primer slide ya trae src real y va precargado en el <head>).
+    const hydrate = (slide) => {
+      if (!slide) return;
+      const img = slide.querySelector("img[data-src]");
+      if (!img) return;
+      if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+      img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+      img.removeAttribute("data-srcset");
+    };
+    const nextIndex = (i) => (i + 1) % slides.length;
+    // Precargamos el siguiente para que el primer fundido no tenga hueco.
+    hydrate(slides[nextIndex(index)]);
+
     function go(next) {
       if (next === index) return;
       // El slide saliente vuelve a su reposo con la misma transición CSS (sin salto).
       slides[index].classList.remove("is-active");
       index = (next + slides.length) % slides.length;
+      hydrate(slides[index]);
+      // Adelantamos la carga del siguiente para el próximo fundido.
+      hydrate(slides[nextIndex(index)]);
       // El nuevo activo arranca el paneo Ken Burns vía transición CSS.
       slides[index].classList.add("is-active");
     }
