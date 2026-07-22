@@ -49,7 +49,7 @@
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="/assets/img/hero-trepa-doble-arbol-full.webp" imagesrcset="/assets/img/hero-trepa-doble-arbol-480.webp 480w, /assets/img/hero-trepa-doble-arbol-768.webp 768w, /assets/img/hero-trepa-doble-arbol-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=4">
 
   <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -235,7 +235,6 @@
       <a href="tel:+34628850027">628 850 027</a>
       <a href="mailto:boralan04@gmail.com">boralan04@gmail.com</a>
       <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">@boralan04</a>
-      <a href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener">TikTok</a>
     </div>
   </nav>
   <!--#/HEADER#-->
@@ -246,11 +245,6 @@
     <section class="hero">
       <!-- Fondo: vídeos laterales en autoplay (solo PC) + carrusel central de fotos con fundido cruzado y Ken Burns -->
       <div class="hero__bg" data-hero-media>
-        <div class="hero__side hero__side--left" aria-hidden="true">
-          <!-- src/poster via data-*: solo se cargan por JS en pantallas anchas, para no descargar MB en móvil -->
-          <video class="hero__side-video" data-hero-side-video muted loop playsinline preload="none" data-poster="/assets/video/hero-lateral-izquierda-poster.webp" data-src="/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
-        </div>
-        <div class="hero__divider" aria-hidden="true"></div>
         <div class="hero__carousel" data-hero-carousel aria-label="Trabajos de Boralan" role="group" aria-roledescription="carrusel">
           <figure class="hero__slide is-active">
             <img class="hero__slide-img" width="1600" height="900"
@@ -291,7 +285,8 @@
         </div>
         <div class="hero__divider" aria-hidden="true"></div>
         <div class="hero__side hero__side--right" aria-hidden="true">
-          <video class="hero__side-video" data-hero-side-video muted loop playsinline preload="none" data-poster="/assets/video/hero-lateral-derecha-poster.webp" data-src="/assets/video/hero-lateral-derecha.mp4" tabindex="-1"></video>
+          <!-- Playlist: alterna derecha e izquierda en bucle (sin atributo loop; el JS encadena al terminar cada clip) -->
+          <video class="hero__side-video" data-hero-side-video muted playsinline preload="none" data-poster="/assets/video/hero-lateral-derecha-poster.webp" data-src="/assets/video/hero-lateral-derecha.mp4" data-playlist="/assets/video/hero-lateral-derecha.mp4,/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
         </div>
       </div>
       <div class="container hero__content">
@@ -580,7 +575,6 @@
             <a href="tel:+34628798602">628 798 602</a>
             <a href="mailto:boralan04@gmail.com">boralan04@gmail.com</a>
             <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">Instagram @boralan04</a>
-            <a href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener">TikTok @boralan04</a>
             <span style="color:var(--text-dim)">Lesaka, Navarra</span>
           </div>
         </div>
@@ -671,7 +665,7 @@
       if (loaded) return; loaded = true;
       load("/assets/js/gsap.min.js")
         .then(function () { return load("/assets/js/ScrollTrigger.min.js"); })
-        .then(function () { return load("/assets/js/main.js?v=3"); });
+        .then(function () { return load("/assets/js/main.js?v=4"); });
     };
     ["pointerdown", "touchstart", "keydown", "wheel", "scroll", "mousemove"].forEach(function (ev) {
       window.addEventListener(ev, boot, { once: true, passive: true });

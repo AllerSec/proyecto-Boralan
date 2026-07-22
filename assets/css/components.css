@@ -143,7 +143,7 @@ html.no-js [data-hero-reveal] { transform: none; animation: none; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11, 13, 12, .55) 0%, rgba(11, 13, 12, .45) 50%, rgba(11, 13, 12, .8) 100%);
+  background: linear-gradient(180deg, rgba(11, 13, 12, .3) 0%, rgba(11, 13, 12, .2) 50%, rgba(11, 13, 12, .55) 100%);
 }
 /* Columna divisoria entre laterales y carrusel: columna propia del grid con
    una "cuerda" vertical (hairline que se desvanece en los extremos) por la
@@ -188,7 +188,7 @@ html.no-js [data-hero-reveal] { transform: none; animation: none; }
 @media (min-width: 1100px) {
   .hero__bg {
     grid-template-columns:
-      minmax(230px, 24vw) clamp(18px, 1.8vw, 30px) minmax(0, 1fr) clamp(18px, 1.8vw, 30px) minmax(230px, 24vw);
+      minmax(0, 1fr) clamp(18px, 1.8vw, 30px) minmax(230px, 24vw);
     background: var(--c-ink);
   }
   .hero__side,
@@ -214,21 +214,21 @@ html.no-js [data-hero-reveal] { transform: none; animation: none; }
   height: 100%;
   object-fit: cover;
   /* estado de reposo: ligeramente ampliada, lista para paneo suave */
-  transform: scale(1.04) translate3d(0, 0, 0);
+  transform: scale(1.01) translate3d(0, 0, 0);
   transition: transform 6s var(--ease-out);
 }
 /* Ken Burns: zoom/paneo lento y sutil en la diapositiva activa.
    Al usar transition (no animation forwards), cuando el slide deja de estar
    activo el transform vuelve al reposo con la MISMA transición: sin saltos. */
 .hero__slide.is-active .hero__slide-img {
-  transform: scale(1.09) translate3d(-1%, -1%, 0);
+  transform: scale(1.035) translate3d(-.5%, -.5%, 0);
 }
 @media (prefers-reduced-motion: reduce) {
   .hero__slide { transition: opacity .01ms; }
   .hero__slide-img,
   .hero__slide.is-active .hero__slide-img {
     transition: none;
-    transform: scale(1.03);
+    transform: scale(1.01);
   }
 }
 .hero__bg::after {
@@ -236,7 +236,7 @@ html.no-js [data-hero-reveal] { transform: none; animation: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(11,13,12,.6) 0%, rgba(11,13,12,.32) 38%, rgba(11,13,12,.9) 100%),
+    linear-gradient(180deg, rgba(11,13,12,.62) 0%, rgba(11,13,12,.38) 38%, rgba(11,13,12,.9) 100%),
     radial-gradient(130% 90% at 25% 35%, rgba(11,13,12,.55) 0%, transparent 55%);
 }
 /* Móvil: el vídeo de fondo necesita más oscurecido para legibilidad del texto */

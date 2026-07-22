@@ -49,7 +49,7 @@
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="/assets/img/hero-trepa-doble-arbol-full.webp" imagesrcset="/assets/img/hero-trepa-doble-arbol-480.webp 480w, /assets/img/hero-trepa-doble-arbol-768.webp 768w, /assets/img/hero-trepa-doble-arbol-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=4">
 
   <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -235,7 +235,6 @@
       <a href="tel:+34628850027">628 850 027</a>
       <a href="mailto:boralan04@gmail.com">boralan04@gmail.com</a>
       <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">@boralan04</a>
-      <a href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener">TikTok</a>
     </div>
   </nav>
   <!--#/HEADER#-->
@@ -246,11 +245,6 @@
     <section class="hero">
       <!-- Fondo: vídeos laterales en autoplay (solo PC) + carrusel central de fotos con fundido cruzado y Ken Burns -->
       <div class="hero__bg" data-hero-media>
-        <div class="hero__side hero__side--left" aria-hidden="true">
-          <!-- src/poster via data-*: solo se cargan por JS en pantallas anchas, para no descargar MB en móvil -->
-          <video class="hero__side-video" data-hero-side-video muted loop playsinline preload="none" data-poster="/assets/video/hero-lateral-izquierda-poster.webp" data-src="/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
-        </div>
-        <div class="hero__divider" aria-hidden="true"></div>
         <div class="hero__carousel" data-hero-carousel aria-label="Boralanen lanak" role="group" aria-roledescription="carrusel">
           <figure class="hero__slide is-active">
             <img class="hero__slide-img" width="1600" height="900"
@@ -291,7 +285,8 @@
         </div>
         <div class="hero__divider" aria-hidden="true"></div>
         <div class="hero__side hero__side--right" aria-hidden="true">
-          <video class="hero__side-video" data-hero-side-video muted loop playsinline preload="none" data-poster="/assets/video/hero-lateral-derecha-poster.webp" data-src="/assets/video/hero-lateral-derecha.mp4" tabindex="-1"></video>
+          <!-- Playlist: alterna derecha e izquierda en bucle (sin atributo loop; el JS encadena al terminar cada clip) -->
+          <video class="hero__side-video" data-hero-side-video muted playsinline preload="none" data-poster="/assets/video/hero-lateral-derecha-poster.webp" data-src="/assets/video/hero-lateral-derecha.mp4" data-playlist="/assets/video/hero-lateral-derecha.mp4,/assets/video/hero-lateral-izquierda.mp4" tabindex="-1"></video>
         </div>
       </div>
       <div class="container hero__content">
@@ -455,8 +450,8 @@
       <div class="container">
         <div class="section-head section-head--center" data-reveal>
           <p class="eyebrow">Komunikabideetan</p>
-          <h2>Telebistan agertu gara.</h2>
-          <p>Gure altuerako lanak Nafarroako eta Euskal Herriko telebistaren arreta erakarri du.</p>
+          <h2>Salimos en la televisión.</h2>
+          <p>Nuestro trabajo en altura llamó la atención de la televisión de Navarra y el País Vasco.</p>
         </div>
 
         <div class="split" data-reveal>
@@ -482,18 +477,18 @@
     <section class="section">
       <div class="container">
         <div class="press" data-reveal>
-          <a class="press__clip" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener" aria-label="Irakurri erreportaje osoa Diario de Navarran">
+          <a class="press__clip" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener" aria-label="Leer el reportaje completo en Diario de Navarra">
             <img src="/assets/img/diario-navarra-articulo-1600.webp"
               srcset="/assets/img/diario-navarra-articulo-480.webp 480w, /assets/img/diario-navarra-articulo-768.webp 768w, /assets/img/diario-navarra-articulo-1600.webp 1600w"
               sizes="(min-width: 900px) 54vw, 100vw" width="2018" height="1420" loading="lazy" decoding="async"
-              alt="Boralani buruzko erreportajea Diario de Navarra egunkarian: «Altueran ekiten duten hiru gazte»">
+              alt="Reportaje sobre Boralan en el Diario de Navarra: «Tres jóvenes que emprenden en altura»">
           </a>
           <div class="press__body">
-            <span class="eyebrow">Prentsan</span>
+            <span class="eyebrow">En prensa</span>
             <img class="press__logo" src="/assets/img/diario-de-navarra-logo.webp" width="200" height="200" alt="Diario de Navarra" loading="lazy">
-            <blockquote class="press__quote">«Gehienek diote erotuta gaudela».</blockquote>
-            <p>Diario de Navarra egunkariak erreportajea egin zigun: Lesakako hiru gazte, besteek iristen ez diren tokietara igotzen garenak.</p>
-            <a class="btn btn--ghost" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener">Irakurri erreportajea
+            <blockquote class="press__quote">«La mayoría dicen que estamos locos».</blockquote>
+            <p>El Diario de Navarra nos dedicó un reportaje: tres jóvenes de Lesaka que decidimos emprender subiendo donde otros no llegan.</p>
+            <a class="btn btn--ghost" href="https://www.diariodenavarra.es/noticias/negocios/dn-management/emprendedores/2026/02/14/tres-jovenes-emprenden-altura-mayoria-dicen-locos-810130-91.html" target="_blank" rel="noopener">Leer el reportaje
               <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -506,12 +501,12 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <p class="eyebrow">@boralan04</p>
-          <h2>Jarraitu gaitzazu.</h2>
+          <h2>Síguenos.</h2>
           <p>Gure lanak GoPro-rekin grabatzen ditugu zuhaitzaren goialdetik. 4.300 lagunek baino gehiagok jarraitzen gaituzte jada.</p>
         </div>
         <div class="social-links" data-reveal>
-          <a class="social-btn" href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener" aria-label="Boralanen Instagram (@boralan04)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38C1.36 2.67.95 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.72 5.72 0 0 0 2.12-1.38 5.72 5.72 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.72 5.72 0 0 0-1.38-2.12A5.72 5.72 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>Instagram</a>
-          <a class="social-btn" href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener" aria-label="Boralanen TikTok (@boralan04)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.04-2.82h-3.4v13.6a2.59 2.59 0 1 1-1.79-2.46V10.6a5.98 5.98 0 1 0 5.18 5.93V9.4a7.66 7.66 0 0 0 4.47 1.43V7.42a4.27 4.27 0 0 1-3.42-1.6z"/></svg>TikTok</a>
+          <a class="social-btn" href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener" aria-label="Instagram de Boralan (@boralan04)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38C1.36 2.67.95 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.72 5.72 0 0 0 2.12-1.38 5.72 5.72 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.72 5.72 0 0 0-1.38-2.12A5.72 5.72 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>Instagram</a>
+          <a class="social-btn" href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener" aria-label="TikTok de Boralan (@boralan04)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.04-2.82h-3.4v13.6a2.59 2.59 0 1 1-1.79-2.46V10.6a5.98 5.98 0 1 0 5.18 5.93V9.4a7.66 7.66 0 0 0 4.47 1.43V7.42a4.27 4.27 0 0 1-3.42-1.6z"/></svg>TikTok</a>
         </div>
         <div class="ig-strip" data-reveal-group>
           <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener" data-reveal-item aria-label="Ikusi Boralanen Instagram profila">
@@ -579,7 +574,6 @@
             <a href="tel:+34628798602">628 798 602</a>
             <a href="mailto:boralan04@gmail.com">boralan04@gmail.com</a>
             <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">Instagram @boralan04</a>
-            <a href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener">TikTok @boralan04</a>
             <span style="color:var(--text-dim)">Lesaka, Nafarroa</span>
           </div>
         </div>
@@ -670,7 +664,7 @@
       if (loaded) return; loaded = true;
       load("/assets/js/gsap.min.js")
         .then(function () { return load("/assets/js/ScrollTrigger.min.js"); })
-        .then(function () { return load("/assets/js/main.js?v=3"); });
+        .then(function () { return load("/assets/js/main.js?v=4"); });
     };
     ["pointerdown", "touchstart", "keydown", "wheel", "scroll", "mousemove"].forEach(function (ev) {
       window.addEventListener(ev, boot, { once: true, passive: true });

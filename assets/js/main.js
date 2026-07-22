@@ -403,6 +403,17 @@
       if (!v.src && v.dataset.src) {
         if (v.dataset.poster) v.poster = v.dataset.poster;
         v.src = v.dataset.src;
+        // Playlist: al terminar un clip pasa al siguiente y vuelve al primero (bucle).
+        // Estos vídeos no llevan atributo loop para que dispare "ended".
+        if (v.dataset.playlist) {
+          const list = v.dataset.playlist.split(",").map((s) => s.trim()).filter(Boolean);
+          let i = Math.max(0, list.indexOf(v.dataset.src));
+          v.addEventListener("ended", () => {
+            i = (i + 1) % list.length;
+            v.src = list[i];
+            v.play().catch(() => {});
+          });
+        }
       }
     };
     const sync = () => {
