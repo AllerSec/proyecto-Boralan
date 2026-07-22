@@ -288,10 +288,12 @@ strong { font-weight: 600; }
   inset: 0 0 auto 0;
   z-index: var(--z-header);
   padding-block: clamp(.6rem, 1.5vw, .85rem);
-  /* Sin backdrop-filter: el blur re-muestrea el fondo cada vez que carga
-     contenido por debajo y provoca re-pintados tardíos de la cabecera que
-     disparaban el LCP. Fondo casi opaco: aspecto casi idéntico en un sitio oscuro. */
-  background: color-mix(in srgb, var(--c-ink) 92%, transparent);
+  /* Fondo rgba sólido (soportado en todos los navegadores, incl. Safari iOS):
+     antes usaba color-mix(), que en Safari antiguo no se aplica y dejaba la
+     barra transparente. El blur es una mejora progresiva encima. */
+  background: rgba(11, 13, 12, 0.9);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
   border-bottom: 1px solid var(--c-line);
 }
 .header__inner {

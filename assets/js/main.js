@@ -119,28 +119,35 @@
       return;
     }
 
-    gsap.utils.toArray("[data-reveal]").forEach((el) => {
-      const y = parseFloat(el.dataset.revealY || "40");
-      gsap.fromTo(el,
-        { autoAlpha: 0, y },
-        {
-          autoAlpha: 1, y: 0, duration: 1, ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }
-        }
-      );
-    });
+    // Si un IntersectionObserver en línea ya gestiona los reveals (clase reveal-ready),
+    // GSAP NO debe ocultarlos: evitamos que el script pesado, al cargar tarde en móvil,
+    // dejara títulos ocultos si un ScrollTrigger no se disparaba.
+    const inlineReveals = document.documentElement.classList.contains("reveal-ready");
 
-    // grupos con stagger (data-reveal-group -> hijos data-reveal-item)
-    gsap.utils.toArray("[data-reveal-group]").forEach((group) => {
-      const items = group.querySelectorAll("[data-reveal-item]");
-      gsap.fromTo(items,
-        { autoAlpha: 0, y: 50 },
-        {
-          autoAlpha: 1, y: 0, duration: 0.9, ease: "power3.out", stagger: 0.1,
-          scrollTrigger: { trigger: group, start: "top 80%", toggleActions: "play none none none" }
-        }
-      );
-    });
+    if (!inlineReveals) {
+      gsap.utils.toArray("[data-reveal]").forEach((el) => {
+        const y = parseFloat(el.dataset.revealY || "40");
+        gsap.fromTo(el,
+          { autoAlpha: 0, y },
+          {
+            autoAlpha: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }
+          }
+        );
+      });
+
+      // grupos con stagger (data-reveal-group -> hijos data-reveal-item)
+      gsap.utils.toArray("[data-reveal-group]").forEach((group) => {
+        const items = group.querySelectorAll("[data-reveal-item]");
+        gsap.fromTo(items,
+          { autoAlpha: 0, y: 50 },
+          {
+            autoAlpha: 1, y: 0, duration: 0.9, ease: "power3.out", stagger: 0.1,
+            scrollTrigger: { trigger: group, start: "top 80%", toggleActions: "play none none none" }
+          }
+        );
+      });
+    }
 
     // texto que aparece por líneas (data-reveal-lines)
     gsap.utils.toArray("[data-reveal-lines] .line__inner").forEach((line) => {

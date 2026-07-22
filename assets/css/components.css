@@ -5,6 +5,30 @@
 /* ---------- estado de carga ---------- */
 html.is-loading body { overflow: hidden; }
 
+/* ---------- reveals al hacer scroll (IntersectionObserver, sin depender de GSAP) ----------
+   El estado oculto SOLO se aplica si la clase .reveal-ready está en <html>, que
+   la añade un script en línea únicamente cuando IntersectionObserver existe. Si el
+   JS falla o no se soporta, el contenido queda visible (nunca desaparece). */
+html.reveal-ready [data-reveal],
+html.reveal-ready [data-reveal-item] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
+}
+html.reveal-ready [data-reveal].is-revealed,
+html.reveal-ready [data-reveal-item].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+/* stagger suave dentro de grupos (p. ej. la tira de Instagram) */
+html.reveal-ready [data-reveal-group] [data-reveal-item]:nth-child(2) { transition-delay: .08s; }
+html.reveal-ready [data-reveal-group] [data-reveal-item]:nth-child(3) { transition-delay: .16s; }
+html.reveal-ready [data-reveal-group] [data-reveal-item]:nth-child(4) { transition-delay: .24s; }
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready [data-reveal],
+  html.reveal-ready [data-reveal-item] { opacity: 1; transform: none; transition: none; }
+}
+
 /* Entrada del hero en CSS puro: aparece de inmediato sin depender de JS/GSAP.
    Importante para el LCP: el texto se mantiene OPACO desde el primer frame
    (solo se desplaza), porque Chrome descarta como candidato LCP el texto que
@@ -488,20 +512,26 @@ html.no-js [data-hero-reveal] { transform: none; animation: none; }
   align-items: center;
 }
 @media (min-width: 900px) {
-  .press { grid-template-columns: 1.15fr 1fr; gap: var(--sp-6); }
+  .press { grid-template-columns: 1fr 1fr; gap: var(--sp-6); }
 }
 .press__clip {
   display: block;
+  width: 100%;
+  /* Contenido: en móvil se limita y centra para que el recorte no domine. */
+  max-width: 440px;
+  margin-inline: auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--c-line);
   box-shadow: var(--shadow-2);
   transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out);
 }
+@media (min-width: 900px) { .press__clip { max-width: 100%; } }
 .press__clip img { width: 100%; height: auto; display: block; }
 .press__clip:hover,
 .press__clip:focus-visible {
   transform: translateY(-4px);
+  border-color: rgba(255, 90, 31, .5);
   box-shadow: 0 26px 70px rgba(0, 0, 0, .55);
 }
 .press__body {
@@ -533,6 +563,38 @@ html.no-js [data-hero-reveal] { transform: none; animation: none; }
 @media (prefers-reduced-motion: reduce) {
   .press__clip { transition: none; }
   .press__clip:hover, .press__clip:focus-visible { transform: none; }
+}
+
+/* Botones de redes sociales con logotipo (Instagram, TikTok). */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .7em 1.2em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--c-line);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--step-0);
+  transition: transform .2s var(--ease-out), border-color .2s var(--ease-out), background .2s var(--ease-out);
+}
+.social-btn svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
+.social-btn:hover,
+.social-btn:focus-visible {
+  transform: translateY(-2px);
+  background: var(--surface);
+  border-color: rgba(255, 90, 31, .5);
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-btn { transition: none; }
+  .social-btn:hover, .social-btn:focus-visible { transform: none; }
 }
 
 /* ==========================================================================
