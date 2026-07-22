@@ -49,7 +49,7 @@
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="/assets/img/hero-trepa-doble-arbol-full.webp" imagesrcset="/assets/img/hero-trepa-doble-arbol-480.webp 480w, /assets/img/hero-trepa-doble-arbol-768.webp 768w, /assets/img/hero-trepa-doble-arbol-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=2">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
 
   <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -671,7 +671,7 @@
       if (loaded) return; loaded = true;
       load("/assets/js/gsap.min.js")
         .then(function () { return load("/assets/js/ScrollTrigger.min.js"); })
-        .then(function () { return load("/assets/js/main.js"); });
+        .then(function () { return load("/assets/js/main.js?v=3"); });
     };
     ["pointerdown", "touchstart", "keydown", "wheel", "scroll", "mousemove"].forEach(function (ev) {
       window.addEventListener(ev, boot, { once: true, passive: true });
