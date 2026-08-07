@@ -64,6 +64,7 @@ const T = {
     "Poda y tala en altura · Navarra": "Inausketa eta mozketa altueran · Nafarroa",
     "Subimos donde": "Besteek iristen ez diren",
     "otros no llegan": "tokira igotzen gara",
+    "Empresa de tala y poda de árboles en Navarra y Gipuzkoa": "Zuhaitzak moztu eta inausteko enpresa Nafarroan eta Gipuzkoan",
     "Especialistas en talas controladas y podas de grandes árboles en zonas inaccesibles para maquinaria. Técnicas de trepa y apeos controlados. Abaratamos costes sin renunciar a la seguridad.":
       "Makineria iristen ez den tokietan zuhaitz handien mozketa eta inausketa kontrolatuetan adituak. Igoera-teknikak eta mozketa kontrolatuak. Kostuak merkatzen ditugu segurtasunari uko egin gabe.",
     "Pide presupuesto": "Eskatu aurrekontua",
@@ -140,6 +141,7 @@ const T = {
     // — Servicios —
     "Lo que hacemos": "Egiten duguna",
     "en altura.": "altueran.",
+    "Tala y poda de árboles en Navarra y Gipuzkoa": "Zuhaitzak moztu eta inaustea Nafarroan eta Gipuzkoan",
     "Trepa, apeos controlados y limpieza. Resolvemos los árboles que nadie más quiere tocar.":
       "Igoera, mozketa kontrolatuak eta garbiketa. Beste inork ukitu nahi ez dituen zuhaitzak konpontzen ditugu.",
     "Servicio 01": "01 Zerbitzua", "Servicio 02": "02 Zerbitzua", "Servicio 03": "03 Zerbitzua", "Servicio 04": "04 Zerbitzua",
@@ -236,6 +238,7 @@ const T = {
     // — Galería —
     "Cada árbol,": "Zuhaitz bakoitza,",
     "una historia.": "istorio bat.",
+    "Trabajos realizados en fotos y vídeo": "Egindako lanak argazkitan eta bideotan",
     "Fotos y vídeos reales de nuestro día a día subidos a los árboles más complicados.":
       "Gure egunerokoaren benetako argazki eta bideoak, zuhaitzik korapilatsuenetan igota.",
     "En movimiento": "Mugimenduan",
@@ -343,6 +346,7 @@ const T = {
 
     "Subir": "Monter", "donde": "là où", "otros": "les autres", "no": "ne", "llegan.": "vont pas.",
     "Poda y tala en altura · Navarra": "Élagage et abattage en hauteur · Navarre",
+    "Empresa de tala y poda de árboles en Navarra y Gipuzkoa": "Entreprise d'abattage et d'élagage d'arbres en Navarre et Gipuzkoa",
     "Subimos donde": "Nous montons là où",
     "otros no llegan": "les autres n'arrivent pas",
     "Especialistas en talas controladas y podas de grandes árboles en zonas inaccesibles para maquinaria. Técnicas de trepa y apeos controlados. Abaratamos costes sin renunciar a la seguridad.":
@@ -411,6 +415,7 @@ const T = {
       "Arbres dangereux, élagage en hauteur ou abattage là où les machines n'accèdent pas. On s'en occupe.",
     "Pedir presupuesto": "Demander un devis",
 
+    "Tala y poda de árboles en Navarra y Gipuzkoa": "Abattage et élagage d'arbres en Navarre et Gipuzkoa",
     "Lo que hacemos": "Ce que nous faisons",
     "en altura.": "en hauteur.",
     "Trepa, apeos controlados y limpieza. Resolvemos los árboles que nadie más quiere tocar.":
@@ -505,6 +510,7 @@ const T = {
     "Presupuesto sin compromiso en Navarra y País Vasco.": "Devis sans engagement en Navarre et au Pays basque.",
     "Contactar": "Nous contacter",
 
+    "Trabajos realizados en fotos y vídeo": "Travaux réalisés en photos et vidéo",
     "Cada árbol,": "Chaque arbre,",
     "una historia.": "une histoire.",
     "Fotos y vídeos reales de nuestro día a día subidos a los árboles más complicados.":
@@ -611,6 +617,7 @@ const T = {
 
     "Subir": "Going", "donde": "where", "otros": "others", "no": "can't", "llegan.": "reach.",
     "Poda y tala en altura · Navarra": "Tree pruning & felling at height · Navarre",
+    "Empresa de tala y poda de árboles en Navarra y Gipuzkoa": "Tree felling and pruning company in Navarre and Gipuzkoa",
     "Subimos donde": "We climb where",
     "otros no llegan": "others can't reach",
     "Especialistas en talas controladas y podas de grandes árboles en zonas inaccesibles para maquinaria. Técnicas de trepa y apeos controlados. Abaratamos costes sin renunciar a la seguridad.":
@@ -679,6 +686,7 @@ const T = {
       "Dangerous trees, pruning at height or felling where machinery can't get in. We'll take a look.",
     "Pedir presupuesto": "Request a quote",
 
+    "Tala y poda de árboles en Navarra y Gipuzkoa": "Tree felling and pruning in Navarre and Gipuzkoa",
     "Lo que hacemos": "What we do",
     "en altura.": "at height.",
     "Trepa, apeos controlados y limpieza. Resolvemos los árboles que nadie más quiere tocar.":
@@ -773,6 +781,7 @@ const T = {
     "Presupuesto sin compromiso en Navarra y País Vasco.": "Free, no-obligation quote in Navarre and the Basque Country.",
     "Contactar": "Get in touch",
 
+    "Trabajos realizados en fotos y vídeo": "Completed work in photos and video",
     "Cada árbol,": "Every tree,",
     "una historia.": "a story.",
     "Fotos y vídeos reales de nuestro día a día subidos a los árboles más complicados.":
@@ -842,30 +851,30 @@ const T = {
 const META = {
   es: {
     "": { title: "Boralan | Poda y tala de árboles en altura en Navarra y País Vasco", desc: "Poda y tala de grandes árboles en altura en Lesaka (Navarra). Trepa y apeos controlados en zonas inaccesibles, sin maquinaria pesada. Presupuesto sin compromiso." },
-    "servicios": { title: "Servicios de poda y tala en altura | Boralan · Navarra", desc: "Talas controladas, podas en altura y trabajos en zonas inaccesibles en Navarra y Gipuzkoa. Apeos controlados mediante trepa. Presupuesto sin compromiso." },
+    "servicios": { title: "Tala y poda de árboles en Navarra y Gipuzkoa | Boralan", desc: "Empresa de tala y poda de árboles en altura. Talas controladas, apeos mediante trepa y trabajos en zonas inaccesibles. Presupuesto sin compromiso." },
     "nosotros": { title: "Quiénes somos | Boralan · Tres jóvenes que emprenden en altura", desc: "Iker, Beñat y Jon: tres lesakarras especialistas en poda y tala de árboles en altura. Conoce la historia de Boralan en Lesaka (Navarra)." },
-    "galeria": { title: "Galería de trabajos | Boralan · Poda y tala en altura", desc: "Fotos y vídeos reales de trabajos de poda y tala en altura en Navarra y Gipuzkoa: talas controladas, podas mediante trepa y apeos en zonas inaccesibles." },
+    "galeria": { title: "Galería de trabajos realizados | Boralan · Lesaka", desc: "Fotos y vídeos de trabajos realizados por Boralan en Navarra y Gipuzkoa. Mira cómo trabajamos antes de pedir presupuesto." },
     "contacto": { title: "Contacto y presupuesto | Boralan · Lesaka, Navarra", desc: "Pide presupuesto sin compromiso para poda y tala de árboles en altura. Llámanos o escríbenos por WhatsApp. Boralan, Lesaka (Navarra)." }
   },
   eu: {
     "": { title: "Boralan | Zuhaitzen inausketa eta mozketa altueran Nafarroan eta Euskal Herrian", desc: "Zuhaitz handien inausketa eta mozketa altueran Lesakan (Nafarroa). Igoera eta mozketa kontrolatuak sarbide zaileko guneetan, makineria astunik gabe. Aurrekontua doan." },
     "servicios": { title: "Inausketa eta mozketa zerbitzuak altueran | Boralan · Nafarroa", desc: "Mozketa kontrolatuak, altuerako inausketak eta sarbide zaileko guneetako lanak Nafarroan eta Gipuzkoan. Mozketa kontrolatuak igoeraz. Aurrekontua doan." },
     "nosotros": { title: "Nor garen | Boralan · Altueran ekiten duten hiru gazte", desc: "Iker, Beñat eta Jon: altuerako zuhaitzen inausketan eta mozketan adituak diren hiru lesakar. Ezagutu Boralanen historia Lesakan (Nafarroa)." },
-    "galeria": { title: "Lanen galeria | Boralan · Inausketa eta mozketa altueran", desc: "Boralanen lanen galeria: mozketa kontrolatuak, altuerako inausketak eta igoerak Nafarroan eta Euskal Herrian. Gure egunerokoaren benetako argazki eta bideoak." },
+    "galeria": { title: "Egindako lanen galeria | Boralan · Lesaka", desc: "Boralanek Nafarroan eta Gipuzkoan egindako lanen argazkiak eta bideoak. Ikusi nola lan egiten dugun aurrekontua eskatu aurretik." },
     "contacto": { title: "Kontaktua eta aurrekontua | Boralan · Lesaka, Nafarroa", desc: "Eskatu konpromisorik gabeko aurrekontua altuerako zuhaitzen inausketa eta mozketarako. Deitu 628 850 027 zenbakira edo idatzi WhatsApp bidez. Boralan, Lesaka (Nafarroa)." }
   },
   fr: {
     "": { title: "Boralan | Élagage et abattage d'arbres en hauteur en Navarre et au Pays basque", desc: "Élagage et abattage de grands arbres en hauteur à Lesaka (Navarre). Grimpe et démontage contrôlé en zones inaccessibles, sans machinerie lourde. Devis gratuit." },
     "servicios": { title: "Services d'élagage et d'abattage en hauteur | Boralan · Navarre", desc: "Abattages contrôlés, élagage en hauteur et travaux en zones inaccessibles en Navarre et au Guipuscoa. Démontage contrôlé par grimpe. Devis sans engagement." },
     "nosotros": { title: "Qui sommes-nous | Boralan · Trois jeunes qui entreprennent en hauteur", desc: "Iker, Beñat et Jon : trois habitants de Lesaka spécialistes de l'élagage et de l'abattage d'arbres en hauteur. Découvrez l'histoire de Boralan." },
-    "galeria": { title: "Galerie de chantiers | Boralan · Élagage et abattage en hauteur", desc: "Galerie des chantiers de Boralan : abattages contrôlés, élagage en hauteur et grimpes en Navarre et au Pays basque. Photos et vidéos réelles de notre quotidien dans les arbres." },
+    "galeria": { title: "Galerie de chantiers réalisés | Boralan · Lesaka", desc: "Photos et vidéos de chantiers réalisés par Boralan en Navarre et au Guipuscoa. Découvrez notre travail avant de demander un devis." },
     "contacto": { title: "Contact et devis | Boralan · Lesaka, Navarre", desc: "Demandez un devis sans engagement pour l'élagage et l'abattage d'arbres en hauteur. Appelez le 628 850 027 ou écrivez-nous sur WhatsApp. Boralan, Lesaka (Navarre)." }
   },
   en: {
     "": { title: "Boralan | Tree pruning & felling at height in Navarre and the Basque Country", desc: "Pruning and felling of large trees at height in Lesaka (Navarre). Climbing and controlled dismantling in inaccessible areas, no heavy machinery. Free quote." },
     "servicios": { title: "Tree pruning & felling services at height | Boralan · Navarre", desc: "Controlled felling, pruning at height and work in inaccessible areas in Navarre and Gipuzkoa. Controlled dismantling by climbing. Free, no-obligation quote." },
     "nosotros": { title: "About us | Boralan · Three young people taking on heights", desc: "Iker, Beñat and Jon: three locals from Lesaka specialising in tree pruning and felling at height. Discover the story of Boralan in Lesaka (Navarre)." },
-    "galeria": { title: "Work gallery | Boralan · Tree pruning & felling at height", desc: "Boralan's work gallery: controlled felling, pruning at height and climbing in Navarre and the Basque Country. Real photos and videos of our daily work in the trees." },
+    "galeria": { title: "Completed work gallery | Boralan · Lesaka", desc: "Photos and videos of work completed by Boralan in Navarre and Gipuzkoa. See how we work before requesting a quote." },
     "contacto": { title: "Contact & quote | Boralan · Lesaka, Navarre", desc: "Request a free, no-obligation quote for tree pruning and felling at height. Call 628 850 027 or message us on WhatsApp. Boralan, Lesaka (Navarre)." }
   }
 };
