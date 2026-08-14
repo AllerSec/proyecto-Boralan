@@ -127,8 +127,8 @@ const T = {
 
     // — Home: instagram —
     "Síguenos en Instagram.": "Jarraitu gaitzazu Instagramen.",
-    "Grabamos nuestros trabajos con la GoPro desde lo alto del árbol. Más de 4.300 personas ya nos siguen.":
-      "Gure lanak GoPro-rekin grabatzen ditugu zuhaitzaren goialdetik. 4.300 lagunek baino gehiagok jarraitzen gaituzte jada.",
+    "Grabamos nuestros trabajos con la GoPro desde lo alto del árbol. Más de 7.000 personas ya nos siguen.":
+      "Gure lanak GoPro-rekin grabatzen ditugu zuhaitzaren goialdetik. 7.000 lagunek baino gehiagok jarraitzen gaituzte jada.",
     "Ver perfil de Instagram de Boralan": "Ikusi Boralanen Instagram profila",
 
     // — Home: CTA —
@@ -249,8 +249,8 @@ const T = {
     "El trabajo, de cerca.": "Lana, gertutik.",
     "Más en @boralan04": "Gehiago @boralan04-n",
     "Síguenos para no perderte ningún trabajo.": "Jarraitu gaitzazu lanik ez galtzeko.",
-    "Más de 4.300 personas ya ven nuestros vídeos desde lo alto del árbol.":
-      "4.300 lagunek baino gehiagok ikusten dituzte jada gure bideoak zuhaitzaren goialdetik.",
+    "Más de 7.000 personas ya ven nuestros vídeos desde lo alto del árbol.":
+      "7.000 lagunek baino gehiagok ikusten dituzte jada gure bideoak zuhaitzaren goialdetik.",
     "Ver Instagram": "Ikusi Instagram",
 
     // — Contacto —
@@ -405,8 +405,8 @@ const T = {
     "Tu navegador no admite vídeo HTML5.": "Votre navigateur ne prend pas en charge la vidéo HTML5.",
 
     "Síguenos en Instagram.": "Suivez-nous sur Instagram.",
-    "Grabamos nuestros trabajos con la GoPro desde lo alto del árbol. Más de 4.300 personas ya nos siguen.":
-      "Nous filmons nos chantiers avec la GoPro depuis la cime de l'arbre. Plus de 4 300 personnes nous suivent déjà.",
+    "Grabamos nuestros trabajos con la GoPro desde lo alto del árbol. Más de 7.000 personas ya nos siguen.":
+      "Nous filmons nos chantiers avec la GoPro depuis la cime de l'arbre. Plus de 7 000 personnes nous suivent déjà.",
     "Ver perfil de Instagram de Boralan": "Voir le profil Instagram de Boralan",
 
     "¿Tienes un árbol complicado?": "Vous avez un arbre compliqué ?",
@@ -523,8 +523,8 @@ const T = {
     "El trabajo, de cerca.": "Le travail, de près.",
     "Más en @boralan04": "Plus sur @boralan04",
     "Síguenos para no perderte ningún trabajo.": "Suivez-nous pour ne manquer aucun chantier.",
-    "Más de 4.300 personas ya ven nuestros vídeos desde lo alto del árbol.":
-      "Plus de 4 300 personnes regardent déjà nos vidéos depuis la cime de l'arbre.",
+    "Más de 7.000 personas ya ven nuestros vídeos desde lo alto del árbol.":
+      "Plus de 7 000 personnes regardent déjà nos vidéos depuis la cime de l'arbre.",
     "Ver Instagram": "Voir Instagram",
 
     "Hablemos de": "Parlons de",
@@ -676,8 +676,8 @@ const T = {
     "Tu navegador no admite vídeo HTML5.": "Your browser does not support HTML5 video.",
 
     "Síguenos en Instagram.": "Follow us on Instagram.",
-    "Grabamos nuestros trabajos con la GoPro desde lo alto del árbol. Más de 4.300 personas ya nos siguen.":
-      "We film our jobs with a GoPro from the top of the tree. Over 4,300 people already follow us.",
+    "Grabamos nuestros trabajos con la GoPro desde lo alto del árbol. Más de 7.000 personas ya nos siguen.":
+      "We film our jobs with a GoPro from the top of the tree. Over 7,000 people already follow us.",
     "Ver perfil de Instagram de Boralan": "View Boralan's Instagram profile",
 
     "¿Tienes un árbol complicado?": "Got a tricky tree?",
@@ -794,8 +794,8 @@ const T = {
     "El trabajo, de cerca.": "The work, up close.",
     "Más en @boralan04": "More on @boralan04",
     "Síguenos para no perderte ningún trabajo.": "Follow us so you don't miss a single job.",
-    "Más de 4.300 personas ya ven nuestros vídeos desde lo alto del árbol.":
-      "Over 4,300 people already watch our videos from the top of the tree.",
+    "Más de 7.000 personas ya ven nuestros vídeos desde lo alto del árbol.":
+      "Over 7,000 people already watch our videos from the top of the tree.",
     "Ver Instagram": "View Instagram",
 
     "Hablemos de": "Let's talk about",
