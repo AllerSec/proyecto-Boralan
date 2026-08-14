@@ -294,6 +294,27 @@ const AREA_SERVED = {
   fr: "Navarre et Pays basque", en: "Navarre and the Basque Country"
 };
 
+/* Variantes legítimas del nombre comercial. Consolidan la entidad de marca
+   en Google (sitelinks) sin reclamar nombres de terceros. */
+const BRAND_ALIASES = ["Boralan Lesaka", "Boralan Arboricultura", "Boralan Bortziri"];
+
+/* Horario de atención: L-V 8:00-18:00, Sáb 9:00-14:00.
+   Habilita el indicador "Abierto ahora" en la SERP. */
+const OPENING_HOURS = [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "09:00",
+    "closes": "14:00"
+  }
+];
+
 // Preguntas frecuentes (servicios) por idioma — paridad con la sección visible
 const FAQ = {
   es: [
@@ -361,10 +382,12 @@ function businessLd(lang) {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${SITE}/#business`,
     "name": "Boralan",
+    "alternateName": BRAND_ALIASES,
     "description": BIZ_DESC[lang] || BIZ_DESC.es,
     "url": pageUrl("", lang),
     "email": "boralan04@gmail.com",
     "telephone": "+34628850027",
+    "openingHoursSpecification": OPENING_HOURS,
     "image": `${SITE}/assets/img/equipo-boralan-retrato-1200.webp`,
     "logo": `${SITE}/assets/img/boralan-logo.png`,
     "priceRange": "€€",
@@ -436,12 +459,14 @@ function faqLd(lang) {
 function contactBusinessLd(lang) {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${SITE}/#business`,
     "name": "Boralan",
+    "alternateName": BRAND_ALIASES,
     "image": `${SITE}/assets/img/equipo-boralan-retrato-1200.webp`,
     "telephone": "+34628850027",
     "email": "boralan04@gmail.com",
+    "openingHoursSpecification": OPENING_HOURS,
     "address": { "@type": "PostalAddress", "addressLocality": "Lesaka", "addressRegion": "Navarra", "postalCode": "31770", "addressCountry": "ES" },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.2447, "longitude": -1.7019 },
     "url": pageUrl("contacto", lang),
@@ -449,13 +474,31 @@ function contactBusinessLd(lang) {
   };
 }
 
-// Organization (nosotros) — misma entidad que el negocio (@id #business)
+/* WebSite (#website): nodo de marca. Consolida "Boralan" como entidad
+   y es la señal que Google usa para plantear sitelinks de marca. */
+function websiteLd(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE}/#website`,
+    "name": "Boralan",
+    "alternateName": BRAND_ALIASES,
+    "url": pageUrl("", lang),
+    "inLanguage": lang,
+    "publisher": { "@id": `${SITE}/#business` }
+  };
+}
+
+/* Organization (nosotros): la MISMA entidad que #business.
+   Mantiene el @type de #business en lugar de redeclararlo como Organization,
+   porque dos @type distintos bajo un mismo @id crean conflicto de entidad. */
 function organizationLd(lang) {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${SITE}/#business`,
     "name": "Boralan",
+    "alternateName": BRAND_ALIASES,
     "url": pageUrl("", lang),
     "logo": `${SITE}/assets/img/boralan-logo.png`,
     "foundingDate": "2024",
@@ -473,7 +516,7 @@ function organizationLd(lang) {
 function buildJsonLd(pageKey, lang) {
   let blocks = [];
   if (pageKey === "") {
-    blocks = [businessLd(lang), serviceLd(lang)];
+    blocks = [websiteLd(lang), businessLd(lang), serviceLd(lang)];
   } else if (pageKey === "servicios") {
     blocks = [breadcrumbLd("servicios", lang), faqLd(lang)];
   } else if (pageKey === "nosotros") {
