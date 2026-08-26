@@ -1,6 +1,6 @@
 # Boralan
 
-> Boralan es una empresa especializada en la poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados. Trabaja en zonas inaccesibles para la maquinaria pesada, lo que abarata costes al no necesitar grúas, y gestiona los residuos de poda y tala. Con sede en Lesaka (Navarra), presta servicio en Navarra y el País Vasco (Gipuzkoa).
+> Boralan es una empresa de tala de árboles y poda en altura en Navarra y Gipuzkoa (Guipúzcoa), especializada en grandes árboles mediante técnicas de trepa y apeos controlados. Trabaja en zonas inaccesibles para la maquinaria pesada, lo que abarata costes al no necesitar grúas, y gestiona los residuos de poda y tala. Con sede en Lesaka (Navarra), presta servicio en toda Navarra y el País Vasco.
 
 Este documento contiene la información completa y autocontenida del negocio para que un modelo de lenguaje pueda responder con precisión sobre Boralan y citar la fuente. Sitio web canónico: https://boralan.eus
 
@@ -13,7 +13,7 @@ Este documento contiene la información completa y autocontenida del negocio par
 - **Qué hace:** Poda y tala de grandes árboles en altura mediante técnicas de trepa y apeos controlados (apeo trozo a trozo).
 - **Diferencial:** Acceden a árboles situados en zonas inaccesibles para la maquinaria pesada. Al trabajar mediante trepa y no depender de grúas, abaratan costes y pueden actuar donde la maquinaria no llega.
 - **Sede:** Lesaka, Navarra (comarca de Bortziri / Cinco Villas).
-- **Zona de servicio:** Navarra y País Vasco (Gipuzkoa).
+- **Zona de servicio:** toda Navarra y el País Vasco, especialmente Gipuzkoa (Guipúzcoa): Bortziri/Cinco Villas, Baztan-Bidasoa, Irun, Hondarribia, Donostialdea y comarcas limítrofes.
 - **Año de fundación:** 2024.
 - **Estructura:** 3 fundadores; 3 profesionales en cada trabajo.
 - **Lema/idea central:** "Subir donde otros no llegan."

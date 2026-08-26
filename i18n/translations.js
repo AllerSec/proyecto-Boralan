@@ -61,7 +61,7 @@ const T = {
 
     // — Home: hero / loader —
     "Subir": "Igo", "donde": "besteek", "otros": "iristen", "no": "ez", "llegan.": "diren tokira.",
-    "Poda y tala en altura · Navarra": "Inausketa eta mozketa altueran · Nafarroa",
+    "Tala y poda en altura · Navarra y Gipuzkoa": "Mozketa eta inausketa altueran · Nafarroa eta Gipuzkoa",
     "Subimos donde": "Besteek iristen ez diren",
     "otros no llegan": "tokira igotzen gara",
     "Empresa de tala y poda de árboles en Navarra y Gipuzkoa": "Zuhaitzak moztu eta inausteko enpresa Nafarroan eta Gipuzkoan",
@@ -345,7 +345,7 @@ const T = {
     "Rechazar": "Refuser",
 
     "Subir": "Monter", "donde": "là où", "otros": "les autres", "no": "ne", "llegan.": "vont pas.",
-    "Poda y tala en altura · Navarra": "Élagage et abattage en hauteur · Navarre",
+    "Tala y poda en altura · Navarra y Gipuzkoa": "Abattage et élagage en hauteur · Navarre et Guipuscoa",
     "Empresa de tala y poda de árboles en Navarra y Gipuzkoa": "Entreprise d'abattage et d'élagage d'arbres en Navarre et Gipuzkoa",
     "Subimos donde": "Nous montons là où",
     "otros no llegan": "les autres n'arrivent pas",
@@ -616,7 +616,7 @@ const T = {
     "Rechazar": "Decline",
 
     "Subir": "Going", "donde": "where", "otros": "others", "no": "can't", "llegan.": "reach.",
-    "Poda y tala en altura · Navarra": "Tree pruning & felling at height · Navarre",
+    "Tala y poda en altura · Navarra y Gipuzkoa": "Tree removal & pruning at height · Navarre",
     "Empresa de tala y poda de árboles en Navarra y Gipuzkoa": "Tree felling and pruning company in Navarre and Gipuzkoa",
     "Subimos donde": "We climb where",
     "otros no llegan": "others can't reach",
@@ -850,7 +850,7 @@ const T = {
    Clave = ruta de la página (relativa). */
 const META = {
   es: {
-    "": { title: "Boralan · Poda y tala de árboles en altura | Navarra", desc: "Talamos y podamos árboles grandes donde no entra maquinaria: trepa y apeo controlado pieza a pieza. Presupuesto gratis en 24 h. ☎ 628 850 027." },
+    "": { title: "Boralan · Tala y poda de árboles | Navarra y Gipuzkoa", desc: "Tala y poda de árboles en altura en Navarra y Gipuzkoa: trepa y apeo controlado donde no entra maquinaria. Presupuesto gratis en 24 h. ☎ 628 850 027." },
     "servicios": { title: "Tala y poda de árboles en altura · Navarra y Gipuzkoa", desc: "Tala controlada, poda en altura y apeo por trepa en zonas sin acceso. Retirada de restos incluida. Te damos precio en 24 h, sin compromiso." },
     "nosotros": { title: "Quiénes somos · Boralan, arboristas en Lesaka", desc: "Iker, Beñat y Jon: tres lesakarras que trepan donde la máquina no llega. Equipo propio, seguro de responsabilidad civil y trabajo cuidado." },
     "galeria": { title: "Trabajos realizados · Fotos y vídeos | Boralan", desc: "Mira árboles de 25 m talados pieza a pieza junto a tejados y cables. Fotos y vídeos reales de nuestros trabajos en Navarra y Gipuzkoa." },
@@ -871,7 +871,7 @@ const META = {
     "contacto": { title: "Devis gratuit sous 24 h · Boralan, Lesaka", desc: "Dites-nous de quel arbre il s'agit et recevez un prix sous 24 h, sans engagement. Appelez le 628 850 027 ou envoyez une photo sur WhatsApp." }
   },
   en: {
-    "": { title: "Boralan · Tree surgeons in Navarre, Spain", desc: "Tree pruning and felling at height in Lesaka, Navarre (Spain). We climb and dismantle trees where no machinery fits. Free quote within 24 h." },
+    "": { title: "Boralan · Tree removal & pruning in Navarre, Spain", desc: "Tree removal, pruning and felling at height in Lesaka, Navarre (Spain). We climb and dismantle trees where no machinery fits. Free quote within 24 h." },
     "servicios": { title: "Tree felling & pruning at height · Navarre, Spain", desc: "Controlled felling, pruning at height and rope-access dismantling in Navarre and Gipuzkoa, northern Spain. Debris removal included. Quote in 24 h." },
     "nosotros": { title: "About us · Boralan, tree climbers in Lesaka", desc: "Iker, Beñat and Jon: three locals from Lesaka, Navarre who climb where machines cannot reach. Professional kit and public liability insurance." },
     "galeria": { title: "Our work · Photos and videos | Boralan", desc: "See 25 m trees dismantled piece by piece beside roofs and power lines. Real photos and videos of our work in Navarre and Gipuzkoa, Spain." },
