@@ -280,6 +280,8 @@
         window.gtag("event", "clic_email", { transport_type: "beacon" });
       } else if (href.indexOf("instagram.com") !== -1) {
         window.gtag("event", "clic_instagram", { transport_type: "beacon" });
+      } else if (href.indexOf("tiktok.com") !== -1) {
+        window.gtag("event", "clic_tiktok", { transport_type: "beacon" });
       }
     }, true);
   }

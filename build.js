@@ -134,7 +134,8 @@ function partials(lang, pageKey) {
     <div class="mobile-nav__footer">
       <a href="tel:+34628850027">628 850 027</a>
       <a href="mailto:boralan04@gmail.com">boralan04@gmail.com</a>
-      <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">@boralan04</a>
+      <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">Instagram @boralan04</a>
+      <a href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener">TikTok @boralan04</a>
     </div>
   </nav>`,
 
@@ -163,6 +164,7 @@ function partials(lang, pageKey) {
             <a href="tel:+34628798602">628 798 602</a>
             <a href="mailto:boralan04@gmail.com">boralan04@gmail.com</a>
             <a href="https://www.instagram.com/boralan04/" target="_blank" rel="noopener">Instagram @boralan04</a>
+            <a href="https://www.tiktok.com/@boralan04" target="_blank" rel="noopener">TikTok @boralan04</a>
             <span style="color:var(--text-dim)">${tr("Lesaka, Navarra", lang)}</span>
           </div>
         </div>
@@ -441,7 +443,7 @@ function businessLd(lang) {
       "addressCountry": "ES"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.2447, "longitude": -1.7019 },
-    "sameAs": ["https://www.instagram.com/boralan04/"],
+    "sameAs": ["https://www.instagram.com/boralan04/", "https://www.tiktok.com/@boralan04"],
     "knowsAbout": KNOWS[lang] || KNOWS.es
   };
 }
@@ -532,7 +534,7 @@ function organizationLd(lang) {
       { "@type": "Person", "name": "Jon Erro Fagoaga" }
     ],
     "foundingLocation": "Lesaka, Navarra",
-    "sameAs": ["https://www.instagram.com/boralan04/"]
+    "sameAs": ["https://www.instagram.com/boralan04/", "https://www.tiktok.com/@boralan04"]
   };
 }
 
