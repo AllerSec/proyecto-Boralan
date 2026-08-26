@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0c">
+  <!--#GTAG#-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "G-2GGYYSD9ZT");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGYYSD9ZT"></script>
+  <!--#/GTAG#-->
 
   <title>Tala y poda de árboles en altura · Navarra y Gipuzkoa</title>
   <meta name="description" content="Tala controlada, poda en altura y apeo por trepa en zonas sin acceso. Retirada de restos incluida. Te damos precio en 24 h, sin compromiso.">
@@ -437,7 +456,7 @@
   <!--#/WHATSAPP#-->
   <!--#COOKIES#-->
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-    <p>Usamos cookies propias y técnicas para mejorar tu experiencia. Consulta nuestra <a href="/politica-cookies/">política de cookies</a>.</p>
+    <p>Usamos cookies técnicas y, si las aceptas, cookies de análisis (Google Analytics) para saber cómo se usa la web. Consulta nuestra <a href="/politica-cookies/">política de cookies</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">Aceptar</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">Rechazar</button>

@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0c">
+  <!--#GTAG#-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "G-2GGYYSD9ZT");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGYYSD9ZT"></script>
+  <!--#/GTAG#-->
   <title>Politique de cookies | Boralan</title>
   <meta name="description" content="Politique de cookies du site de Boralan. Informations sur l'utilisation des cookies techniques et tiers.">
   <meta name="robots" content="noindex, follow">
@@ -79,6 +98,7 @@
       <h2>2. Cookies que nous utilisons</h2>
       <ul>
         <li><strong>Cookies techniques et de préférences (propres) :</strong> nous utilisons le stockage local de votre navigateur pour mémoriser si vous avez accepté l'avis de cookies et pour afficher l'effet de chargement uniquement lors de votre première visite. Ils ne collectent pas de données personnelles identifiables.</li>
+        <li><strong>Cookies d'analyse (Google Analytics, tiers) :</strong> uniquement si vous les acceptez dans l'avis, nous utilisons Google Analytics 4 pour connaître de manière statistique le nombre de visites, les pages les plus consultées et l'origine du trafic. Nous ne les utilisons pas à des fins publicitaires. Fournisseur : Google Ireland Limited.</li>
         <li><strong>Cookies tiers :</strong> lors de la lecture de contenu intégré ou en suivant des liens vers Instagram, Facebook ou des services de cartes, ces tiers peuvent installer leurs propres cookies, soumis à leurs politiques respectives.</li>
       </ul>
 
@@ -90,6 +110,7 @@
         <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
         <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
       </ul>
+      <p>Si vous changez d'avis, supprimez les données de ce site dans votre navigateur et l'avis réapparaîtra.</p>
 
       <h2>4. Mises à jour</h2>
       <p>Nous pouvons mettre à jour cette politique pour l'adapter aux évolutions réglementaires ou techniques. Nous vous recommandons de la consulter régulièrement.</p>
@@ -147,7 +168,7 @@
   <!--#/WHATSAPP#-->
   <!--#COOKIES#-->
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="Avis de cookies">
-    <p>Nous utilisons des cookies propres et techniques pour améliorer votre expérience. Consultez notre <a href="/fr/politica-cookies/">politique de cookies</a>.</p>
+    <p>Nous utilisons des cookies techniques et, si vous les acceptez, des cookies d'analyse (Google Analytics) pour savoir comment le site est utilisé. Consultez notre <a href="/fr/politica-cookies/">politique de cookies</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">Accepter</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">Refuser</button>

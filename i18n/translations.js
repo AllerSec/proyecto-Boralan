@@ -53,8 +53,8 @@ const T = {
     "Diseñado por": "Diseinatzailea:",
     "Escríbenos por WhatsApp": "Idatzi WhatsApp bidez",
     "Aviso de cookies": "Cookieen oharra",
-    "Usamos cookies propias y técnicas para mejorar tu experiencia. Consulta nuestra":
-      "Cookie propioak eta teknikoak erabiltzen ditugu zure esperientzia hobetzeko. Ikusi gure",
+    "Usamos cookies técnicas y, si las aceptas, cookies de análisis (Google Analytics) para saber cómo se usa la web. Consulta nuestra":
+      "Cookie teknikoak erabiltzen ditugu eta, onartzen badituzu, analisi-cookieak (Google Analytics), weba nola erabiltzen den jakiteko. Ikusi gure",
     "política de cookies": "cookieen politika",
     "Aceptar": "Onartu",
     "Rechazar": "Ukatu",
@@ -338,8 +338,8 @@ const T = {
     "Diseñado por": "Conçu par",
     "Escríbenos por WhatsApp": "Écrivez-nous sur WhatsApp",
     "Aviso de cookies": "Avis de cookies",
-    "Usamos cookies propias y técnicas para mejorar tu experiencia. Consulta nuestra":
-      "Nous utilisons des cookies propres et techniques pour améliorer votre expérience. Consultez notre",
+    "Usamos cookies técnicas y, si las aceptas, cookies de análisis (Google Analytics) para saber cómo se usa la web. Consulta nuestra":
+      "Nous utilisons des cookies techniques et, si vous les acceptez, des cookies d'analyse (Google Analytics) pour savoir comment le site est utilisé. Consultez notre",
     "política de cookies": "politique de cookies",
     "Aceptar": "Accepter",
     "Rechazar": "Refuser",
@@ -609,8 +609,8 @@ const T = {
     "Diseñado por": "Designed by",
     "Escríbenos por WhatsApp": "Message us on WhatsApp",
     "Aviso de cookies": "Cookie notice",
-    "Usamos cookies propias y técnicas para mejorar tu experiencia. Consulta nuestra":
-      "We use our own and technical cookies to improve your experience. See our",
+    "Usamos cookies técnicas y, si las aceptas, cookies de análisis (Google Analytics) para saber cómo se usa la web. Consulta nuestra":
+      "We use technical cookies and, if you accept them, analytics cookies (Google Analytics) to understand how the site is used. See our",
     "política de cookies": "cookie policy",
     "Aceptar": "Accept",
     "Rechazar": "Decline",

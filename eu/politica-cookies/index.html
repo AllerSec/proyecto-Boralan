@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0c">
+  <!--#GTAG#-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "G-2GGYYSD9ZT");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGYYSD9ZT"></script>
+  <!--#/GTAG#-->
   <title>Cookieen politika | Boralan</title>
   <meta name="description" content="Boralan webguneko cookieen politika. Cookie tekniko eta hirugarrenen erabilerari buruzko informazioa.">
   <meta name="robots" content="noindex, follow">
@@ -79,6 +98,7 @@
       <h2>2. Erabiltzen ditugun cookieak</h2>
       <ul>
         <li><strong>Cookie tekniko eta lehentasunezkoak (propioak):</strong> zure nabigatzailearen biltegiratze lokala erabiltzen dugu cookieen oharra onartu duzun gogoratzeko eta karga-efektua zure lehen bisitan soilik erakusteko. Ez dute datu pertsonal identifikagarririk biltzen.</li>
+        <li><strong>Analisi-cookieak (Google Analytics, hirugarrenenak):</strong> oharrean onartzen badituzu bakarrik, Google Analytics 4 erabiltzen dugu bisita kopurua, gehien ikusitako orriak eta trafikoaren jatorria estatistikoki ezagutzeko. Ez ditugu publizitate helburuetarako erabiltzen. Hornitzailea: Google Ireland Limited.</li>
         <li><strong>Hirugarrenen cookieak:</strong> txertatutako edukia erreproduzitzean edo Instagram, Facebook edo mapa-zerbitzuetarako estekak jarraitzean, hirugarren horiek beren cookieak instala ditzakete, beren politiken arabera.</li>
       </ul>
 
@@ -90,6 +110,7 @@
         <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
         <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
       </ul>
+      <p>Iritziz aldatzen baduzu, ezabatu gune honetako datuak zure nabigatzailean eta oharra berriro agertuko da.</p>
 
       <h2>4. Eguneraketak</h2>
       <p>Politika hau egunera dezakegu aldaketa arau-emaile edo teknikoetara egokitzeko. Aldizka berrikustea gomendatzen dizugu.</p>
@@ -147,7 +168,7 @@
   <!--#/WHATSAPP#-->
   <!--#COOKIES#-->
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="Cookieen oharra">
-    <p>Cookie propioak eta teknikoak erabiltzen ditugu zure esperientzia hobetzeko. Ikusi gure <a href="/eu/politica-cookies/">cookieen politika</a>.</p>
+    <p>Cookie teknikoak erabiltzen ditugu eta, onartzen badituzu, analisi-cookieak (Google Analytics), weba nola erabiltzen den jakiteko. Ikusi gure <a href="/eu/politica-cookies/">cookieen politika</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">Onartu</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">Ukatu</button>

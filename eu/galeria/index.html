@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0c">
+  <!--#GTAG#-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "G-2GGYYSD9ZT");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGYYSD9ZT"></script>
+  <!--#/GTAG#-->
 
   <title>Egindako lanak · Argazkiak eta bideoak | Boralan</title>
   <meta name="description" content="Ikusi 25 metroko zuhaitzak zatika moztuta teilatu eta kableen ondoan. Nafarroan eta Gipuzkoan egindako lanen argazki eta bideo errealak.">
@@ -251,7 +270,7 @@
   <!--#/WHATSAPP#-->
   <!--#COOKIES#-->
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="Cookieen oharra">
-    <p>Cookie propioak eta teknikoak erabiltzen ditugu zure esperientzia hobetzeko. Ikusi gure <a href="/eu/politica-cookies/">cookieen politika</a>.</p>
+    <p>Cookie teknikoak erabiltzen ditugu eta, onartzen badituzu, analisi-cookieak (Google Analytics), weba nola erabiltzen den jakiteko. Ikusi gure <a href="/eu/politica-cookies/">cookieen politika</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">Onartu</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">Ukatu</button>

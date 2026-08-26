@@ -84,6 +84,11 @@ module.exports = {
     "Cookies técnicas y de preferencias (propias):": "Cookie tekniko eta lehentasunezkoak (propioak):",
     "usamos el almacenamiento local de tu navegador para recordar si has aceptado el aviso de cookies y para mostrar el efecto de carga solo en tu primera visita. No recogen datos personales identificables.":
       "zure nabigatzailearen biltegiratze lokala erabiltzen dugu cookieen oharra onartu duzun gogoratzeko eta karga-efektua zure lehen bisitan soilik erakusteko. Ez dute datu pertsonal identifikagarririk biltzen.",
+    "Cookies de análisis (Google Analytics, de terceros):": "Analisi-cookieak (Google Analytics, hirugarrenenak):",
+    "solo si las aceptas en el aviso, usamos Google Analytics 4 para conocer de forma estadística el número de visitas, las páginas más vistas y el origen del tráfico. No las usamos con fines publicitarios. Proveedor: Google Ireland Limited.":
+      "oharrean onartzen badituzu bakarrik, Google Analytics 4 erabiltzen dugu bisita kopurua, gehien ikusitako orriak eta trafikoaren jatorria estatistikoki ezagutzeko. Ez ditugu publizitate helburuetarako erabiltzen. Hornitzailea: Google Ireland Limited.",
+    "Si cambias de opinión, borra los datos de este sitio en tu navegador y el aviso volverá a aparecer.":
+      "Iritziz aldatzen baduzu, ezabatu gune honetako datuak zure nabigatzailean eta oharra berriro agertuko da.",
     "Cookies de terceros:": "Hirugarrenen cookieak:",
     "al reproducir contenido incrustado o seguir enlaces a Instagram, Facebook o servicios de mapas, dichos terceros pueden instalar sus propias cookies, sujetas a sus respectivas políticas.":
       "txertatutako edukia erreproduzitzean edo Instagram, Facebook edo mapa-zerbitzuetarako estekak jarraitzean, hirugarren horiek beren cookieak instala ditzakete, beren politiken arabera.",
@@ -174,6 +179,11 @@ module.exports = {
     "Cookies técnicas y de preferencias (propias):": "Cookies techniques et de préférences (propres) :",
     "usamos el almacenamiento local de tu navegador para recordar si has aceptado el aviso de cookies y para mostrar el efecto de carga solo en tu primera visita. No recogen datos personales identificables.":
       "nous utilisons le stockage local de votre navigateur pour mémoriser si vous avez accepté l'avis de cookies et pour afficher l'effet de chargement uniquement lors de votre première visite. Ils ne collectent pas de données personnelles identifiables.",
+    "Cookies de análisis (Google Analytics, de terceros):": "Cookies d'analyse (Google Analytics, tiers) :",
+    "solo si las aceptas en el aviso, usamos Google Analytics 4 para conocer de forma estadística el número de visitas, las páginas más vistas y el origen del tráfico. No las usamos con fines publicitarios. Proveedor: Google Ireland Limited.":
+      "uniquement si vous les acceptez dans l'avis, nous utilisons Google Analytics 4 pour connaître de manière statistique le nombre de visites, les pages les plus consultées et l'origine du trafic. Nous ne les utilisons pas à des fins publicitaires. Fournisseur : Google Ireland Limited.",
+    "Si cambias de opinión, borra los datos de este sitio en tu navegador y el aviso volverá a aparecer.":
+      "Si vous changez d'avis, supprimez les données de ce site dans votre navigateur et l'avis réapparaîtra.",
     "Cookies de terceros:": "Cookies tiers :",
     "al reproducir contenido incrustado o seguir enlaces a Instagram, Facebook o servicios de mapas, dichos terceros pueden instalar sus propias cookies, sujetas a sus respectivas políticas.":
       "lors de la lecture de contenu intégré ou en suivant des liens vers Instagram, Facebook ou des services de cartes, ces tiers peuvent installer leurs propres cookies, soumis à leurs politiques respectives.",
@@ -264,6 +274,11 @@ module.exports = {
     "Cookies técnicas y de preferencias (propias):": "Technical and preference cookies (own):",
     "usamos el almacenamiento local de tu navegador para recordar si has aceptado el aviso de cookies y para mostrar el efecto de carga solo en tu primera visita. No recogen datos personales identificables.":
       "we use your browser's local storage to remember whether you have accepted the cookie notice and to show the loading effect only on your first visit. They do not collect identifiable personal data.",
+    "Cookies de análisis (Google Analytics, de terceros):": "Analytics cookies (Google Analytics, third-party):",
+    "solo si las aceptas en el aviso, usamos Google Analytics 4 para conocer de forma estadística el número de visitas, las páginas más vistas y el origen del tráfico. No las usamos con fines publicitarios. Proveedor: Google Ireland Limited.":
+      "only if you accept them in the notice, we use Google Analytics 4 to obtain statistics on the number of visits, the most viewed pages and the origin of traffic. We do not use them for advertising purposes. Provider: Google Ireland Limited.",
+    "Si cambias de opinión, borra los datos de este sitio en tu navegador y el aviso volverá a aparecer.":
+      "If you change your mind, delete this site's data in your browser and the notice will appear again.",
     "Cookies de terceros:": "Third-party cookies:",
     "al reproducir contenido incrustado o seguir enlaces a Instagram, Facebook o servicios de mapas, dichos terceros pueden instalar sus propias cookies, sujetas a sus respectivas políticas.":
       "when playing embedded content or following links to Instagram, Facebook or map services, those third parties may install their own cookies, subject to their respective policies.",

@@ -26,6 +26,29 @@ const SITE = "https://boralan.eus"; // dominio canónico para SEO (hreflang/og)
 
 const WA_MSG = encodeURIComponent("Hola, he visto vuestra web y quería pedir un presupuesto para un trabajo de poda o tala.");
 const WA_LINK = `https://wa.me/34628850027?text=${WA_MSG}`;
+
+/* Google Analytics 4 con Consent Mode v2 (RGPD/EEE): todo denegado por defecto;
+   analytics solo se activa si el usuario aceptó el aviso de cookies (localStorage).
+   main.js actualiza el consentimiento al pulsar Aceptar/Rechazar en el banner. */
+const GA_ID = "G-2GGYYSD9ZT";
+const GTAG = `
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "${GA_ID}");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>`;
 const BRAND_MARK = `<img class="brand__mark" src="/assets/img/logo-mark-160.webp" width="106" height="160" alt="" aria-hidden="true">`;
 
 // Páginas del sitio: clave = ruta lógica; valor = ruta de archivo fuente (es)
@@ -83,6 +106,7 @@ function partials(lang, pageKey) {
   const d = LANGS.find(l => l.code === lang).dir;
   const home = `${d}/`;
   return {
+    GTAG,
     HEADER: `
   <header class="site-header">
     <div class="container header__inner">
@@ -163,7 +187,7 @@ function partials(lang, pageKey) {
 
     COOKIES: `
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="${tr("Aviso de cookies", lang)}">
-    <p>${tr("Usamos cookies propias y técnicas para mejorar tu experiencia. Consulta nuestra", lang)} <a href="${d}/politica-cookies/">${tr("política de cookies", lang)}</a>.</p>
+    <p>${tr("Usamos cookies técnicas y, si las aceptas, cookies de análisis (Google Analytics) para saber cómo se usa la web. Consulta nuestra", lang)} <a href="${d}/politica-cookies/">${tr("política de cookies", lang)}</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">${tr("Aceptar", lang)}</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">${tr("Rechazar", lang)}</button>

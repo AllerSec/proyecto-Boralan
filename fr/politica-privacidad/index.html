@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0c">
+  <!--#GTAG#-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "G-2GGYYSD9ZT");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGYYSD9ZT"></script>
+  <!--#/GTAG#-->
   <title>Politique de confidentialité | Boralan</title>
   <meta name="description" content="Politique de confidentialité et de protection des données de Boralan conformément au RGPD et à la LOPDGDD.">
   <meta name="robots" content="noindex, follow">
@@ -153,7 +172,7 @@
   <!--#/WHATSAPP#-->
   <!--#COOKIES#-->
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="Avis de cookies">
-    <p>Nous utilisons des cookies propres et techniques pour améliorer votre expérience. Consultez notre <a href="/fr/politica-cookies/">politique de cookies</a>.</p>
+    <p>Nous utilisons des cookies techniques et, si vous les acceptez, des cookies d'analyse (Google Analytics) pour savoir comment le site est utilisé. Consultez notre <a href="/fr/politica-cookies/">politique de cookies</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">Accepter</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">Refuser</button>

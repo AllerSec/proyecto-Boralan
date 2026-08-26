@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0c">
+  <!--#GTAG#-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var granted = false;
+      try { granted = localStorage.getItem("boralan_cookies") === "accept"; } catch (e) {}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    })();
+    gtag("js", new Date());
+    gtag("config", "G-2GGYYSD9ZT");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGYYSD9ZT"></script>
+  <!--#/GTAG#-->
 
   <title>About us · Boralan, tree climbers in Lesaka</title>
   <meta name="description" content="Iker, Beñat and Jon: three locals from Lesaka, Navarre who climb where machines cannot reach. Professional kit and public liability insurance.">
@@ -348,7 +367,7 @@
   <!--#/WHATSAPP#-->
   <!--#COOKIES#-->
   <div class="cookie-banner" data-cookie role="dialog" aria-live="polite" aria-label="Cookie notice">
-    <p>We use our own and technical cookies to improve your experience. See our <a href="/en/politica-cookies/">cookie policy</a>.</p>
+    <p>We use technical cookies and, if you accept them, analytics cookies (Google Analytics) to understand how the site is used. See our <a href="/en/politica-cookies/">cookie policy</a>.</p>
     <div class="cookie-banner__actions">
       <button class="btn" data-cookie-accept type="button">Accept</button>
       <button class="btn btn--ghost" data-cookie-reject type="button">Decline</button>

@@ -253,11 +253,35 @@
     setTimeout(() => banner.classList.add("is-visible"), 1400);
     banner.querySelectorAll("[data-cookie-accept], [data-cookie-reject]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        localStorage.setItem("boralan_cookies", btn.hasAttribute("data-cookie-accept") ? "accept" : "reject");
+        const accepted = btn.hasAttribute("data-cookie-accept");
+        localStorage.setItem("boralan_cookies", accepted ? "accept" : "reject");
+        if (typeof window.gtag === "function") {
+          window.gtag("consent", "update", { analytics_storage: accepted ? "granted" : "denied" });
+        }
         banner.classList.remove("is-visible");
         setTimeout(() => banner.remove(), 600);
       });
     });
+  }
+
+  /* ----------------------------------------------------------------------
+     9b. EVENTOS DE ANALÍTICA — clics en teléfono, WhatsApp, email e Instagram
+     ---------------------------------------------------------------------- */
+  function initAnalyticsEvents() {
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest ? e.target.closest("a[href]") : null;
+      if (!link || typeof window.gtag !== "function") return;
+      const href = link.getAttribute("href") || "";
+      if (href.indexOf("tel:") === 0) {
+        window.gtag("event", "llamada_telefono", { numero: href.replace("tel:", ""), transport_type: "beacon" });
+      } else if (href.indexOf("wa.me") !== -1 || href.indexOf("api.whatsapp.com") !== -1) {
+        window.gtag("event", "clic_whatsapp", { transport_type: "beacon" });
+      } else if (href.indexOf("mailto:") === 0) {
+        window.gtag("event", "clic_email", { transport_type: "beacon" });
+      } else if (href.indexOf("instagram.com") !== -1) {
+        window.gtag("event", "clic_instagram", { transport_type: "beacon" });
+      }
+    }, true);
   }
 
   /* ----------------------------------------------------------------------
@@ -514,6 +538,7 @@
     initMagnetic();
     initTilt();
     initCookies();
+    initAnalyticsEvents();
     initLightbox();
     initCarousels();
     initHeroCarousel();
