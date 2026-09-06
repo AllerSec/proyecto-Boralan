@@ -145,7 +145,7 @@ function partials(lang, pageKey) {
       <div class="footer__grid">
         <div class="footer__brand">
           <a class="brand" href="${home}" aria-label="${tr("Boralan — inicio", lang)}">${BRAND_MARK}<span>boralan</span></a>
-          <p class="footer__tagline">${tr("Poda y tala de grandes árboles en altura. Trepa y apeos controlados en Navarra y País Vasco.", lang)}</p>
+          <p class="footer__tagline">${tr("Poda y tala de grandes árboles en altura. Trepa y apeos controlados en toda Euskal Herria, Iparralde incluido.", lang)}</p>
         </div>
         <div>
           <p class="footer__title">${tr("Navegación", lang)}</p>
@@ -316,8 +316,10 @@ const SERVICE_TYPE = {
 };
 
 const AREA_SERVED = {
-  es: "Navarra y País Vasco", eu: "Nafarroa eta Euskal Herria",
-  fr: "Navarre et Pays basque", en: "Navarre and the Basque Country"
+  es: "Euskal Herria: Navarra, Gipuzkoa, Bizkaia, Araba e Iparralde",
+  eu: "Euskal Herria osoa: Nafarroa, Gipuzkoa, Bizkaia, Araba eta Iparraldea",
+  fr: "Pays Basque : Navarre, Guipuscoa, Biscaye, Alava et Iparralde",
+  en: "The Basque Country: Navarre, Gipuzkoa, Bizkaia, Araba and the French Basque Country"
 };
 
 /* Variantes legítimas del nombre comercial. Consolidan la entidad de marca
@@ -349,7 +351,7 @@ const FAQ = {
     ["¿Podéis quitar un árbol pegado a una casa sin dañarla?", "Sí. Apeamos el árbol trozo a trozo desde arriba y bajamos cada corte con cuerda, protegiendo casas, vallados e instalaciones cercanas."],
     ["¿Trabajáis en sitios donde no entra la maquinaria?", "Sí. Nos especializamos en zonas inaccesibles para grúas y máquinas. Al trabajar con técnicas de trepa abaratamos costes porque no necesitamos grandes medios."],
     ["¿Os encargáis de retirar los restos de la poda o la tala?", "Sí, gestionamos los residuos de podas y talas y dejamos la zona limpia."],
-    ["¿En qué zonas trabajáis?", "En Navarra (Lesaka, Bera, Igantzi, Etxalar y el resto de Bortziri / Cinco Villas) y en Gipuzkoa (Irun, Hondarribia y alrededores). Consúltanos tu caso sin compromiso."]
+    ["¿En qué zonas trabajáis?", "En toda Euskal Herria y alrededores: Navarra, Gipuzkoa, Bizkaia, Araba e Iparralde. Tenemos la base en Lesaka (Bortziri / Cinco Villas), pero nos desplazamos donde haga falta. Consúltanos tu caso sin compromiso."]
   ],
   eu: [
     ["Zenbat balio du zuhaitz handi bat altueran moztzeak?", "Kostua altueraren, ingurunearen eta sarbidearen zailtasunaren araberakoa da. Igoeraz eta gururik gabe lan eginez, prezioa merkatzen dugu makineria astunaren aldean. Konpromisorik gabeko aurrekontua ematen dugu."],
@@ -357,7 +359,7 @@ const FAQ = {
     ["Etxe bati itsatsitako zuhaitz bat ken dezakezue kalterik egin gabe?", "Bai. Zuhaitza goitik behera zatika apeatzen dugu eta moztutako zati bakoitza sokaz jaisten dugu, inguruko etxe, hesi eta instalazioak babestuz."],
     ["Makineria sartzen ez den tokietan lan egiten duzue?", "Bai. Gururako eta makinetarako sarbide zaileko guneetan espezializatuta gaude. Igoera-teknikekin lan eginez kostuak merkatzen ditugu, ez baitugu bitarteko handirik behar."],
     ["Inausketako edo mozketako hondarrak kentzeaz arduratzen zarete?", "Bai, inausketa eta mozketako hondakinak kudeatzen ditugu eta eremua garbi uzten dugu."],
-    ["Zein eremutan lan egiten duzue?", "Nafarroan (Lesaka, Bera, Igantzi, Etxalar eta gainerako Bortziri / Bost Iriak) eta Gipuzkoan (Irun, Hondarribia eta inguruak). Galdetu zure kasua konpromisorik gabe."]
+    ["Zein eremutan lan egiten duzue?", "Euskal Herri osoan eta inguruetan: Nafarroa, Gipuzkoa, Bizkaia, Araba eta Iparraldea. Gure egoitza Lesakan dago (Bortziri), baina behar den lekura joaten gara. Galdetu zure kasua konpromisorik gabe."]
   ],
   fr: [
     ["Combien coûte l'abattage d'un grand arbre en hauteur ?", "Le coût dépend de la hauteur, de l'environnement et de la difficulté d'accès. En travaillant par grimpe et sans grue, nous réduisons le prix par rapport à la machinerie lourde. Devis sans engagement."],
@@ -365,7 +367,7 @@ const FAQ = {
     ["Pouvez-vous retirer un arbre collé à une maison sans l'endommager ?", "Oui. Nous démontons l'arbre morceau par morceau depuis le haut et descendons chaque coupe à la corde, en protégeant maisons, clôtures et installations proches."],
     ["Travaillez-vous là où la machinerie ne peut pas accéder ?", "Oui. Nous sommes spécialisés dans les zones inaccessibles aux grues et aux machines. En travaillant par grimpe, nous réduisons les coûts car nous n'avons pas besoin de gros moyens."],
     ["Vous chargez-vous d'enlever les restes de l'élagage ou de l'abattage ?", "Oui, nous gérons les déchets d'élagage et d'abattage et laissons la zone propre."],
-    ["Dans quelles zones travaillez-vous ?", "En Navarre (Lesaka, Bera, Igantzi, Etxalar et le reste de Bortziri / Cinco Villas) et au Guipuscoa (Irun, Hondarribia et alentours). Parlez-nous de votre cas sans engagement."]
+    ["Dans quelles zones travaillez-vous ?", "Dans tout le Pays Basque et ses alentours : Navarre, Guipuscoa, Biscaye, Alava et Iparralde (Pays Basque français). Nous sommes basés à Lesaka (Bortziri / Cinco Villas) mais nous nous déplaçons là où le chantier se trouve. Parlez-nous de votre cas sans engagement."]
   ],
   en: [
     ["How much does it cost to fell a large tree at height?", "The cost depends on the height, the surroundings and how hard the access is. By working with climbing and no crane, we lower the price compared with heavy machinery. We give a free, no-obligation quote."],
@@ -373,7 +375,7 @@ const FAQ = {
     ["Can you remove a tree right next to a house without damaging it?", "Yes. We dismantle the tree piece by piece from above and lower each cut with a rope, protecting nearby houses, fences and installations."],
     ["Do you work where machinery cannot get in?", "Yes. We specialise in areas inaccessible to cranes and machines. By working with climbing techniques we lower costs because we don't need heavy equipment."],
     ["Do you take care of removing the pruning or felling debris?", "Yes, we manage the pruning and felling waste and leave the area clean."],
-    ["Which areas do you work in?", "In Navarre (Lesaka, Bera, Igantzi, Etxalar and the rest of Bortziri / Cinco Villas) and in Gipuzkoa (Irun, Hondarribia and the surrounding area). Tell us about your case with no obligation."]
+    ["Which areas do you work in?", "Across the whole Basque Country and surrounding areas: Navarre, Gipuzkoa, Bizkaia, Araba and the French Basque Country. We are based in Lesaka (Bortziri / Cinco Villas) but travel wherever the job is. Tell us about your case with no obligation."]
   ]
 };
 
@@ -431,9 +433,14 @@ function businessLd(lang) {
       { "@type": "City", "name": "Etxalar" },
       { "@type": "City", "name": "Irun" },
       { "@type": "City", "name": "Hondarribia" },
+      { "@type": "City", "name": "Donostia-San Sebastián" },
+      { "@type": "City", "name": "Pamplona-Iruñea" },
       { "@type": "AdministrativeArea", "name": "Bortziri / Cinco Villas" },
       { "@type": "AdministrativeArea", "name": "Gipuzkoa" },
-      { "@type": "State", "name": "Navarra" }
+      { "@type": "AdministrativeArea", "name": "Bizkaia" },
+      { "@type": "AdministrativeArea", "name": "Araba" },
+      { "@type": "State", "name": "Navarra" },
+      { "@type": "AdministrativeArea", "name": "Iparralde / Pays Basque", "containedInPlace": { "@type": "Country", "name": "France" } }
     ],
     "address": {
       "@type": "PostalAddress",
